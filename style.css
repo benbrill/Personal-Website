@@ -1,0 +1,164 @@
+/*menu*/
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color :#2D5B85;
+    position: sticky;
+}
+
+    .menuItem {
+        margin: 1em 1em 1em 1em;
+        color: white;
+        font-family: Halyard Micro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 49px;
+        text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+
+    .menuItem:hover {
+        color: #AA6464
+    }
+
+.logo {
+    background-image: url("logos_Thick White.svg");
+    background-repeat: no-repeat;
+    height: 43%;
+    width: 43%;
+    transition: 0.5s ease-in;
+    position: absolute;
+    top: 20%;
+    margin-left: 5%;
+}
+
+.logo:hover {
+    background-image: url("logos_Thick\ Inverse\ White.svg");
+}
+
+.introBanner {
+    background: #2D5B85;
+    height: 90vh;
+    width: 100vw;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.introText {
+    margin-left: 8%;
+    top: 45%;
+    position: absolute;
+    font-family: halyard-display, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.5em;
+    line-height: 2em;
+    color: white;
+}
+
+#introNormal {
+    font-weight: 300;
+    font-size: .8em;
+}
+
+.interactive {
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    transform: scaleX(1.25) scaleY(1.25);
+}
+
+    .upPolygon, .downPolygon {
+        position: absolute;
+        transition: 0.25s ease-in;
+    }
+
+    #row1 .upPolygon {
+        fill: #4884DE;
+        content: ""
+    }
+
+    #row1 .downPolygon {
+        fill: #C4C4C4;
+        left: 78px;
+    }
+
+    #row1 .upPolygon:last-of-type {
+        fill: #AA6464;
+        left: 156px;
+    }
+
+    #row2 {
+        position: absolute;
+        top: 135px;
+        left: -78px;
+    }
+
+    #row2 .upPolygon {
+        fill: #4884DE
+    }
+
+    #row2 .downPolygon {
+        fill: #C4C4C4;
+        left: 78px;
+    }
+
+    #row2 .upPolygon:last-of-type {
+        fill: #AA6464;
+        left: 156px
+    }
+
+    #row3 {
+        position: absolute;
+        top: 270px;
+        left: 78px;
+    }
+
+    #row3 .downPolygon {
+        fill: #4884DE
+    }
+
+    #row3 .upPolygon {
+        fill: #C4C4C4;
+        left: 78px;
+    }
+
+    #row3 .downPolygon:last-of-type {
+        fill: #AA6464;
+        left: 156px
+    }
+
+    .upPolygon:hover {
+        fill: #ECBB10;
+    }
+
+section {
+    position: absolute;
+    top: 90vh
+}
+
+
+    
+
+    @keyframes flip {
+        0% {
+            transform: rotateY(0deg);
+        }
+        10% {
+            transform: rotateY(180deg);
+            fill: #ECBB10
+        }
+        90% {
+            fill: #ECBB10
+        }
+        100% {
+            transform: rotateY(-180deg);
+        }
+    }
+
