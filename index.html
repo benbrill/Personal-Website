@@ -3,75 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ben Brill</title>
     <link rel="stylesheet" href="https://use.typekit.net/nla5yod.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
     
 </head>
 <body>
     <div class="introBanner">
+        
         <div class="menu">
+            <div>
             <h1 class="menuItem">Resume</h1>
+            <span class="dot"></span>
+            </div>
             <h1 class="menuItem">Data</h1>
             <h1 class="menuItem">Photos</h1>
             <h1 class="menuItem">Design</h1>
             <h1 class="menuItem">Fun</h1>
         </div>
+        
+        <span class="line"></span>
+        
+        <div class="portraitStuff">
+            <svg>
+                <defs>
+                    <clippath id = "svgPath" clipPathUnits="objectBoundingBox">
+                        <path id="firstblob" d="M16.4087 331.475C-28.3913 270.675 35.0754 146.142 72.4087 91.4752C80.4087 83.4752 100.409 72.2752 116.409 91.4752C136.409 115.475 144.409 123.475 216.409 91.4752C240.409 59.4752 244.409 51.4752 272.409 19.4752C300.409 -12.5248 344.409 3.47521 388.409 19.4752C432.409 35.4752 436.409 67.4752 408.409 123.475C380.409 179.475 408.409 171.475 464.409 211.475C520.409 251.475 504.409 275.475 504.409 351.475C504.409 427.475 452.409 431.475 408.409 463.475C364.409 495.475 288.409 483.475 244.409 483.475C200.409 483.475 188.409 443.475 144.409 463.475C100.409 483.475 72.4087 407.475 16.4087 331.475Z" fill="#C4C4C4" stroke="black" stroke-width="4" transform="scale(0.0015,0.0019) translate(50 0)"/>
+                            <animate attributeName="rx" values="0;2;0" dur="2s" repeatCount="indefinite" />
+                    </clippath>
+                </defs>
+            </svg> 
+        </div>
+        
+        <image src="Portrait.png" alt="Me! And that's Ben Brill" class="portrait"></image> 
         <div class="logo"></div>
         <div class="introText">
-            <h1>Hello,<br><span id="introNormal">Welcome to my site.</span> </h1>
+            <h1><span id="introNormal">Student, Designer, Data Enthusiast.</span> </h1>
         </div>
-        <div class="interactive">
-            <div id="row1">
-                <svg class="upPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 3.09949e-05L155.942 135L0.0577233 135L78 3.09949e-05Z"/>
-                </svg>
-                <svg class="downPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 135L0.0577511 5.76808e-07L155.942 1.42047e-05L78 135Z"/>
-                </svg>
-                <svg class="upPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 3.09949e-05L155.942 135L0.0577233 135L78 3.09949e-05Z"/>
-                </svg>
+    </div>
+    
+    <div class="myHand">
+
+        <div class="myHandText">
+            the basics <span class="myHandOther">the basics 
+        </div>
+
+        <div class="cardContainer">
+            <div class="card">
+                <div class="cardInfo">
+                    <span class="role">Student</span>
+                    <span class="place">UCLA</span>
+                    <img id="royce" class="placeIcon" src="Images\Royce_Royce.svg" alt="Rand inspired Royce Hall at UCLA">
+                    <div class="description">
+                        I am a second-year student studying <strong>Statistics and Cognitive Science with a specialization in computing. </strong>
+                        I’m also a campus tour guide, so ask me about Royce Hall, the building above!
+                    </div>
+                </div>
             </div>
-            <div id="row2">
-                <svg class="upPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 3.09949e-05L155.942 135L0.0577233 135L78 3.09949e-05Z"/>
-                </svg>
-                <svg class="downPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 135L0.0577511 5.76808e-07L155.942 1.42047e-05L78 135Z"/>
-                </svg>
-                <svg class="upPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 3.09949e-05L155.942 135L0.0577233 135L78 3.09949e-05Z"/>
-                </svg>
+            <div class="card">
+                <div class="cardInfo">
+                    <span class="role">Graphics editor</span>
+                    <span class="place">Daily Bruin</span>
+                    <img id="design" class="placeIcon" src="Images\design-07.svg" alt="Rand inspired Computer designing things">
+                    <div class="description">
+                        As Graphics editor, I create pitches and managage the design of graphics. Recently, we have 
+                        put an emphasis on data visualization, finding and visualizing unique stories from data sets. 
+                    </div>
+                </div>
             </div>
-            <div id="row3">
-                <svg class="downPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 135L0.0577511 5.76808e-07L155.942 1.42047e-05L78 135Z"/>
-                </svg>
-                <svg class="upPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 3.09949e-05L155.942 135L0.0577233 135L78 3.09949e-05Z"/>
-                </svg>
-                <svg class="downPolygon" width="156" height="135" viewBox="0 0 156 135" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M78 135L0.0577511 5.76808e-07L155.942 1.42047e-05L78 135Z"/>
-                </svg>
+            <div class="card">
+                <div class="cardInfo">
+                    <span class="role">I like</span>
+                    <span class="place">Data</span>
+                    <img id="data" class="placeIcon" src="Images\Data_Data.svg" alt="Rand inspired Royce Hall at UCLA">
+                    <div class="description">
+                        I am a second-year student studying <strong>Statistics and Cognitive Science with a specialization in computing. </strong>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor hendrerit mauris, vitae mollis est pretium vitae. Mauris eget vestibulum purus. Curabitur quis neque ut est sagittis gravida. Morbi consequat nulla lectus, nec semper massa fringilla id. Duis porta, urna nec consequat dictum, orci eros ornare neque, id imperdiet urna velit nec orci. Mauris mauris nunc, finibus non metus non, placerat varius turpis. Sed in gravida quam. Vestibulum tellus nibh, tincidunt vitae orci et, dictum consectetur leo. Etiam ut magna fringilla, posuere nisl quis, gravida tortor. Nulla et dolor mauris. Sed ullamcorper ligula urna, vel fermentum velit pretium sed. Pellentesque vehicula mauris id massa molestie, in varius mi ultricies. Sed massa orci, accumsan non nibh et, finibus mollis quam. Praesent et lectus posuere, mollis justo vel, sollicitudin neque. Nulla arcu tortor, egestas vel pellentesque facilisis, condimentum vel lectus. Praesent aliquam, velit nec hendrerit pellentesque, dolor massa lobortis ligula, condimentum posuere turpis nibh at libero.
-
-            Aliquam risus metus, ultricies id lectus vitae, rhoncus hendrerit metus. Praesent condimentum turpis ut lectus imperdiet consequat. Sed a risus ut dui vehicula pellentesque. Donec sit amet lacus ante. In vel tincidunt lacus. Nullam tristique iaculis justo, molestie elementum lectus ornare ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae ipsum eros. Proin vel lobortis neque, et vulputate felis. Morbi vitae volutpat libero. Fusce velit felis, sollicitudin a ultricies vel, condimentum accumsan mauris. Vivamus sit amet auctor neque. Sed pretium elementum ante, in sollicitudin dolor. Nulla sagittis, mi non ultrices vehicula, sapien lorem sollicitudin tellus, a rhoncus metus ipsum at purus. Cras interdum leo maximus urna mattis viverra. Aliquam ut feugiat eros.
-            
-            Ut id nulla accumsan nulla porttitor laoreet vitae ac odio. Donec ultricies mauris in nibh condimentum pellentesque ac ac ante. In suscipit sapien eget sollicitudin convallis. Vivamus vel consectetur eros. Aliquam commodo eros eu dolor posuere, ut dictum orci tincidunt. Vivamus id felis ut justo posuere interdum a vel leo. Nullam mauris nulla, iaculis non neque nec, tincidunt consequat dolor. Proin fringilla id nulla non fringilla. Sed mollis mauris et nunc facilisis tincidunt. Mauris at mi vitae magna feugiat accumsan. In imperdiet blandit dui sed blandit. Aenean sodales sit amet tellus id aliquam.
-            
-            Praesent sapien mi, pulvinar eget vestibulum ut, convallis non est. Donec sed tristique est. Morbi maximus nec orci at dignissim. Fusce ultrices bibendum accumsan. Sed et libero ut est tincidunt ornare et sit amet est. Donec ipsum tellus, aliquam suscipit ornare at, accumsan ut mauris. Morbi sollicitudin libero ac tortor congue egestas. Cras mauris dui, ornare non vulputate quis, commodo sit amet ante. Ut lobortis, metus sit amet efficitur consectetur, odio lacus placerat turpis, sit amet sollicitudin sapien dolor non ex. Praesent eget imperdiet ante, a aliquet enim.
-            
-            Nulla tincidunt justo vitae neque tincidunt fermentum. Nam sodales ultrices tempus. Integer aliquet nulla nec hendrerit ultricies. Donec mattis eget quam nec fringilla. Nunc eget dictum metus. Vestibulum vehicula scelerisque nisi, dapibus cursus augue luctus vel. Nunc blandit tempus magna eu tristique. Suspendisse et tortor sollicitudin, viverra diam a, porta arcu. Proin vulputate consequat porttitor. Phasellus ac tellus lacus. Suspendisse laoreet enim neque, sit amet semper dolor porttitor in. Curabitur eget commodo mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque in erat in risus tempus volutpat.
-            
-            </p>
-    </section>
+                
+      
+        
+    
         
 </body>
 </html>
