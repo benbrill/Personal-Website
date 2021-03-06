@@ -6,72 +6,109 @@ body {
 p {
     opacity: 1;
 }
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color :#153553;
-    position: sticky;
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+    font-family: halyard-micro, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    margin: 0% 0%;
+}
+h2 {
+    font-family: halyard-micro, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0% 0%;
+}
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
-    .menuItem {
-        margin: 1em 1em 0.2em 1em;
-        color: white;
-        font-family: Halyard Micro;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 2vw;
-        line-height: 49px;
-        text-align: center;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        transition: 0.5s;
-    }
+.mobileWarning {
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
+    position: absolute;
+}
 
-    .dots {
+@media only screen and (max-width: 768px) {
+    .mobileWarning {
+        width: 100vw;
+        height: 100vh;
         position: absolute;
+        background: white;
+        z-index: 1;
+        visibility: visible;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: #f1dabf;
+        color: #153553;
     }
-
-    .dot {
-        height: 2vh;
-        width: 2vh;
-        background-color: white;
-        border-radius: 50%;
-        margin: 0 0vw;
+    p {
+        margin: 0% 5%;
+        text-align: center;
+        font-family: halyard-text, sans-serif;
+        font-size: 1.5rem;
+        line-height: 115%;
+        text-align: center;
     }
-
-    .dots .dot:first-of-type {
-        margin: 0 5vw
+    .content {
+        visibility: hidden;
+        height: 0vh;
+        width: 0vw;
     }
+}
 
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 2;
+}
 
+.menuItems {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    margin-right: 5%;
+    font-family: halyard-micro, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3vmin;
+    letter-spacing: 0.5vmin;
+    text-transform: uppercase;
+    color: black;
+    transition: 0.25s ease-in-out;
+}
 
-    .line {
-        border-top: 0.25em solid white;
-        width: 65vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 18vw;
-    }
+.menuItems a:link, .menuItems a:visited {
+    color: black;
+    text-decoration: none;
+}
 
-    .menuItem:hover {
-        color: #AA6464
-    }
+.menuItems a:hover {
+    color: #ECBB10;
+    
+}
 
 .logo {
     background-image: url("logos_Thick White.svg");
     background-repeat: no-repeat;
-    height: 43%;
-    width: 43%;
+    height: 30vh;
+    width: 40vw;
     transition: 0.5s ease-in;
-    position: absolute;
-    top: 20%;
-    margin-left: 5%;
     filter: drop-shadow(4px 7px 7px rgba(0, 0, 0, 0.25));
 }
 
@@ -80,7 +117,9 @@ p {
 }
 
 .introBanner {
-    background: #153553;
+    /* background-image: url("Images/JTree_Day.jpg");
+    background-size: 100vw;
+    background-position: center; */
     height: 90vh;
     width: 100vw;
     position: relative;
@@ -88,22 +127,50 @@ p {
     left: 0%;
 }
 
-.introText {
-    margin-left: 8%;
-    top: 40vh;
+/* .introBanner:hover {
+    background-image: url("Images/JTree_Night.png");
+} */
+
+.introImages {
     position: absolute;
-    width: 30%;
-    font-family: halyard-display, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 2.5vw;
-    line-height: 1.5em;
-    color: white;
+    top: -10%;
+    width: 100vw;
+    clip-path: inset(0% 0% 10% 0%);
+    z-index: -1;
+}
+
+#introNight {
+    opacity: 0%;
+}
+
+#introDark {
+    opacity: 0%;
+}
+
+.introTextContainer {
+    background: linear-gradient(135deg, rgba(133,133,133,0.3) 0%, rgba(226,226,226,0.3) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    box-sizing: border-box;
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 3em;
+    position: absolute;
+    left: 55%;
+    top: 20%;
+    width: 40%
 }
 
 #introNormal {
     font-weight: 300;
     font-size: .8em;
+    font-family: halyard-display, sans-serif;
+    font-style: normal;
+    font-size: 6vmin;
+    line-height: 100%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    color: white;
 }
 
 .portraitStuff {
@@ -114,41 +181,22 @@ p {
     overflow: hidden;
 }
 
-.portrait {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    height: 70%;
-    background: #C4C4C4;
-    clip-path: url(#svgPath);
-    perspective: 500px;
-}
 
-
-
-svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-/* #firstblob {
-    animation: rotation 1s infinite;
-    d: path("M8 270C-4.8 230 2.66667 192.667 8 179C16 171 26 179 38 168C50 157 62 155 74 143C86 131 90 128 96 114C102 100 104 89 96 69C88 49 86 47 85 29C84 11 100 -4.00002 118 1.99998C136 7.99998 181 11 188 21C195 31 244 34 266 21C288 7.99999 298 3.99999 319 11C340 18 356 33 370 56C384 79 382 79 392 105C402 131 407 116 430 143C453 170 453 171 460 187C467 203 470 205 474 233C478 261 474 255 460 255C446 255 416 305 424 316C432 327 422 328 424 357C426 386 416 372 407 383C398 394 390 394 370 397C350 400 343 411 325 425C307 439 309 438 292 443C275 448 261 448 219 438C177 428 188 443 167 448C146 453 99 468 62 443C25 418 51 389 45 367C39 345 24 320 8 270Z")
-} */
 
 
 .myHand {
     position: relative;
     perspective: 1000%;
     width: 100vw;
+    height: auto;
+    /* background-color: red; */
 }
 
 .myHandText {
-    font-family: Halyard Display;
+    font-family: halyard-display, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 20vh;
+    font-size: 20vmin;
     line-height: 20vh;
     position: absolute;
     width: 100vw;
@@ -168,7 +216,7 @@ svg {
 
 .cardContainer {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     position: relative;
     top: 8vmax;
@@ -177,7 +225,7 @@ svg {
 }
 
 .cardContainer .card:first-of-type {
-    margin-left: 8%;
+    margin-left: 5%;
 }
 
 .card {
@@ -207,7 +255,7 @@ svg {
 }
 
     .role {
-        font-family: Halyard Micro;
+        font-family: halyard-micro, sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 1vmax;
@@ -217,7 +265,7 @@ svg {
     }
 
     .place {
-        font-family: Halyard Display;
+        font-family: halyard-display;
         font-style: normal;
         font-weight: 600;
         line-height: 70%;
@@ -231,23 +279,23 @@ svg {
 
     #royce {
         margin-top: 10%;
-        height: 50%;
+        height: 30vmin;
         margin-bottom: 10%;
     }
 
     #design{
         margin-top: 8%;
-        height: 50%;
+        height: 30vmin;
         margin-bottom: 2%;
     }
 
     #data {
         margin-top: 10%;
-        height: 42%;
+        height: 30vmin;
     }
 
     .description {
-        font-family: Halyard Display;
+        font-family: halyard-display, sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 1.5vw;
@@ -259,3 +307,141 @@ svg {
     .description strong {
         font-weight: 500;
     }
+
+.otherStuff {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: coral */
+}
+
+    .otherStuffImage {
+        width: 100vw;
+        clip-path: inset(0% 0%);
+        top: 0%;
+        position: absolute;
+        padding-bottom: 100px;
+    }
+
+    .otherStuffImageWipe {
+        width: 100vw;
+        position: absolute;
+        top: 0%;
+        clip-path: inset(0% 0%);
+    }
+
+    .otherStuffTitle {
+        position: relative;
+        top: 10%;
+        font-family: halyard-display, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10vh;
+        text-align: center;
+    }
+
+    .otherStuffTitle.white {
+        color: white;
+        position: absolute;
+        text-align: center;
+        clip-path: inset(0% 0%);
+        width: 100%;
+    }
+
+    .otherStuffTextContainer {
+        background: rgba(71, 71, 71, 0.3);
+        border: 1px solid rgba(26, 26, 26, 0.3);
+        box-sizing: border-box;
+        /* box-shadow: 6px 9px 10px rgba(122, 122, 122, 0.25); */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 2em;
+        width: 40%;
+        margin: auto;
+        margin-top: 15%;
+        color: white;
+    }
+
+    .osLA {
+        font-family: halyard-micro, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+
+    .osLAexplain {
+        font-family: halyard-text, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 115%;
+        text-align: center;
+        margin: 2% 2%;
+    }
+
+.alsoLike {
+    position: relative;
+    height: 90vh;
+    background-color: wheat;
+}
+
+#contact {
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    background-color: #153553;
+    margin-top: 10%;
+}
+
+#contact h2 {
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.contactIcons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 3fr 1fr;
+    height: 20vh;
+    width: 50vw;
+    margin: auto;
+    padding-top: 2%;
+    column-gap: 1em;
+    row-gap: 1rem;
+    justify-items: center;
+    align-items: top;
+
+    font-family: halyard-text, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 115%;
+    text-align: center;
+    color: white;
+}
+
+/* .contactIcons .contactImage:first-of-type {
+   height: 120%;
+   transition: 0.25s ease-in-out;
+}
+
+.contactIcons .contactImage:nth-of-type(n+2){
+   height: 110%;
+   transition: 0.25s ease-in-out;
+} */
+
+.contactIcons a .contactImage{
+    height: 90%;
+    transition: 0.25s ease-in-out;
+}
+
+.contactIcons a .contactImage:hover{
+    height: 95%;
+}
+

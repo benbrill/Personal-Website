@@ -1,17 +1,48 @@
-$(document).ready(function(){
+document.addEventListener("DOMContentLoaded", function() {
+
+intro = gsap.timeline({repeat: -1, repeatDelay: 2, yoyo: true});
+intro.to('.menuItems a:link',{duration: 2, delay: 2.5, color: "white", ease:Power1.easeNone});
+intro.to('#introDark',{duration: 2, opacity: "100%", ease: Power1.easeNone}, "-=2");
+intro.to('#introNight',{duration: 2, opacity: "100%", ease: Bounce.easeOut});
+intro.to('#introNight',{duration: 1.5});
 
 gsap.to('.myHandText', {scrollTrigger:{
     trigger: '.myHand',
     start: "top 90%",
     end: "bottom 90%",
     scrub: 1,
-    }, duration: 3, x: "-15%", ease: 'linear'});
+    }, duration: 3, x: "-20%", ease: 'linear'});
 gsap.from('.card', {scrollTrigger: {
     trigger: '.myHand',
     start: '20% 60%',
     end: '55% 50%',
     scrub: true,
 }, duration: 3, opacity: 0, y: "50%", ease: "ease-in"})
+// gsap.to('.otherStuffImage', {scrollTrigger: {
+//     trigger:'.otherStuff',
+//     start: "40% 50%",
+//     end: "70% 30%",
+//     pin: true,
+//     scrub: 1,
+// }, duration: 3, clipPath: "inset(0% 0%)"})
+
+var tl = gsap.timeline();
+
+tl.from('.otherStuffImage',{duration: 2, clipPath: "inset(20% 10% 40% 10%)"});
+tl.from('.otherStuffImageWipe, #wipeText',{duration: 3, clipPath: "inset(0% 100% 0% 0%)"})
+tl.from('.otherStuffText .white', {duration: 3, clipPath: "inset(0% 100% 0% 0%)"})
+tl.from('.otherStuffTextContainer', {duration: 2, opacity: 0, x: "50%"})
+
+ScrollTrigger.create({
+    animation: tl,
+    trigger:'.otherStuff',
+        start: "60% 50%",
+        end: "bottom top",
+        pin: true,
+        markers: false,
+        scrub: 1,
+});
+
 // card animations
   const card = document.querySelectorAll('.card');
 

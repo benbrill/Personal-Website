@@ -2,54 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Brill</title>
-    <link rel="stylesheet" href="https://use.typekit.net/nla5yod.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ben-Ohr Brill</title>
+    <link rel="stylesheet" href="https://use.typekit.net/mta3hot.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
     
 </head>
 <body>
+
+    <div class="mobileWarning">
+        <h1>Hello!</h1>
+        <p>I'm still in the process of making my new site responsive. For optimal mobile viewing, I recommend you turn your device in to landscape mode.</p>
+    </div>
+
+    <div class="content">
+
     <div class="introBanner">
         
-        <div class="menu">
-            <div>
-            <h1 class="menuItem">Resume</h1>
-            <span class="dot"></span>
-            </div>
-            <h1 class="menuItem">Data</h1>
-            <h1 class="menuItem">Photos</h1>
-            <h1 class="menuItem">Design</h1>
-            <h1 class="menuItem">Fun</h1>
-        </div>
+        <nav class="menu">
+            <ul class="menuItems">
+                <li><a href="Resume.pdf">Resume</a></li>
+                <li><a href="data">Data</a></li>
+                <li><a href="https://benohrbrill.com/design">Design</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
         
-        <span class="line"></span>
-        
-        <div class="portraitStuff">
-            <svg>
-                <defs>
-                    <clippath id = "svgPath" clipPathUnits="objectBoundingBox">
-                        <path id="firstblob" d="M16.4087 331.475C-28.3913 270.675 35.0754 146.142 72.4087 91.4752C80.4087 83.4752 100.409 72.2752 116.409 91.4752C136.409 115.475 144.409 123.475 216.409 91.4752C240.409 59.4752 244.409 51.4752 272.409 19.4752C300.409 -12.5248 344.409 3.47521 388.409 19.4752C432.409 35.4752 436.409 67.4752 408.409 123.475C380.409 179.475 408.409 171.475 464.409 211.475C520.409 251.475 504.409 275.475 504.409 351.475C504.409 427.475 452.409 431.475 408.409 463.475C364.409 495.475 288.409 483.475 244.409 483.475C200.409 483.475 188.409 443.475 144.409 463.475C100.409 483.475 72.4087 407.475 16.4087 331.475Z" fill="#C4C4C4" stroke="black" stroke-width="4" transform="scale(0.0015,0.0019) translate(50 0)"/>
-                            <animate attributeName="rx" values="0;2;0" dur="2s" repeatCount="indefinite" />
-                    </clippath>
-                </defs>
-            </svg> 
+        <img src="Images\JTree_Day.jpg" class="introImages" id="introDay" alt="">
+        <img src="Images\JTree_Dark.jpg" class="introImages" id="introDark" alt="">
+        <img src="Images\JTree_Night.png" class="introImages" id="introNight" alt="">
+        <div class="introTextContainer" >
+            <div class="logo"></div>
+            <div id="introNormal">My full name is Ben-Ohr, which means "Son of Light" in Hebrew!</div>
+
         </div>
-        
-        <image src="Portrait.png" alt="Me! And that's Ben Brill" class="portrait"></image> 
-        <div class="logo"></div>
-        <div class="introText">
-            <h1><span id="introNormal">Student, Designer, Data Enthusiast.</span> </h1>
-        </div>
+
     </div>
     
     <div class="myHand">
 
         <div class="myHandText">
-            the basics <span class="myHandOther">the basics 
+            the basics <span class="myHandOther">the basics </span>
         </div>
 
         <div class="cardContainer">
@@ -75,19 +72,59 @@
                     </div>
                 </div>
             </div>
+            
             <div class="card">
                 <div class="cardInfo">
                     <span class="role">I like</span>
                     <span class="place">Data</span>
                     <img id="data" class="placeIcon" src="Images\Data_Data.svg" alt="Rand inspired Royce Hall at UCLA">
                     <div class="description">
-                        I am a second-year student studying <strong>Statistics and Cognitive Science with a specialization in computing. </strong>
+                        Much of my focus in my studies is on data, whether it be data mining or psychological statistics. Recently, I’ve been doing more independent data projects to build up my skills. You can see some of those projects in the Data section.
                     </div>
                 </div>
             </div>
         </div>
     </div>
-                
+
+    <div class="otherStuff">
+         
+        <img class="otherStuffImage" src="Images\Dodger Stadium-3.jpg" alt="The 110 Freeway heading toward Downtown LA near Elysian Park">
+        <img class="otherStuffImageWipe" src="Images\Dodger Stadium Night-1.jpg" alt="The 110 Freeway heading toward Downtown LA near Elysian Park at night">
+        
+        <div class="otherStuffTitle">
+            Some other things I like
+        </div>
+        <div class="otherStuffTitle white" id="wipeText">
+            Some other things I like
+        </div>
+
+        <div class="otherStuffTextContainer">
+            <div class="osLA">Los Angeles</div>
+            <div class="osLAexplain">My home, and something I like to take pictures of. I like taking pictures in general.</div>
+        </div>
+        
+    </div>
+    
+    <!-- <div class="alsoLike">
+        <h1>I also like</h1>
+    </div> -->
+
+    <section id="contact">
+        <h2>Say hi!</h2>
+        <div class="contactIcons">
+            <img src="Images\Email.svg" class="contactImage" alt="Icon for Email">
+            <a href="https://www.linkedin.com/in/benohrbrill/" target="_blank" rel="noopener noreferrer"><img src="Images\LinkedIn.svg" class="contactImage" alt="Icon for LinkedIn"></a>
+            <a href="https://github.com/benbrill" target="_blank" rel="noopener noreferrer"><img src="Images\Github.svg" class="contactImage" alt="Icon for Github"></a>
+            <a href="https://twitter.com/benzbrill" target="_blank" rel="noopener noreferrer"><img src="Images\Twitter.svg" class="contactImage" alt="Icon for Twitter"></a>
+            <div>Email</div>
+            <div>LinkedIn</div>
+            <div>Github</div>
+            <div>Twitter</div>
+        </div>
+        
+    </section>
+
+    </div>
       
         
     
