@@ -14,27 +14,40 @@
 </head>
 <body>
 
-    <div class="mobileWarning">
-        <h1>Hello!</h1>
-        <p>I'm still in the process of making my new site responsive. For optimal mobile viewing, I recommend you turn your device in to landscape mode.</p>
-    </div>
+    
 
-    <div class="content">
+
+    <nav class="menu">
+        <div id="menuLogoContainer">
+            <a href="..\index.html">
+                <img src="Images\logos_Thick Inverse White.svg" id="menuLogo" alt="The logo for the menu">
+            </a>
+            <div class="burger">
+                <div class="burgerLine"></div>
+                <div class="burgerLine"></div>
+                <div class="burgerLine"></div>
+            </div>
+        </div>
+        <ul class="menuItems">
+            <li><a href="../Resume.pdf">Resume</a></li>
+            <li><a href="..\data">Data</a></li>
+            <li>
+                <a href="https://benohrbrill.com/design">Design</a>
+            </li>
+            <li><a href="..\index.html#contact">Contact</a></li>
+        </ul> 
+    </nav>
 
     <div class="introBanner">
         
-        <nav class="menu">
-            <ul class="menuItems">
-                <li><a href="Resume.pdf">Resume</a></li>
-                <li><a href="data">Data</a></li>
-                <li><a href="https://benohrbrill.com/design">Design</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <img src="Images\JTree_Day.jpg" class="introImages" id="introDay" alt="">
-        <img src="Images\JTree_Dark.jpg" class="introImages" id="introDark" alt="">
-        <img src="Images\JTree_Night.png" class="introImages" id="introNight" alt="">
+        <div class="imageContainer">
+            <img src="Images\JTree_Day_Mobile.jpg" class="introImages mobile" id="introDay" alt="">
+            <img src="Images\JTree_Dark_Mobile.jpg" class="introImages mobile" id="introDark" alt="">
+            <img src="Images\JTree_Night_Mobile.jpg" class="introImages mobile" id="introNight" alt="">
+        </div>
+        <img src="Images\JTree_Day.jpg" class="introImages desktop" id="introDay" alt="">
+        <img src="Images\JTree_Dark.jpg" class="introImages desktop" id="introDark" alt="">
+        <img src="Images\JTree_Night.png" class="introImages desktop" id="introNight" alt="">
         <div class="introTextContainer" >
             <div class="logo"></div>
             <div id="introNormal">My full name is Ben-Ohr, which means "Son of Light" in Hebrew!</div>
@@ -87,14 +100,14 @@
     </div>
 
     <div class="otherStuff">
-         
+        <div class="otherStuffTitle mobile">Some other things I like</div>
         <img class="otherStuffImage" src="Images\Dodger Stadium-3.jpg" alt="The 110 Freeway heading toward Downtown LA near Elysian Park">
         <img class="otherStuffImageWipe" src="Images\Dodger Stadium Night-1.jpg" alt="The 110 Freeway heading toward Downtown LA near Elysian Park at night">
         
-        <div class="otherStuffTitle">
+        <div class="otherStuffTitle desktop">
             Some other things I like
         </div>
-        <div class="otherStuffTitle white" id="wipeText">
+        <div class="otherStuffTitle white desktop" id="wipeText">
             Some other things I like
         </div>
 
@@ -112,19 +125,27 @@
     <section id="contact">
         <h2>Say hi!</h2>
         <div class="contactIcons">
-            <img src="Images\Email.svg" class="contactImage" alt="Icon for Email">
-            <a href="https://www.linkedin.com/in/benohrbrill/" target="_blank" rel="noopener noreferrer"><img src="Images\LinkedIn.svg" class="contactImage" alt="Icon for LinkedIn"></a>
-            <a href="https://github.com/benbrill" target="_blank" rel="noopener noreferrer"><img src="Images\Github.svg" class="contactImage" alt="Icon for Github"></a>
-            <a href="https://twitter.com/benzbrill" target="_blank" rel="noopener noreferrer"><img src="Images\Twitter.svg" class="contactImage" alt="Icon for Twitter"></a>
-            <div>Email</div>
-            <div>LinkedIn</div>
-            <div>Github</div>
-            <div>Twitter</div>
+            <div class="contactIconContainer">
+                <img src="Images\Email.svg" class="contactImage" alt="Icon for Email">
+                <div>Email</div>
+            </div>
+            <div class="contactIconContainer">
+                <a href="https://www.linkedin.com/in/benohrbrill/" target="_blank" rel="noopener noreferrer"><img src="Images\LinkedIn.svg" class="contactImage" alt="Icon for LinkedIn"></a>
+                <div>LinkedIn</div>
+            </div>
+            <div class="contactIconContainer">
+                <a href="https://github.com/benbrill" target="_blank" rel="noopener noreferrer"><img src="Images\Github.svg" class="contactImage" alt="Icon for Github"></a>
+                <div>Github</div>
+            </div>
+            <div class="contactIconContainer">
+                <a href="https://twitter.com/benzbrill" target="_blank" rel="noopener noreferrer"><img src="Images\Twitter.svg" class="contactImage" alt="Icon for Twitter"></a>
+                <div>Twitter</div>
+            </div>
+            
         </div>
         
     </section>
 
-    </div>
       
         
     

@@ -6,7 +6,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+<link rel="stylesheet" href="https://use.typekit.net/mta3hot.css">
 
 
 <style type="text/css">
@@ -22,7 +22,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: halyard-text, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -1087,7 +1087,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: halyard-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.42857143;
   color: #000;
@@ -1188,7 +1188,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: halyard-micro;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -11421,7 +11421,7 @@ div#notebook {
   overflow-x: auto;
   width: 100%;
   /* This spaces the page away from the edge of the notebook area */
-  padding-top: 20px;
+  padding-top: 5%;
   margin: 0px;
   outline: none;
   box-sizing: border-box;
@@ -13016,6 +13016,57 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 10vh;
+    background-color: #153553;
+}
+
+#menuLogoContainer {
+    align-self: flex-start;
+    left: 5%;
+    position: absolute
+}
+
+#menuLogo {
+    align-self: center;
+    height: 10vh;
+}
+
+.menuItems {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 45%;
+    margin: 0% 6% 0% 0%;
+    font-family: halyard-micro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vmin;
+    letter-spacing: 0.5vmin;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: 0.25s ease-in-out;
+}
+
+.menuItems a:link, .menuItems a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menuItems a:hover {
+    color: #ECBB10;
+    
+}
     </style>
 
 
@@ -13071,21 +13122,36 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body>
+  <nav class="menu">
+    <div id="menuLogoContainer">
+        <a href="..\index.html">
+            <img src="..\logos_Thick Inverse White.svg" id="menuLogo" alt="The logo for the menu">
+        </a>
+    </div>
+    <ul class="menuItems">
+        <li><a href="../Resume.pdf">Resume</a></li>
+        <li><a href="..\data.html">Data</a></li>
+        <li>
+            <a href="https://benohrbrill.com/design">Design</a>
+        </li>
+        <li><a href="..\index.html#contact">Contact</a></li>
+    </ul>
+</nav>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
+      
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Group-Contributions:">Group Contributions:<a class="anchor-link" href="#Group-Contributions:">&#182;</a></h2>
+<h1>Palmer Penguins Project<a class="anchor-link" href="#Group-Contributions:">&#182;</a></h1>
+<p><em>By Ben Brill, Ally Shirman, and Krishna Shaipurdari</em></p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Krishna did the exploratory analyses while Ally did the feature selection section. Ally also created the Decision Tree Classifier model and analyzed those results. Ben created the Logistic Regression and K Nearest Neighbors models and analyzed those results, and wrote the conclusion. We all contributed to discussion in the sections we didn't specifically lead as well.</p>
-<p>Okay, let's get started!</p>
 
 </div>
 </div>

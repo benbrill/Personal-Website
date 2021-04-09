@@ -25,11 +25,7 @@ body {
     padding-bottom: 5%;
 }
 
-.background {
-    position: absolute;
-    width: 110vw;
-    z-index: -1;
-}
+
 
 
 .menu {
@@ -172,7 +168,7 @@ body {
 
 .projectDescription {
     grid-area: 2 / 2 / 3 / 3;
-    font-family: Halyard Text;
+    font-family: halyard-text;
     font-style: normal;
     font-weight: normal;
     align-self: center;
