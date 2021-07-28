@@ -1,0 +1,18 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://use.typekit.net/mta3hot.css");
+
+.btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    font-family: halyard-micro;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.5vmin;
+    text-transform: uppercase;
+}
+
+.navbar-collapse {
+    justify-content: right;
+}
