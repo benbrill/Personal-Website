@@ -19,7 +19,7 @@ const HeroLanding = () => {
                 </Container>
             </MediaQuery>
             <MediaQuery maxWidth={650}>
-                <StaticImage src='../images/JTree_Day.jpg' layout="fullWidth" />
+                <StaticImage src='../images/JTree_Day_Mobile.jpg' layout="fullWidth" />
                 <Container id = "mobile">
                     <span style = {{fontFamily : "Halyard-Display", fontSize : "5rem", fontWeight: 600, lineHeight: "5rem"}}>Ben-Ohr Brill</span>
                     <p>Welcome to my site</p>
