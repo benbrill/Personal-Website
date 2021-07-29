@@ -1,6 +1,6 @@
 #introCard{
     border-radius: 1rem;
-    min-height: 20rem;
+    min-height: 25rem;
 }
 #introCardHeader {
   background-color: white;
@@ -10,6 +10,31 @@
 #introCardImg {
     max-height: 10rem;
     padding-top: 1rem;
+}
+
+
+#desktop {
+    left: 55%;
+    background: linear-gradient(135deg, rgba(133,133,133,0.3) 0%, rgba(226,226,226,0.3) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    box-sizing: border-box;
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 3em;
+    top: 10rem;
+    border-radius: 3em;
+    position: absolute;
+    width: 25rem;
+    padding-left: 2%;
+
+}
+
+#mobile {
+    margin: auto;
+    top: 30%;
+    position: absolute;
+    padding-left: 5%;
 }
 
 

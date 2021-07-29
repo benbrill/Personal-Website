@@ -24,7 +24,7 @@ const IntroCard = ({ header, url, body}) => {
     return (
         <Card id = "introCard">
             <Card.Header id = "introCardHeader"> <h2 style = {styles.h2}>{header}</h2> </Card.Header>
-            <Card.Img id = "introCardImg" src={url} />
+            <Card.Img id = "introCardImg" src={url}  />
             <Card.Body style = {styles.p}> {body} </Card.Body>
         </Card>
     )
