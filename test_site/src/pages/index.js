@@ -13,6 +13,7 @@ const IndexPage = () => (
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
+    <h2>Hi</h2>
     <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}

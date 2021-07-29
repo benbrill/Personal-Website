@@ -1,18 +1,20 @@
 @import "~bootstrap/scss/bootstrap";
 @import url("https://use.typekit.net/mta3hot.css");
+@import "static/card.scss";
+// https://getbootstrap.com/docs/4.4/getting-started/theming/
 
 .btn {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar {
+.navbar-expand-sm .navbar-collapse {
     font-family: halyard-micro;
     font-style: normal;
     font-weight: 600;
     letter-spacing: 0.5vmin;
     text-transform: uppercase;
-}
-
-.navbar-collapse {
-    justify-content: right;
+    // display: flex;
+    // flex-basis: auto;
+    // flex-direction: row;
+    justify-content: flex-end;
 }
