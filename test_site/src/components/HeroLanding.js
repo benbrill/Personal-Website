@@ -4,8 +4,6 @@ import Image from 'react-bootstrap/Image'
 import { Container } from 'react-bootstrap';
 import MediaQuery from 'react-responsive'
 import '../static/card.scss'
-import desktopImage from '../images/JTree_Day.jpg'
-import mobileImage from '../images/JTree_Day_Mobile.jpg'
 
 
 
@@ -14,14 +12,14 @@ const HeroLanding = () => {
     return (
         <>
             <MediaQuery minWidth={650}>
-            <Image src={desktopImage} layout="fullWidth" />
+            <StaticImage src='../images/JTree_Day.jpg' layout="fullWidth" />
                 <Container id = "desktop">
                     <span style = {{fontFamily : "Halyard-Display", fontSize : "5rem", fontWeight: 600, lineHeight: "5rem"}}>Ben-Ohr Brill</span>
                     <p>Welcome to my site</p>
                 </Container>
             </MediaQuery>
             <MediaQuery maxWidth={650}>
-                <Image src={mobileImage} layout="fullWidth" />
+                <StaticImage src='../images/JTree_Day.jpg' layout="fullWidth" />
                 <Container id = "mobile">
                     <span style = {{fontFamily : "Halyard-Display", fontSize : "5rem", fontWeight: 600, lineHeight: "5rem"}}>Ben-Ohr Brill</span>
                     <p>Welcome to my site</p>
