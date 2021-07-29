@@ -1,14 +1,18 @@
 import React from 'react'
 import Layout from '../components/layout'
 import IntroCard from '../components/IntroCard'
-import Button from 'react-bootstrap/Button';
-import CardGroup from 'react-bootstrap/CardGroup'
-import { StaticImage } from 'gatsby-plugin-image'
+import HeroLanding from '../components/HeroLanding';
+import CardGroup from 'react-bootstrap/CardGroup';
+import { Alert } from 'react-bootstrap';
+// import { StaticImage } from 'gatsby-plugin-image'
 
-const AboutPage =  function about() {
+
+const AboutPage =  function About() {
+    // const imageUrl = useWindowWidth() >= 650 ? "../images/JTree_Day.jpg" : "../images/JTree_Day_Mobile.jpg";
     return (
         <>
-        <StaticImage src="../images/JTree_Day.jpg" placeholder="blured" layout="fullWidth" />
+        <HeroLanding />
+        {/* <StaticImage src={{imageUrl}} placeholder="blured" layout="fullWidth" /> */}
         <Layout>
         <div>
             <h1>About</h1>
@@ -19,11 +23,12 @@ const AboutPage =  function about() {
             <IntroCard header = "I am a Data Scientist" url = "../images/Data_Data.svg" body = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"/>
             <IntroCard header = "Research and stuff" url = "../images/design-07.svg" body = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"/>
         </CardGroup>
+        <Alert variant = "secondary">Check out more about me in my resume</Alert>
         <div className="hi" style = {{height: '100vh'}}></div>
-        <Button>Hello</Button>
         </Layout>
         </>
     )
 }
+
 
 export default AboutPage
