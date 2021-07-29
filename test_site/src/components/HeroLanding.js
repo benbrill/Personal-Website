@@ -11,7 +11,7 @@ import '../static/card.scss'
 
 
 const HeroLanding = () => {
-    const imageUrl = useWindowWidth() >= 650 ? desktopImage : mobileImage
+    // const imageUrl = useWindowWidth() >= 650 ? desktopImage : mobileImage
     return (
         <>
             <MediaQuery minWidth={650}>
@@ -32,20 +32,20 @@ const HeroLanding = () => {
     )
 }
 
-const useWindowWidth = () => {
-    const [windowWidth, setWindowWidth ] = useState(window.innerWidth);
-    // https://itnext.io/responsive-background-images-using-react-hooks-941af365ea1f
-    useEffect(() => {
-        const handleWindowResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
+// const useWindowWidth = () => {
+//     const [windowWidth, setWindowWidth ] = useState(window.innerWidth);
+//     // https://itnext.io/responsive-background-images-using-react-hooks-941af365ea1f
+//     useEffect(() => {
+//         const handleWindowResize = () => {
+//             setWindowWidth(window.innerWidth);
+//         };
 
-        window.addEventListener('resize', handleWindowResize);
-        return () => window.removeEventListener('resize', handleWindowResize);
-    },[]);
+//         window.addEventListener('resize', handleWindowResize);
+//         return () => window.removeEventListener('resize', handleWindowResize);
+//     },[]);
 
-    return windowWidth;
-};
+//     return windowWidth;
+// };
 
 
 export default HeroLanding
