@@ -26,7 +26,7 @@ const AboutPage =  function About() {
             <IntroCard header = "Research and stuff" url = "../images/design-07.svg" body = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"/>
         </CardGroup>
         <Alert variant = "secondary">Check out more about me in my resume</Alert>
-        <StaticImage src = "../../static/images/LA_Night.jpg" layout="fullWidth"/>
+        <StaticImage src = "../images/LA_Night.jpg" layout="fullWidth"/>
         </Layout>
         </>
     )
