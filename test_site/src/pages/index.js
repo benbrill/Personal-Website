@@ -4,6 +4,7 @@ import IntroCard from '../components/IntroCard'
 import HeroLanding from '../components/HeroLanding';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { Alert } from 'react-bootstrap';
+import {StaticImage} from 'gatsby-plugin-image'
 import '../App.scss'
 // import { StaticImage } from 'gatsby-plugin-image'
 
@@ -25,7 +26,7 @@ const AboutPage =  function About() {
             <IntroCard header = "Research and stuff" url = "../images/design-07.svg" body = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"/>
         </CardGroup>
         <Alert variant = "secondary">Check out more about me in my resume</Alert>
-        <div className="hi" style = {{height: '100vh'}}></div>
+        <StaticImage src = "../../static/images/LA_Night.jpg" layout="fullWidth"/>
         </Layout>
         </>
     )
