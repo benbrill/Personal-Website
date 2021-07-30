@@ -11,21 +11,22 @@ import { useStaticQuery, graphql } from "gatsby"
 
 
 import "./layout.css"
-import Menu from "./navbar"
+import Menu from "./navbar_home"
 
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  console.log(data)
   return (
     <>
-      
+      <Menu />
       <div
         style={{
           margin: `0 auto`,
@@ -33,7 +34,6 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <Menu />
         
         <main>{children}</main>
         <footer

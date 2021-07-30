@@ -12,14 +12,14 @@ const HeroLanding = () => {
     return (
         <>
             <MediaQuery minWidth={650}>
-            <StaticImage src='../../static/images/JTree_Day.jpg' layout="fullWidth" aria-placeholder = "blurred"/>
+            <StaticImage src='../../static/images/JTree_Day.jpg' layout="fullWidth" aria-placeholder = "blurred" alt=""/>
                 <Container id = "desktop">
                     <span style = {{fontFamily : "Halyard-Display", fontSize : "5rem", fontWeight: 600, lineHeight: "5rem"}}>Ben-Ohr Brill</span>
                     <p>Welcome to my site</p>
                 </Container>
             </MediaQuery>
             <MediaQuery maxWidth={650}>
-                <StaticImage src='../../static/images/JTree_Day_Mobile.jpg' layout="fullWidth"/>
+                <StaticImage src='../../static/images/JTree_Day_Mobile.jpg' layout="fullWidth" alt=""/>
                 <Container id = "mobile">
                     <span style = {{fontFamily : "Halyard-Display", fontSize : "5rem", fontWeight: 600, lineHeight: "5rem"}}>Ben-Ohr Brill</span>
                     <p>Welcome to my site</p>
