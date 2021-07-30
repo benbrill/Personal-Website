@@ -20,7 +20,6 @@ const styles = {
     }
 }
 const IntroCard = ({ header, url, body}) => {
-    console.log(url)
     return (
         <Card id = "introCard">
             <Card.Header id = "introCardHeader"> <h2 style = {styles.h2}>{header}</h2> </Card.Header>
