@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   // `)
   return (
     <>
-      
+      <Menu />
       <div
         style={{
           margin: `0 auto`,
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <Menu />
+        
         
         <main>{children}</main>
         <footer

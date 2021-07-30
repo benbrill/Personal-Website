@@ -1,22 +1,18 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Container from 'react-bootstrap/Container'
-import  Col  from 'react-bootstrap/Col'
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Data = () => {
     return (
         <>
         <Layout>
-            <Container fluid = "true">
-                <Col>
+            <div style = {{display: "flex"}}>
                 <StaticImage src = "../../static/images/Data_Data.svg" />
-                </Col>
-                <Col>
+                <div>
                     <h1>Data</h1>
                     <p>Here is a collection of some of my projects involving data science and development</p>
-                </Col>
-            </Container>
+                </div>
+            </div>
             
         </Layout>
             

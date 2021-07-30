@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 function Menu() {
 
     return (
-        <Navbar expand = "sm" fixed = "top" style={{ transition: '1s ease', backgroundColor:  '#2b2b2b'}}>
+        <Navbar expand = "sm" sticky = "top" style={{ transition: '1s ease', backgroundColor:  '#2b2b2b'}}>
         <Container>
         <Navbar.Brand href="/" style={{ transition: '0.5s ease', color: "white", fontFamily : "Halyard-Display", fontSize : "2rem", fontWeight: 600}}>Ben-Ohr Brill</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="justify-content flex-end" />
