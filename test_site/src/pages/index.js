@@ -9,12 +9,11 @@ import '../App.scss'
 // import { StaticImage } from 'gatsby-plugin-image'
 
 
-const AboutPage =  function About() {
+const HomePage =  function HomePage() {
     // const imageUrl = useWindowWidth() >= 650 ? "../images/JTree_Day.jpg" : "../images/JTree_Day_Mobile.jpg";
     return (
         <>
         <HeroLanding />
-        {/* <StaticImage src={{imageUrl}} placeholder="blured" layout="fullWidth" /> */}
         <Layout>
         <div>
             <h1>About</h1>
@@ -26,11 +25,11 @@ const AboutPage =  function About() {
             <IntroCard header = "Research and stuff" url = "../images/design-07.svg" body = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"/>
         </CardGroup>
         <Alert variant = "secondary">Check out more about me in my resume</Alert>
-        <StaticImage src = "../images/LA_Night.jpg" layout="fullWidth"/>
+        <StaticImage src = "../../static/images/LA_Night.jpg" layout="fullWidth"/>
         </Layout>
         </>
     )
 }
 
 
-export default AboutPage
+export default HomePage

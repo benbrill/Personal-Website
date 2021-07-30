@@ -12,7 +12,6 @@ const AboutPage =  function About() {
     return (
         <>
         <HeroLanding />
-        {/* <StaticImage src={{imageUrl}} placeholder="blured" layout="fullWidth" /> */}
         <Layout>
         <div>
             <h1>About</h1>
