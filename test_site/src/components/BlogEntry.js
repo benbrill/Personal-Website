@@ -1,24 +1,26 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useMediaQuery } from 'react-responsive'
 import { Badge } from 'react-bootstrap'
 
-const BlogEntry = ({ id, name, header, description, tags }) => {
+const BlogEntry = ({ post }) => {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+    console.log(post.node.frontmatter.path)
     return (
-        <div key={ id }>
+        <div key={ post.node.id }>
             <Container>
                 <Row style = {{flexDirection: isTabletOrMobile ? "column" : "row"}}>
                     <Col>
-                        <GatsbyImage image={header} alt=""/>
+                        <GatsbyImage image={post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} alt=""/>
                     </Col>
                     <Col>
-                        <h3>{name}</h3>
-                        <p>{description}</p>
-                        {tags.map(tag => (<Badge bg = "Primary">{tag}</Badge>))}
+                        {post.node.frontmatter.tags.map(tag => (<Badge pill bg = "primary">{tag}</Badge>))}
+                        <Link to={post.node.frontmatter.path}><h3>{post.node.frontmatter.name}</h3></Link>
+                        <p>{post.node.frontmatter.description}</p>
                     </Col>
                 
                 </Row>

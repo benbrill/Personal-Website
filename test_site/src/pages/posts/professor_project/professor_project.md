@@ -3,9 +3,8 @@ name: "Professor Demographics in Film"
 tags: [web scraping, python]
 featuredImage: professors.jpg
 description: "Diversity in professorships has long been a problem pervasive throughout academia. In this web scrapping project, I analyzed the casts of over 1000 movies on IMBD to find the gender of characters who were professors. Unfortunately, the results were not surprising."
-
+path: /professor_project
 ---
-# Professor Demographics in Film
 
 Inspired by [this Washington Post article](https://www.washingtonpost.com/graphics/2020/entertainment/fictional-presidents-in-movies/) analyzing the demographics of actors who portrayed presidents in mopvies (they found that they were mostly portrayed by white males), I wanted to try a similar experiment with a portrayl of positions of power, relevant to my life: university professors.
 

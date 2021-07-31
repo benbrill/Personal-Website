@@ -3,16 +3,49 @@
  *
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
-//  const path = require(`path`);
-
-//  exports.createPages = ({ graphql, boundActionCreators }) => {
-//      const { createPage } = boundActionCreators;
-
-//      const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-
-//      return graphql(``)
-//  }
-// You can delete this file if you're not using it
+ const path = require(`path`)
+ const { createFilePath } = require(`gatsby-source-filesystem`)
+ 
+ exports.onCreateNode = ({ node, getNode, actions }) => {
+   const { createNodeField } = actions
+   if (node.internal.type === `MarkdownRemark`) {
+     const slug = createFilePath({ node, getNode, basePath: `pages` })
+     createNodeField({
+       node,
+       name: `slug`,
+       value: slug,
+     })
+   }
+ }
+ 
+ exports.createPages = async ({ graphql, actions }) => {
+   const { createPage } = actions
+   const result = await graphql(`
+     query {
+       allMarkdownRemark {
+         edges {
+           node {
+             frontmatter {
+               path
+             }
+           }
+         }
+       }
+     }
+   `)
+ 
+   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+     createPage({
+       path: node.frontmatter.path,
+       component: path.resolve(`./src/templates/blogPost.js`),
+       context: {
+         // Data passed to context is available
+         // in page queries as GraphQL variables.
+         slug: node.frontmatter.path,
+       },
+     })
+   })
+ }
 const { createRemoteFileNode } = require("gatsby-source-filesystem")
 
 exports.createSchemaCustomization = ({ actions }) => {

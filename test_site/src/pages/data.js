@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 import BlogEntry from '../components/BlogEntry';
 import Container from 'react-bootstrap/Container'
 import { useMediaQuery } from 'react-responsive';
@@ -24,14 +24,14 @@ const Data = ({data}) => {
                     </div>
                 </div>
             </Container>
-            <div>
+            <Container>
                 {data.allMarkdownRemark.edges.map(post => (
                     // console.log(post.node.frontmatter.featuredImage.childImageSharp.fluid),
                     // <GatsbyImage image= {post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} />
-                    <BlogEntry id = {post.node.id} name = {post.node.frontmatter.name} header = {post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} description = {post.node.frontmatter.description} tags = {post.node.frontmatter.tags} />
+                    <BlogEntry post= {post} />
                 )
                 )}
-            </div>
+            </Container>
             
         </Layout>
             
@@ -57,6 +57,7 @@ query dataPostQuery {
             title
             tags
             name
+            path
           }
         }
       }
