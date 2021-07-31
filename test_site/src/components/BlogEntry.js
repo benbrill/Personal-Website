@@ -4,8 +4,9 @@ import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useMediaQuery } from 'react-responsive'
+import { Badge } from 'react-bootstrap'
 
-const BlogEntry = ({ id, name, header, description }) => {
+const BlogEntry = ({ id, name, header, description, tags }) => {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
     return (
         <div key={ id }>
@@ -17,6 +18,7 @@ const BlogEntry = ({ id, name, header, description }) => {
                     <Col>
                         <h3>{name}</h3>
                         <p>{description}</p>
+                        {tags.map(tag => (<Badge bg = "Primary">{tag}</Badge>))}
                     </Col>
                 
                 </Row>

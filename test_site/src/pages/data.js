@@ -28,7 +28,7 @@ const Data = ({data}) => {
                 {data.allMarkdownRemark.edges.map(post => (
                     // console.log(post.node.frontmatter.featuredImage.childImageSharp.fluid),
                     // <GatsbyImage image= {post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} />
-                    <BlogEntry id = {post.node.id} name = {post.node.frontmatter.name} header = {post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} description = {post.node.frontmatter.description}/>
+                    <BlogEntry id = {post.node.id} name = {post.node.frontmatter.name} header = {post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} description = {post.node.frontmatter.description} tags = {post.node.frontmatter.tags} />
                 )
                 )}
             </div>
