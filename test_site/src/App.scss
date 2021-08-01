@@ -18,3 +18,23 @@
     // flex-direction: row;
     justify-content: flex-end;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: halyard-display, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-family: halyard-text, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}
+
+.introSub {
+    text-align: center;
+    text-transform: capitalize;
+}
+

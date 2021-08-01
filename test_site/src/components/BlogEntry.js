@@ -13,14 +13,14 @@ const BlogEntry = ({ post }) => {
     return (
         <div key={ post.node.id }>
             <Container>
-                <Row style = {{flexDirection: isTabletOrMobile ? "column" : "row"}}>
+                <Row style = {{flexDirection: isTabletOrMobile ? "column" : "row", paddingBottom: "20px"}}>
                     <Col>
-                        <GatsbyImage image={post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} alt=""/>
+                        <Link to={post.node.frontmatter.path}><GatsbyImage image={post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} alt=""/></Link>
                     </Col>
                     <Col>
                         {post.node.frontmatter.tags.map(tag => (<Badge pill bg = "primary">{tag}</Badge>))}
                         <Link to={post.node.frontmatter.path}><h3>{post.node.frontmatter.name}</h3></Link>
-                        <p>{post.node.frontmatter.description}</p>
+                        <p>{post.node.frontmatter.description} <Link to={post.node.frontmatter.path} style ={{color:'blue'}}><em>Read More</em></Link></p>
                     </Col>
                 
                 </Row>

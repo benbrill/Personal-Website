@@ -17,7 +17,6 @@ const HomePage =  function HomePage() {
         <Layout>
         <div>
             <div className="homeAbout">About</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, in voluptates praesentium animi sed, deserunt ducimus quasi delectus suscipit dolorem sint adipisci ipsum facilis enim beatae voluptatem dolor soluta fugit, veniam doloribus? Neque autem commodi itaque provident. Sequi, voluptatum eius?</p>
         </div>
         <CardGroup>
             <IntroCard pos = "Student" header = "UCLA"  url = "../images/Royce_Royce.svg" body = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit"/>

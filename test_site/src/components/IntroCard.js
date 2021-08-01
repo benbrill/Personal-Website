@@ -13,18 +13,22 @@ const styles = {
         textAlign: "center"
     },
     p: {
-        fontFamily: "halyard-display, sans-serif",
+        fontFamily: "halyard-text, sans-serif",
         fontStyle: "normal",
         fontWeight: 300,
-        textAlign: "center"
+        textAlign: "center",
+        lineHeight: 1.2,
     }
 }
-const IntroCard = ({ header, url, body}) => {
+const IntroCard = ({ pos, header, url, body}) => {
     return (
         <Card id = "introCard">
-            <Card.Header id = "introCardHeader"> <h2 style = {styles.h2}>{header}</h2> </Card.Header>
-            <Card.Img id = "introCardImg" src={url}  />
-            <Card.Body style = {styles.p}> {body} </Card.Body>
+            <Card.Body>
+                <Card.Subtitle className = "introSub">{pos}</Card.Subtitle>
+                <Card.Title id = "introCardHeader"> <h2 style = {styles.h2}>{header}</h2> </Card.Title>
+                <Card.Img id = "introCardImg" src={url}  />
+                <Card.Text style = {styles.p}> {body} </Card.Text>
+            </Card.Body>
         </Card>
     )
 }

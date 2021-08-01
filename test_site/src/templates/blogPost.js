@@ -11,7 +11,7 @@ const blogPost = ({data}) => {
                 <Breadcrumb.Item href="/data">Data</Breadcrumb.Item>
                 <Breadcrumb.Item active>Post</Breadcrumb.Item>
             </Breadcrumb>
-            <h1>{post.frontmatter.name}</h1>
+            <h2>{post.frontmatter.name}</h2>
             <div dangerouslySetInnerHTML={{__html: post.html}} />
         </Layout>
     )
