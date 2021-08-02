@@ -5,7 +5,7 @@ import HeroLanding from '../components/HeroLanding';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { Alert } from 'react-bootstrap';
 import {StaticImage} from 'gatsby-plugin-image'
-import Seo from '../components/Seo'
+import Seo from '../components/seo'
 import '../App.scss'
 // import { StaticImage } from 'gatsby-plugin-image'
 

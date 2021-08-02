@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 // import { useMediaQuery } from 'react-responsive';
 import { Media } from '../Media';
 import { graphql } from "gatsby"
-import Seo from '../components/Seo'
+import Seo from '../components/seo'
 
 const Data = ({data}) => {
     return (

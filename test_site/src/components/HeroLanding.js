@@ -2,7 +2,6 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image';
 // import Image from 'react-bootstrap/Image'
 import { Container } from 'react-bootstrap';
-import MediaQuery from 'react-responsive'
 import { Media, MediaContextProvider } from "../Media"
 import '../static/card.scss'
 
@@ -32,20 +31,6 @@ const HeroLanding = () => {
     )
 }
 
-// const useWindowWidth = () => {
-//     const [windowWidth, setWindowWidth ] = useState(window.innerWidth);
-//     // https://itnext.io/responsive-background-images-using-react-hooks-941af365ea1f
-//     useEffect(() => {
-//         const handleWindowResize = () => {
-//             setWindowWidth(window.innerWidth);
-//         };
-
-//         window.addEventListener('resize', handleWindowResize);
-//         return () => window.removeEventListener('resize', handleWindowResize);
-//     },[]);
-
-//     return windowWidth;
-// };
 
 
 export default HeroLanding
