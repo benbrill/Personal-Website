@@ -8,6 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { MediaContextProvider } from "../Media"
 
 
 import "./layout.css"
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
   console.log(data)
   return (
     <>
+      <MediaContextProvider>
       <Menu />
       <div
         style={{
@@ -46,6 +48,7 @@ const Layout = ({ children }) => {
           <a href="https://www.benohrbrill.com">Ben Brill</a>
         </footer>
       </div>
+      </MediaContextProvider>
     </>
   )
 }

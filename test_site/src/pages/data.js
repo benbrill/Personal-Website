@@ -3,26 +3,42 @@ import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image';
 import BlogEntry from '../components/BlogEntry';
 import Container from 'react-bootstrap/Container'
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
+import { Media, MediaContextProvider } from '../Media';
 import { graphql } from "gatsby"
 
 const Data = ({data}) => {
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isTabletOrMobile = false
     return (
         <>
         <Layout>
             <Container>
+              <Media greaterThan="sm">
                 <div style={{display: "flex", 
                             justifyContent: "center",
                             alignContent: "center",
                             alignItems: "center",
-                            flexDirection: isTabletOrMobile ? "column" : "row"}}>
+                            flexDirection: "row"}}>
                 <StaticImage src = "../../static/images/Data_Data.svg" />
-                    <div style={{width: isTabletOrMobile ? "70%" : "45%"}}>
+                    <div style={{width: "45%"}}>
                         <h1 style={{fontSize: "4rem"}}>Data</h1>
                         <p>Here is a collection of some of my projects involving data science and development</p>
                     </div>
                 </div>
+                </Media>
+              <Media lessThan="sm">
+                <div style={{display: "flex", 
+                            justifyContent: "center",
+                            alignContent: "center",
+                            alignItems: "center",
+                            flexDirection: "column"}}>
+                <StaticImage src = "../../static/images/Data_Data.svg" />
+                    <div style={{width: "70%"}}>
+                        <h1 style={{fontSize: "4rem"}}>Data</h1>
+                        <p>Here is a collection of some of my projects involving data science and development</p>
+                    </div>
+                </div>
+                </Media>
             </Container>
             <Container>
                 {data.allMarkdownRemark.edges.map(post => (
