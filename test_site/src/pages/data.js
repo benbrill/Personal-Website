@@ -4,13 +4,14 @@ import { StaticImage } from 'gatsby-plugin-image';
 import BlogEntry from '../components/BlogEntry';
 import Container from 'react-bootstrap/Container'
 // import { useMediaQuery } from 'react-responsive';
-import { Media, MediaContextProvider } from '../Media';
+import { Media } from '../Media';
 import { graphql } from "gatsby"
+import Seo from '../components/Seo'
 
 const Data = ({data}) => {
-  const isTabletOrMobile = false
     return (
         <>
+        <Seo title = "Data | Ben-Ohr Brill" lang = "en" description = "A collection of my various data and development related projects"></Seo>
         <Layout>
             <Container>
               <Media greaterThan="sm">

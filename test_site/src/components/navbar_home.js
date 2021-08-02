@@ -30,10 +30,10 @@ function Menu() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="justify-content flex-end" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content flex-end">
         <Nav className="justify-content right" >
-          <Nav.Link href="/about" style={{ transition: '1s ease', color: isTabletOrMobile ? 'white' : navBackground ? '#2b2b2b' : 'white'}}>Resume</Nav.Link>
+          <Nav.Link href="/resume" style={{ transition: '1s ease', color: isTabletOrMobile ? 'white' : navBackground ? '#2b2b2b' : 'white'}}>Resume</Nav.Link>
           <Nav.Link href="/data" style={{ transition: '1s ease', color: isTabletOrMobile ? 'white' : navBackground ? '#2b2b2b' : 'white'}}>Data</Nav.Link>
-          <Nav.Link href="#features" style={{ transition: '1s ease', color: isTabletOrMobile ? 'white' : navBackground ? '#2b2b2b' : 'white'}}>Design</Nav.Link>
-          <Nav.Link href="#pricing" style={{ transition: '1s ease', color: isTabletOrMobile ? 'white' : navBackground ? '#2b2b2b' : 'white'}}>Photos</Nav.Link>
+          <Nav.Link href="/design" style={{ transition: '1s ease', color: isTabletOrMobile ? 'white' : navBackground ? '#2b2b2b' : 'white'}}>Design</Nav.Link>
+          <Nav.Link href="/photos" style={{ transition: '1s ease', color: isTabletOrMobile ? 'white' : navBackground ? '#2b2b2b' : 'white'}}>Photos</Nav.Link>
         </Nav>
         </Navbar.Collapse>
         </Container>

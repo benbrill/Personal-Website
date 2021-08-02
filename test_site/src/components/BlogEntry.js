@@ -15,7 +15,7 @@ const BlogEntry = ({ post }) => {
             <Container>
                 <Row style = {{flexDirection: isTabletOrMobile ? "column" : "row", paddingBottom: "20px"}}>
                     <Col>
-                        <Link to={post.node.frontmatter.path}><GatsbyImage image={post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} alt=""/></Link>
+                        <Link to={post.node.frontmatter.path}><GatsbyImage image={post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} placeholder = "blurred" alt=""/></Link>
                     </Col>
                     <Col>
                         {post.node.frontmatter.tags.map(tag => (<Badge pill bg = "primary">{tag}</Badge>))}
