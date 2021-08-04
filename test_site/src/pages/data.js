@@ -11,7 +11,7 @@ import Seo from '../components/seo'
 const Data = ({data}) => {
     return (
         <>
-        <Seo title = "Data | Ben-Ohr Brill" lang = "en" description = "A collection of my various data and development related projects"></Seo>
+        <Seo title = "Data" lang = "en" description = "A collection of my various data and development related projects"></Seo>
         <Layout>
             <Container>
               <Media greaterThan="sm">

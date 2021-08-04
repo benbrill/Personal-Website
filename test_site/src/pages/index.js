@@ -14,7 +14,7 @@ const HomePage =  function HomePage() {
     // const imageUrl = useWindowWidth() >= 650 ? "../images/JTree_Day.jpg" : "../images/JTree_Day_Mobile.jpg";
     return (
         <>
-        <Seo description = "Ben Brill's personal webpage" title = "Ben-Ohr Brill" lang= "en" />
+        <Seo description = "Ben Brill's personal webpage" title = "Welcome" lang= "en" />
         <HeroLanding />
         <Layout>
         <div>

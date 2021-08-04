@@ -38,3 +38,52 @@ p {
     text-transform: capitalize;
 }
 
+.photoIntroContainer {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    // right: 50%;
+    z-index: 10;
+    width: 100%;
+    justify-content: center;
+}
+
+.photoIntro {
+    display: flex;
+    width: 25rem;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(133,133,133,0.3) 0%, rgba(226,226,226,0.3) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    box-sizing: border-box;
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 3em;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .logoText {
+        transform: rotate(-90deg);
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    hr {
+        margin: none;
+        opacity: 100%;
+    }
+
+    span {
+        position: absolute;
+        width: 180px;
+        height: 0px;
+        top: 80%;
+        border: 3px solid #000000;
+        box-sizing: border-box;
+        background-color: #000000;
+        margin-left: 20px;
+    }
+}

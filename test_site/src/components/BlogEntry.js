@@ -9,7 +9,6 @@ import { Badge } from 'react-bootstrap'
 
 const BlogEntry = ({ post }) => {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-    console.log(post.node.frontmatter.path)
     return (
         <div key={ post.node.id }>
             <Container>
