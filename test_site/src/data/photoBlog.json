@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Hollywood",
+        "featuredImage": "../images/photo_posts/Hollywood/Hollywood-1.jpg",
+        "id": 1,
+        "images": [
+            "../images/photo_posts/Hollywood/Hollywood-1.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-2.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-3.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-4.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-5.jpg"
+        ]
+    }, 
+    {
+        "name": "Warren",
+        "featuredImage": "../images/photo_posts/Warren/Warren-9.jpg",
+        "id": 2,
+        "images": [
+            "../images/photo_posts/Hollywood/Hollywood-1.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-2.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-3.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-4.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-5.jpg"
+        ]
+    }
+]
