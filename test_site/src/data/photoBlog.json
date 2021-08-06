@@ -1,7 +1,10 @@
 [
     {
         "name": "Hollywood",
+        "web_path": "hollywood",
         "featuredImage": "../images/photo_posts/Hollywood/Hollywood-1.jpg",
+        "description": "A set of pictures from Hollywood, CA",
+        "date": "July 29, 2020",
         "id": 1,
         "images": [
             "../images/photo_posts/Hollywood/Hollywood-1.jpg",
@@ -12,15 +15,17 @@
         ]
     }, 
     {
-        "name": "Warren",
+        "name": "Elizabeth Warren Rally",
+        "web_path": "warren",
         "featuredImage": "../images/photo_posts/Warren/Warren-9.jpg",
+        "description": "A set of pictures from the Elizabeth Warren Rally",
+        "date": "Feb. 6, 2020",
         "id": 2,
         "images": [
-            "../images/photo_posts/Hollywood/Hollywood-1.jpg",
-            "../images/photo_posts/Hollywood/Hollywood-2.jpg",
-            "../images/photo_posts/Hollywood/Hollywood-3.jpg",
-            "../images/photo_posts/Hollywood/Hollywood-4.jpg",
-            "../images/photo_posts/Hollywood/Hollywood-5.jpg"
+            "../images/photo_posts/Warren/Warren-9.jpg",
+            "../images/photo_posts/Warren/Warren-11.jpg",
+            "../images/photo_posts/Warren/Warren-13.jpg",
+            "../images/photo_posts/Warren/Warren-14.jpg"
         ]
     }
 ]

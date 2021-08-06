@@ -47,6 +47,36 @@
     font-size: 4rem;
 }
 
+#photoCol {
+    display: flex;
+}
+
+#photoCard {
+    border: none;
+    border-radius: 20px;
+    // min-height: 25rem;
+    margin: 20px;
+    box-shadow: 1px 1px 8px 5px rgb(0 0 0 / 10%);
+    flex: 1 0;
+
+    .title {
+        text-align: center;
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
+    .text {
+        margin: 5px 15px;
+    }
+
+    .footer {
+        margin-top: auto;
+        // justify-self: end;
+    }
+}
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 // import Layout from '../components/layout_home'
-import { CardGroup } from 'react-bootstrap'
+import { Row, Col, CardGroup } from 'react-bootstrap'
 import Menu from '../components/navbar'
 import PhotoHero from '../components/PhotoHero'
 import PhotoBlogCard from '../components/PhotoBlogCard'
@@ -13,9 +13,13 @@ const photos = ({data}) => {
             <Menu />
             <PhotoHero />
             <CardGroup>
+            <Row xs={1} md={3}>
                 {data.allPhotoBlogJson.nodes.map(node => (
+                    <Col id = "photoCol">
                     <PhotoBlogCard props = {node}/>
+                    </Col>
                 ))}
+            </Row>
             </CardGroup>
             
 
@@ -35,6 +39,9 @@ query MyQuery {
           }
         }
         name
+        web_path
+        description
+        date
       }
     }
   }
