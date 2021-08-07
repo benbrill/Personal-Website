@@ -8,9 +8,11 @@ const PhotoBlogPage = ({ data }) => {
     return (
         <>
             <Layout>
-                <h1 style = {{textAlign:"center"}}>{post.photoBlogJson.name}</h1>
+                <h1 style = {{textAlign:"center", fontWeight:600, paddingTop: "30px"}}>{post.photoBlogJson.name}</h1>
+                <p style = {{textAlign: "center", marginBottom: "5px"}}>{post.photoBlogJson.description}</p>
+                <p style = {{textAlign: "center"}}><em>{post.photoBlogJson.date}</em></p>
             {post.photoBlogJson.images.map(image => (
-                <GatsbyImage image = {image.childImageSharp.gatsbyImageData}/>
+                <GatsbyImage image = {image.childImageSharp.gatsbyImageData} placeholder = "blurred"/>
             ))}
             </Layout>
         </>

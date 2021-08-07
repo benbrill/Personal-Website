@@ -13,14 +13,14 @@ const HeroLanding = () => {
         <>
             <MediaContextProvider>
             <Media greaterThan="sm">
-            <StaticImage src='../../static/images/JTree_Day.jpg' layout="fullWidth" aria-placeholder = "blurred" alt=""/>
+            <StaticImage src='../../static/images/JTree_Day.jpg' layout="fullWidth" placeholder = "blurred" alt=""/>
                 <Container id = "desktop">
                     <span style = {{fontFamily : "Halyard-Display", fontSize : "5rem", fontWeight: 600, lineHeight: "5rem"}}>Ben-Ohr Brill</span>
                     <p>Welcome to my site</p>
                 </Container>
             </Media>
             <Media lessThan="sm">
-                <StaticImage src='../../static/images/JTree_Day_Mobile.jpg' layout="fullWidth" alt=""/>
+                <StaticImage src='../../static/images/JTree_Day_Mobile.jpg' layout="fullWidth" placeholder = "blurred" alt=""/>
                 <Container id = "mobile">
                     <span style = {{fontFamily : "Halyard-Display", fontSize : "5rem", fontWeight: 600, lineHeight: "5rem"}}>Ben-Ohr Brill</span>
                     <p>Welcome to my site</p>

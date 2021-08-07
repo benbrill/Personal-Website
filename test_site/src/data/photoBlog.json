@@ -27,5 +27,18 @@
             "../images/photo_posts/Warren/Warren-13.jpg",
             "../images/photo_posts/Warren/Warren-14.jpg"
         ]
+    },
+    {
+        "name": "Puerto Vallarta",
+        "web_path": "puerto-vallarta",
+        "featuredImage": "../images/photo_posts/PuertoVallarta/Puerto Vallarta-8.jpg",
+        "description": "Flags, Churches, Tacos, and Iguanas from the Jallisco city of Puerto Vallarta",
+        "date": "June 30, 2019",
+        "id": 3,
+        "images": [
+            "../images/photo_posts/PuertoVallarta/Puerto Vallarta-8.jpg",
+            "../images/photo_posts/PuertoVallarta/Puerto Vallarta-37.jpg",
+            "../images/photo_posts/PuertoVallarta/Puerto Vallarta-124.jpg"
+        ]
     }
 ]

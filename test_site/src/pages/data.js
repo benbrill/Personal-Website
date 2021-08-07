@@ -20,7 +20,7 @@ const Data = ({data}) => {
                             alignContent: "center",
                             alignItems: "center",
                             flexDirection: "row"}}>
-                <StaticImage src = "../../static/images/Data_Data.svg" />
+                <StaticImage src = "../../static/images/Data_Data.svg" placeholder= "blurred" />
                     <div style={{width: "45%"}}>
                         <h1 style={{fontSize: "4rem"}}>Data</h1>
                         <p>Here is a collection of some of my projects involving data science and development</p>
@@ -33,7 +33,7 @@ const Data = ({data}) => {
                             alignContent: "center",
                             alignItems: "center",
                             flexDirection: "column"}}>
-                <StaticImage src = "../../static/images/Data_Data.svg" />
+                <StaticImage src = "../../static/images/Data_Data.svg" placeholder= "blurred"/>
                     <div style={{width: "70%"}}>
                         <h1 style={{fontSize: "4rem"}}>Data</h1>
                         <p>Here is a collection of some of my projects involving data science and development</p>

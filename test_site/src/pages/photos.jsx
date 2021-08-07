@@ -4,12 +4,14 @@ import { Row, Col, CardGroup } from 'react-bootstrap'
 import Menu from '../components/navbar'
 import PhotoHero from '../components/PhotoHero'
 import PhotoBlogCard from '../components/PhotoBlogCard'
+import Seo from '../components/seo'
 import { graphql } from 'gatsby'
 
 
 const photos = ({data}) => {
     return (
-        <div>
+        <>
+            <Seo title="Photos" description="A collection of my photography" />
             <Menu />
             <PhotoHero />
             <CardGroup>
@@ -20,11 +22,8 @@ const photos = ({data}) => {
                     </Col>
                 ))}
             </Row>
-            </CardGroup>
-            
-
-            
-        </div>
+            </CardGroup>            
+        </>
     )
 }
 

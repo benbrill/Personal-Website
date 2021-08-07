@@ -1,8 +1,8 @@
 ---
-name: PIC16B Project Reflection
+name: "Moodspace: PIC16B Project"
 tags: [Machine Learning, NLP, Tensorflow]
 description: A web app that extracts a user's Spotify Preferences and generates a custom playlist based on a selected, iconic movie scene.
-featuredImage: nwhl.jpg
+featuredImage: moodspace.jpg
 path: /moodspace
 ---
 

@@ -25,7 +25,7 @@ const PhotoHero = () => {
             `}
             render={data => (
                 <Carousel fade="true" controls="false" indicators="false">
-                    {data.allImagesJson.nodes.map(image => (<Carousel.Item><GatsbyImage image={image.img.childImageSharp.gatsbyImageData} alt="" /></Carousel.Item>))}
+                    {data.allImagesJson.nodes.map(image => (<Carousel.Item><GatsbyImage image={image.img.childImageSharp.gatsbyImageData} alt="" placeholder = "blurred"/></Carousel.Item>))}
                 </Carousel>
             )}/>
             <Container className = "photoIntroContainer" fluid="true">
