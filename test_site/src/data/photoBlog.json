@@ -40,5 +40,29 @@
             "../images/photo_posts/PuertoVallarta/Puerto Vallarta-37.jpg",
             "../images/photo_posts/PuertoVallarta/Puerto Vallarta-124.jpg"
         ]
+    },
+    {
+        "name": "Washington D.C.",
+        "web_path": "dc",
+        "featuredImage": "../images/photo_posts/DC/Washington DC-11.jpg",
+        "description": "Lots of things to see around the nation's capital. Here's a few of them in my short time spent there",
+        "date": "Dec. 31, 2019",
+        "id": 4,
+        "images": [
+            "../images/photo_posts/DC/Washington DC-1.jpg",
+            "../images/photo_posts/DC/Washington DC-2.jpg",
+            "../images/photo_posts/DC/Washington DC-3.jpg",
+            "../images/photo_posts/DC/Washington DC-4.jpg",
+            "../images/photo_posts/DC/Washington DC-5.jpg",
+            "../images/photo_posts/DC/Washington DC-6.jpg",
+            "../images/photo_posts/DC/Washington DC-7.jpg",
+            "../images/photo_posts/DC/Washington DC-8.jpg",
+            "../images/photo_posts/DC/Washington DC-9.jpg",
+            "../images/photo_posts/DC/Washington DC-10.jpg",
+            "../images/photo_posts/DC/Washington DC-11.jpg",
+            "../images/photo_posts/DC/Washington DC-12.jpg",
+            "../images/photo_posts/DC/Washington DC-13.jpg",
+            "../images/photo_posts/DC/Washington DC-15.jpg"
+        ]
     }
 ]
