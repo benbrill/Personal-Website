@@ -38,9 +38,9 @@ p {
     text-transform: capitalize;
 }
 
+@media (max-width: 768px) {
+
 .photoIntroContainer {
-    position: absolute;
-    top: 40%;
     display: flex;
     // right: 50%;
     z-index: 10;
@@ -52,13 +52,39 @@ p {
     display: flex;
     width: 25rem;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(133,133,133,0.3) 0%, rgba(226,226,226,0.3) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 5.5px );
-    box-sizing: border-box;
-    -webkit-backdrop-filter: blur( 10px );
-    border-radius: 3em;
+}
+
+}
+
+@media (min-width: 768px) {
+
+    .photoIntroContainer {
+        position: absolute;
+        top: 40%;
+        display: flex;
+        // right: 50%;
+        z-index: 10;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .photoIntro {
+        display: flex;
+        width: 25rem;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(133,133,133,0.3) 0%, rgba(226,226,226,0.3) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 5.5px );
+        box-sizing: border-box;
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 3em;
+    }
+    
+    
+}
+
+.photoIntro {
 
     h1 {
         font-size: 4rem;
