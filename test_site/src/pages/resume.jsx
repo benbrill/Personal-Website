@@ -2,8 +2,9 @@ import React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Container } from 'react-bootstrap'
+import { graphql } from "gatsby"
 
-const resume = () => {
+const resume = ({data}) => {
     return (
         <div>
             <Layout>
@@ -19,12 +20,32 @@ const resume = () => {
                             <div>LinkedIn</div>
                         </div>
                     </div>
+                {data.allDataYaml.nodes[0].Education.map(element => {
+                    <h1>{element.Name}</h1>
+                })}
                 </Container>
-                
             </Layout>
             
         </div>
     )
 }
 
+export const pageQuery = graphql`
+query resumeQuery {
+  allDataYaml {
+    nodes {
+      Education {
+        Details
+        Name
+      }
+      Experience {
+        Description
+        Employer
+      }
+    }
+  }
+}
+  
+`
 export default resume
+
