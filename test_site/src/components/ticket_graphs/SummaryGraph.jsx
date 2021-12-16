@@ -3,9 +3,10 @@ import { LineChart, Line, CartesianGrid, Tooltip, XAxis, YAxis, ResponsiveContai
 import AllTickets from '../../data/dodgers_tickets.json'
 import { ToggleButtonGroup, ToggleButton }  from 'react-bootstrap'
 
-AllTickets = AllTickets.filter(ticket => ticket.days_to_game <= 50)
+
 
 const SummaryGraph = () => {
+    var filteredTickets = AllTickets.filter(ticket => ticket.days_to_game <= 50)
     const teams = ["all", "Los Angeles Dodgers", "San Francisco Giants", "Los Angeles Angels"]
     const [team, setteam] = useState(teams[0])
     const handleChange = (val) => setteam(val);
@@ -30,7 +31,7 @@ const SummaryGraph = () => {
         }
     }
 
-    var DodgersTickets = AllTickets.filter(ticket => ticket.team === team)
+    var DodgersTickets = filteredTickets.filter(ticket => ticket.team === team)
     console.log(team)
     return (
         <div>
