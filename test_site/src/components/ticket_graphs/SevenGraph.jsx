@@ -4,9 +4,9 @@ import AllTickets from '../../data/dodgers_tickets.json'
 import { ToggleButtonGroup, ToggleButton }  from 'react-bootstrap'
 
 
+const InitialFinalGraph = () => {
+    var OrigData = AllTickets.seven_days
 
-const SummaryGraph = ({ metric }) => {
-    var filteredTickets = AllTickets.summary_data.filter(ticket => ticket.days_to_game <= 50)
     const teams = ["all", "Los Angeles Dodgers", "San Francisco Giants", "Los Angeles Angels"]
     const [team, setteam] = useState(teams[0])
     const handleChange = (val) => setteam(val);
@@ -31,18 +31,17 @@ const SummaryGraph = ({ metric }) => {
         }
     }
 
-    var DodgersTickets = filteredTickets.filter(ticket => ticket.team === team)
-    console.log(team)
+    var data = OrigData.filter(ticket => ticket.homeTeam === team)
     return (
         <div>
             <ToggleButtonGroup type = "radio" name = "teams" value = {team} onChange = {handleChange}>
             {teams.map(cteam => <ToggleButton key={cteam} onClick={() => setteam(cteam)} style={{backgroundColor: teamStyles[cteam].color, color: teamStyles[cteam].textColor, borderColor: "#000000"}}>{cteam}</ToggleButton>)}
             </ToggleButtonGroup>
             <ResponsiveContainer width="100%" height={350} margin={{left: 20, bottom: 20}}>
-            <LineChart data={DodgersTickets}>
-                <Line type="monotone" dataKey={metric} stroke={teamStyles[team].color} />
-                <XAxis dataKey="days_to_game" reversed={true} label = {{value: "Days to Game", dy: 15, fontFamily: 'halyard-display, sans-serif'}} type = "number" tickCount={5} domain={[0, 50]} height = {50} fontFamily = {'halyard-display, sans-serif'} />
-                <YAxis dataKey = {metric} label = {{value : "Difference from initial \n listed Price", angle : -90, dx: -20, fontFamily: 'halyard-display, sans-serif'}} width = {60} tickCount = {3} type = "number" fontSize = {15} fontFamily = {'halyard-display, sans-serif'} ticks = {metric === "diff_initial" ? [-0.5, 0, 0.5] : [0, 25, 50, 75]}/>
+            <LineChart data={data}>
+                <Line type="monotone" dataKey="diff_7" stroke={teamStyles[team].color} />
+                <XAxis dataKey="days_to_game" reversed={true} label = {{value: "Days to Game", dy: 15, fontFamily: 'halyard-display, sans-serif'}} type = "number" tickCount={8} domain={[0, 7]} height = {50} fontFamily = {'halyard-display, sans-serif'} />
+                <YAxis dataKey = "diff_7" label = {{value : "Difference from price 7 days before game", angle : -90, dx: -20, fontFamily: 'halyard-display, sans-serif'}} width = {60} tickCount = {3} type = "number" fontSize = {15} fontFamily = {'halyard-display, sans-serif'} ticks = {[-0.5, 0, 0.5]}/>
                 {/* <ReferenceLine y="0" stroke="green" label="Min PAGE" /> */}
                 <CartesianGrid strokeDasharray="3 3"/>
                 <Tooltip label="Days to Game"/>
@@ -52,4 +51,4 @@ const SummaryGraph = ({ metric }) => {
     )
 }
 
-export default SummaryGraph
+export default InitialFinalGraph
