@@ -1,12 +1,44 @@
 ---
-name: "Dodger Ticket Prices"
+name: Finding the best time to purchase baseball tickets
 tags: [data mining, python, visualization]
 featuredImage: dodgers.jpg
-description: "Diversity in professorships has long been a problem pervasive throughout academia. In this web scrapping project, I analyzed the casts of over 1000 movies on IMBD to find the gender of characters who were professors. Unfortunately, the results were not surprising."
-url: dodgers
+description: "Wondering when the best time to purchase tickets to the Dodgers game is? I tracked StubHub price data over the past season to find out how long you should wait to buy baseball tickets."
+url: tickets
 ---
 
-Hello this is a test for dodgers stuff
+I'm a big Dodgers fan. And sports fan in general. So I like to go to sports games. But going to a bunch of games equals spending a bunch of money. So I often find myself
+trying to find the best ways to save money while also getting to go to as many games as I can.
+
+The majority of costs going to a game comes from purchasing tickets (maybe parking eats up a big chunk of spening nowadays as well). So naturally, in order to reduce costs, I need
+to find the cheapest tickets. 
+
+Apps like Gametime market themselves as the cheapest way to buy tickets, as long as you are willing to risk waiting until gametime to purchase them. Their logic is that as the
+game time approaches, sellers will be more likely to reduce their prices on their tickets in order to ensure that their tickets are sold and that they can net at least some profit.
+
+But, I found that everytime I browsed Gametime, ticket prices rarely had a dramatic decrease from their prices a couple days before. So I was curious whether their logic actually held up;
+whether the idea that ticket prices decrease as you get closer to the event time was a myth or the truth.
+
+# Getting the data
+
+While Gametime does not have a readily accessible way of systematically obtaining their ticket prices, I figured that this logic would hold up with any second-hand ticket
+broker if it turned out to be true. I went to Stubhub instead, since they have a relativley easy-to-use API. Stubhub also tended to have not only the most stock of tickets out of 
+ticket brokers I checked (Gametime, VividSeats, and SeatGeek), but also the cheapest tickets. 
+
+I wrote a script that would scrape ticket data two times a day (5 a.m. and 5 p.m.) for every Los Angels Dodgers, San Francisco Giants, and Los Angeles (Anaheim) Angels home game. 
+The scraper would store in an `SQL` Database the time of extraction, the number of days remaining before the game, the lowest ticket price avaliable, and the amount of tickets remaining.
+
+Overall, I tracked the prices of 153 games across 81 days.
+
+# Difference from Initial prices
+
+One way we can quantify a change in price is a change from the initial listing price. That is, the change from the price of a ticket to a game the first time the scraper was run. 
+We can define the "final price" of a ticket as the price of the ticket at the last time the scraper was run before the event occured.
+
+| Team    | Average Initial Price | Average Final Price |
+|---------|-----------------------|---------------------|
+| Dodgers | $41.09                | $38.55              |
+| Giants  | $50.15                | $36.21              |
+| Angels  | $25.50                | $19.11              |
 
 import SummaryGraph from '../../../components/ticket_graphs/SummaryGraph'
 
