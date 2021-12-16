@@ -17,11 +17,15 @@ const blogPost = ({data : { mdx }}) => {
         
         <Layout>
             <Breadcrumb style = {{marginLeft: "0px"}}>
-                <Breadcrumb.Item href="/data">Data</Breadcrumb.Item>
+                <Breadcrumb.Item style = {{marginLeft: "0px"}} href="/data">Data</Breadcrumb.Item>
                 <Breadcrumb.Item active>{mdx.frontmatter.name}</Breadcrumb.Item>
             </Breadcrumb>
             <GatsbyImage image={mdx.frontmatter.featuredImage.childImageSharp.gatsbyImageData} alt = ""/>
-            <h2>{mdx.frontmatter.name}</h2>
+            <h1 style = {{fontWeight: 600}}>{mdx.frontmatter.name}</h1>
+            <div style = {{paddingBottom: "20px"}}>
+                <em>{mdx.frontmatter.description}</em>
+            </div>
+            
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
         </Layout>
         </MDXProvider>
@@ -35,6 +39,7 @@ export const pageQuery = graphql`
       body
       frontmatter {
         name
+        description
         featuredImage {
             childImageSharp {
               fluid(maxWidth: 800) {
