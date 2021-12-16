@@ -42,7 +42,7 @@ const Data = ({data}) => {
                 </Media>
             </Container>
             <Container>
-                {data.allMarkdownRemark.edges.map(post => (
+                {data.allMdx.nodes.map(post => (
                     // console.log(post.node.frontmatter.featuredImage.childImageSharp.fluid),
                     // <GatsbyImage image= {post.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData} />
                     <BlogEntry post= {post} />
@@ -57,9 +57,8 @@ const Data = ({data}) => {
 }
 export const pageQuery = graphql`
 query dataPostQuery {
-    allMarkdownRemark {
-      edges {
-        node {
+    allMdx {
+        nodes {
           frontmatter {
             featuredImage {
               childImageSharp {
@@ -74,11 +73,39 @@ query dataPostQuery {
             title
             tags
             name
-            path
+            url
           }
         }
-      }
     }
   } 
 `
+
+// export const pageQuery = graphql`
+//   query blogIndex {
+//     allMdx {
+//       edges {
+//         node {
+//           id
+//           excerpt
+//           frontmatter {
+//             title
+//             tags
+//             name
+//             description
+//             featuredImage {
+//               childImageSharp {
+//                 fluid(maxWidth: 800) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//                 id
+//                 gatsbyImageData
+//               }
+//             }
+//           }
+//           slug
+//         }
+//       }
+//     }
+//   }
+// `
 export default Data
