@@ -11,7 +11,7 @@ import {Link} from "gatsby"
 const shortcodes = { Link }
 
 const blogPost = ({data : { mdx }}) => {
-    console.log(mdx)
+
     return (
         <MDXProvider components = {shortcodes}> 
         
