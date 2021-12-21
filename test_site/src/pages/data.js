@@ -22,7 +22,7 @@ const Data = ({data}) => {
                             flexDirection: "row"}}>
                 <StaticImage src = "../../static/images/Data_Data.svg" placeholder= "blurred" />
                     <div style={{width: "45%"}}>
-                        <h1 style={{fontSize: "4rem"}}>Data</h1>
+                        <h1 style={{fontSize: "4rem", fontWeight: "600"}}>Data</h1>
                         <p>Here is a collection of some of my projects involving data science and development</p>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Data = ({data}) => {
                             flexDirection: "column"}}>
                 <StaticImage src = "../../static/images/Data_Data.svg" placeholder= "blurred"/>
                     <div style={{width: "70%"}}>
-                        <h1 style={{fontSize: "4rem"}}>Data</h1>
+                        <h1 style={{fontSize: "4rem", fontWeight: "600"}}>Data</h1>
                         <p>Here is a collection of some of my projects involving data science and development</p>
                     </div>
                 </div>

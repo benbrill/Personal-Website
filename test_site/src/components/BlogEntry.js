@@ -18,7 +18,7 @@ const BlogEntry = ({ post }) => {
                     </Col>
                     <Col>
                         {post.frontmatter.tags.map(tag => (<Badge pill bg = "primary">{tag}</Badge>))}
-                        <Link to={`/data/${post.frontmatter.url}`}><h3>{post.frontmatter.name}</h3></Link>
+                        <Link to={`/data/${post.frontmatter.url}`}><h3 style={{fontWeight: 600}}>{post.frontmatter.name}</h3></Link>
                         <p>{post.frontmatter.description} <Link to={`/data/${post.frontmatter.url}`} style ={{color:'blue'}}><em>Read More</em></Link></p>
                     </Col>
                 

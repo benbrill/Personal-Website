@@ -102,5 +102,36 @@
             "../images/photo_posts/SF/SF-28.jpg",
             "../images/photo_posts/SF/SF-57.jpg"
         ]
+    },
+    {
+        "name": "Manhattan in Winter",
+        "web_path": "mb",
+        "featuredImage": "../images/photo_posts/MB/MB-8032.jpg",
+        "description": "It's winter in Manhattan Beach but still no snow. I promise. And the colors are mostly real. I also promise.",
+        "date": "Dec. 19, 2021",
+        "id": 6,
+        "images": [
+            "../images/photo_posts/MB/MB-8000.jpg",
+            "../images/photo_posts/MB/MB-8002.jpg",
+            "../images/photo_posts/MB/MB-8032.jpg",
+            "../images/photo_posts/MB/MB-8052.jpg",
+            "../images/photo_posts/MB/MB-8054.jpg",
+            "../images/photo_posts/MB/MB-8063.jpg",
+            "../images/photo_posts/MB/MB-8070.jpg",
+            "../images/photo_posts/MB/MB-8073.jpg",
+            "../images/photo_posts/MB/MB-8089.jpg",
+            "../images/photo_posts/MB/MB-8075.jpg",
+            "../images/photo_posts/MB/MB-8100.jpg",
+            "../images/photo_posts/MB/MB-8107.jpg",
+            "../images/photo_posts/MB/MB-8110.jpg",
+            "../images/photo_posts/MB/MB-8124.jpg",
+            "../images/photo_posts/MB/MB-8125.jpg",
+            "../images/photo_posts/MB/MB-8162.jpg",
+            "../images/photo_posts/MB/MB-8163.jpg",
+            "../images/photo_posts/MB/MB-8127.jpg",
+            "../images/photo_posts/MB/MB-8207.jpg",
+            "../images/photo_posts/MB/MB-8211.jpg",
+            "../images/photo_posts/MB/MB-8213.jpg"
+        ]
     }
 ]
