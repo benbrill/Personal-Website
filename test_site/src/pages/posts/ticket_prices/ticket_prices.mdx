@@ -43,7 +43,7 @@ that's what we have to pay out of pocket anyway
 | Team    | Average Initial Price | Average Final Price | Average Percent Decrease |
 |---------|-----------------------|---------------------|----------------|
 | Dodgers | $39.03                | $36.90              | 5.78%          |
-| Giants  | $48.23                | $36.21              | 16.17%         |
+| Giants  | $48.23                | $41.52              | 16.17%         |
 | Angels  | $22.47               | $19.11              | 16.46%         |
 
 We see that ticket prices from all three teams have a lower final price than initial price. However, the Dodger ticket prices tend to be less volatile than the Giants and Angels
@@ -75,9 +75,83 @@ reached their floor or that sellers really don't adjust prices a week before the
 Dodgers ticket are slightly cheaper (-8%) the day of the game than they were a week before the game where Angels tickets are the exact opposite (8%). Giants tickets are 1% more
 expensive the day of the game than they were a week before the game. 
 
+![Dodger fans having some fun](./dodgers_2.jpg)
 
-# When are tickets more expensive?
+# Which away teams have the most demand?
 
-# Why is this the pattern we see?
+Especially in MLB, certain visiting teams can have more pull for fans to come than other teams. Usually, this happens for one of two reasons: a visiting team is rivals with the
+the home team or the visiting team is a historically good team. For instance, we would expect to see more demand for Angels tickets at Dodgers game since the two teams are rivals
+that play in the annual Freeway series every year. Or we would expect to see increased demand for Yankee away games across the board, since the Yankees are one of the most 
+storied franchises not just across baseball but across professional sports.
+
+## Measuring Demand through ticket prices
+
+We will measure demand through the average price of the tickets for a visiting team.
+
+In order to normalize the ticket prices for visiting teams across the three different home teams I tracked, we will use z-scores. Z-scores represent the number of standard
+deviations a value is from the mean. The z-scores were calculated for the grouped mean of the ticket prices for each of the three home teams. The more positive the z-score,
+the more expensive the tickets were than average. The more negative the z-score, the cheaper the tickets were than average.
+
+It is important to note that these z-scores reflect average ticket prices tracked across **all** the days leading up to the game, not just the most recent tracked price. 
+That means this pattern could shift if we just look at the most recent prices for each game a visiting team plays. You can toggle that with the buttons below. You will notice
+that not much changes, other than the overall z-scores decreasing, which makes sense as tickets closer to gametime should be cheaper than the average price of the same tickets.
+
+import AwayTeamZScores from '../../../components/ticket_graphs/AwayTeamZScores'
+
+<AwayTeamZScores />
+
+The Yankees have the most expensive tickets across the three stadiums. This is to be expected. The Dodgers also pull a decent amount of demand for tickets, since they are also
+a historically good team and have rivalries with both the Angels and Giants. The Angeles stand in third place, but this is likely due to their rivalry with the Dodgers. The
+Angels would likely not have this high of a z-score if averages were calculated across all 29 other teams. 
+
+At the bottom of the list we have the Arizona Diamondbacks. The D-backs struggle with attendance at home, so it would make sense that they would struggle to pull fans in
+on the road. In addition, the Diamondbacks were the worst team in MLB this year. So it makes sense that not many people would want to go and see them play. 
+
+## Measuring demand through ticket stock
+
+Since demand is inversely related to supply, we can use the supply of tickets to measure demand. We will look at the average amount of tickets remaining closest to gametime, 
+and normalize them using z-scores, as the different ballparks have different amounts of tickets remaining due to differing capacities.
+
+Ideally, we would see the inverse relationship between supply of tickets (tickets remaining at gametime) and demand (price of tickets)
+
+import SupplyDemandZScores from '../../../components/ticket_graphs/SupplyDemandZScores'
+
+<SupplyDemandZScores />
+
+We can see that the teams that have the cheapest tickets also have the least tickets remaining. This makes sense, as cheaper tickets would induce demand, resulting in less stock
+at gametime. As such, we don't see that inverse relationship we would expect. Ticket prices is perhaps a better way to measure demand than stock.
+
+
+# When are tickets most expensive?
+
+Other than proximity to the game, another variable that could potentially affect ticket prices is the date of the game itself.  For instance, if a game is held on a weekend, 
+then the ticket prices will be higher than if it is held on a weekday. Or a game in the middle of summer could be more expensive than a game at the end of september, when
+most school are back in session. 
+
+We will again use z-scores to normalize the data across the three ballparks.
+
+![Plot of ticket prices by dates](./plot.png)
+
+The first thing that immediately pops out are the three extremely red squares, or outliers. These dates are August 3, June 11, and August 4, in descending order of z-score.
+These dates don't really have a particular importance, except that the June 11 game occured before COVID capacity restrictions were lifed (June 15). Because of the lower 
+supply of seats, prices might have been higher for those games.
+
+We also see that Saturday happens to be the most expensive day of the week to attend games. People are off from work and school so this makes sense. Sunday games are less
+expensive than Satuday games, likely due to the fact that many Sunday games are day games. And not many people would willingly pay to sit in the blistering sun for a couple
+hours and watch baseball.
+
+Ticket prices are also relatively random in their pattern through the majority of the summer. However, toward the fourth week of September we see that ticket prices stabilize
+to be cheaper than the rest of the summer. This pattern continues on to the end of the regular season. 
 
 # Limitations
+
+The largest limiation is the data set itself. It only just about one summer of baseball -- albeit an unusual summer with COVID still around. As such, it is difficult to see
+whether these trends will persist or change in future seasons. Only time will tell.
+
+In addition, this data set only covers the home games of three teams. In the future, I hope to expand this to all 30 teams (with more API calls), but in the meantime, these
+are the only teams we can draw conclusions for.
+
+One potential area for growth could be a machine learning algorthim to predict ticket prices with several of the predictors we have discussed. Again, the only issue is the size
+of the data set. 
+
+![Kenley coming in for the save](./Jansen-13.jpg)
