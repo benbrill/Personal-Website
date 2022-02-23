@@ -13,31 +13,31 @@ import BlogShareContainer from '../../../components/BlogShareContainer'
 I'm a big Dodgers fan. And sports fan in general. So I like to go to sports games. But going to a bunch of games equals spending a bunch of money. So I often find myself
 trying to find the best ways to save money while also getting to go to as many games as I can.
 
-The majority of costs going to a game comes from purchasing tickets (maybe parking eats up a big chunk of spening nowadays as well). So naturally, in order to reduce costs, I need
+The majority of costs going to a game comes from purchasing tickets (maybe parking eats up a big chunk of spending nowadays as well). So naturally, to reduce costs, I need
 to find the cheapest tickets. 
 
 Apps like Gametime market themselves as the cheapest way to buy tickets, as long as you are willing to risk waiting until gametime to purchase them. Their logic is that as the
-game time approaches, sellers will be more likely to reduce their prices on their tickets in order to ensure that their tickets are sold and that they can net at least some profit.
+game time approaches, sellers will be more likely to reduce their prices on their tickets to ensure that their tickets are sold and that they can net at least some profit.
 
-But, I found that everytime I browsed Gametime, ticket prices rarely had a dramatic decrease from their prices a couple days before. So I was curious whether their logic actually held up;
+But, I found that every time I browsed Gametime, ticket prices rarely had a dramatic decrease from their prices a couple days before. So I was curious whether their logic actually held up;
 whether the idea that ticket prices decrease as you get closer to the event time was a myth or the truth.
 
 # Getting the data
 
 While Gametime does not have a readily accessible way of systematically obtaining their ticket prices, I figured that this logic would hold up with any second-hand ticket
-broker if it turned out to be true. I went to Stubhub instead, since they have a relativley easy-to-use API. Stubhub also tended to have not only the most stock of tickets out of 
+broker if it turned out to be true. I went to Stubhub instead, since they have a relatively easy-to-use API. Stubhub also tended to have not only the most stock of tickets out of 
 ticket brokers I checked (Gametime, VividSeats, and SeatGeek), but also the cheapest tickets. 
 
 I wrote a `python` script that would scrape ticket data two times a day (5 a.m. and 5 p.m.) for every Los Angels Dodgers, San Francisco Giants, and Los Angeles (Anaheim) Angels home game. 
-The scraper would store in an `SQL` Database the time of extraction, the number of days remaining before the game, the lowest ticket price avaliable, the lowest ticket price avaliable including fees,
- and the amount of tickets remaining. 
+The scraper would store in an `SQL` Database the time of extraction, the number of days remaining before the game, the lowest ticket price available, the lowest ticket price available including fees,
+ and the number of tickets remaining. 
 
 Overall, I tracked the prices of 153 games across 81 days.
 
 # Difference from Initial prices
 
 One way we can quantify a change in price is a change from the initial listing price. That is, the change from the price of a ticket to a game the first time the scraper was run. 
-We can define the "final price" of a ticket as the price of the ticket at the last time the scraper was run before the event occured. All prices used below include fees, since 
+We can define the "final price" of a ticket as the price of the ticket at the last time the scraper was run before the event occurred. All prices used below include fees, since 
 that's what we have to pay out of pocket anyway
 
 | Team    | Average Initial Price | Average Final Price | Average Percent Decrease |
@@ -110,7 +110,7 @@ At the bottom of the list we have the Arizona Diamondbacks. The D-backs struggle
 on the road. In addition, the Diamondbacks were the worst team in MLB this year. So it makes sense that not many people would want to go and see them play. 
 
 Notice the Yankees have a sizeable drop in prices around gametime. This is likely due to the fact that the Yankee games recorded took place at Yankee stadium, which has
-significant drops in prices around gametiem
+significant drops in prices around gametime.
 
 ## Measuring demand through ticket stock
 
@@ -130,7 +130,7 @@ at gametime. As such, we don't see that inverse relationship we would expect. Ti
 # When are tickets most expensive?
 
 Other than proximity to the game, another variable that could potentially affect ticket prices is the date of the game itself.  For instance, if a game is held on a weekend, 
-then the ticket prices will be higher than if it is held on a weekday. Or a game in the middle of summer could be more expensive than a game at the end of september, when
+then the ticket prices will be higher than if it is held on a weekday. Or a game in the middle of summer could be more expensive than a game at the end of September, when
 most school are back in session. 
 
 We will again use z-scores to normalize the data across the three ballparks.
@@ -138,11 +138,11 @@ We will again use z-scores to normalize the data across the three ballparks.
 ![Plot of ticket prices by dates](./plot.png)
 
 The first thing that immediately pops out are the three extremely red squares, or outliers. These dates are August 3, June 11, and August 4, in descending order of z-score.
-These dates don't really have a particular importance, except that the June 11 game occured before COVID capacity restrictions were lifed (June 15). Because of the lower 
+These dates don't really have a particular importance, except that the June 11 game occurred before COVID capacity restrictions were lifed (June 15). Because of the lower 
 supply of seats, prices might have been higher for those games.
 
 We also see that Saturday happens to be the most expensive day of the week to attend games. People are off from work and school so this makes sense. Sunday games are less
-expensive than Satuday games, likely due to the fact that many Sunday games are day games. And not many people would willingly pay to sit in the blistering sun for a couple
+expensive than Saturday games, likely due to the fact that many Sunday games are day games. And not many people would willingly pay to sit in the blistering sun for a couple
 hours and watch baseball.
 
 Ticket prices are also relatively random in their pattern through the majority of the summer. However, toward the fourth week of September we see that ticket prices stabilize
@@ -150,13 +150,13 @@ to be cheaper than the rest of the summer. This pattern continues on to the end 
 
 # Limitations
 
-The largest limiation is the data set itself. It only just about one summer of baseball -- albeit an unusual summer with COVID still around. As such, it is difficult to see
+The largest limitation is the data set itself. It only just about one summer of baseball -- albeit an unusual summer with COVID still around. As such, it is difficult to see
 whether these trends will persist or change in future seasons. Only time will tell.
 
 In addition, this data set only covers the home games of three teams. In the future, I hope to expand this to all 30 teams (with more API calls), but in the meantime, these
 are the only teams we can draw conclusions for.
 
-One potential area for growth could be a machine learning algorthim to predict ticket prices with several of the predictors we have discussed. Again, the only issue is the size
+One potential area for growth could be a machine learning algorithm to predict ticket prices with several of the predictors we have discussed. Again, the only issue is the size
 of the data set. 
 
 ![Kenley coming in for the save](./Jansen-13.jpg)

@@ -35,7 +35,7 @@ const SummaryGraph = ({ metric }) => {
     console.log(team)
     return (
         <div>
-            <h4>Percent change in price from intital listed price</h4>
+            <h4>Percent change in price from initial listed price</h4>
             <ToggleButtonGroup type = "radio" name = "teams" value = {team} onChange = {handleChange}>
             {teams.map(cteam => <ToggleButton key={cteam} onClick={() => setteam(cteam)} style={{backgroundColor: teamStyles[cteam].color, color: teamStyles[cteam].textColor, borderColor: "#000000"}}>{cteam}</ToggleButton>)}
             </ToggleButtonGroup>
