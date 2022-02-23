@@ -42,9 +42,9 @@ that's what we have to pay out of pocket anyway
 
 | Team    | Average Initial Price | Average Final Price | Average Percent Decrease |
 |---------|-----------------------|---------------------|----------------|
-| Dodgers | $39.03                | $36.90              | 5.78%          |
-| Giants  | $48.23                | $41.52              | 16.17%         |
-| Angels  | $22.47               | $19.11              | 16.46%         |
+| Dodgers | $40.16                | $38.48              | 4.37%          |
+| Giants  | $46.51                | $35.25             | 31.97%         |
+| Angels  | $20.27               | $14.39              | 40.87%         |
 
 We see that ticket prices from all three teams have a lower final price than initial price. However, the Dodger ticket prices tend to be less volatile than the Giants and Angels
 prices. In fact, Giants and Angels tickets have a very similar percent decrease. 
@@ -72,8 +72,10 @@ import SevenGraph from '../../../components/ticket_graphs/SevenGraph'
 Across the board, there isn't much of a difference between purchasing your tickets seven days out or purchasing them sooner. This could mean that ticket prices have already
 reached their floor or that sellers really don't adjust prices a week before the game.
 
-Dodgers ticket are slightly cheaper (-8%) the day of the game than they were a week before the game where Angels tickets are the exact opposite (8%). Giants tickets are 1% more
+Dodgers ticket are slightly more expensive (4.8%) the day of the game than they were a week before the game where Angels tickets are a near opposite (5.8%). Giants tickets are 1% more
 expensive the day of the game than they were a week before the game. 
+
+However, in all stadiums, it is cheaper to buy tickets 1 or 2 days out from gametime when using the price 7 days out as a benchmark.
 
 ![Dodger fans having some fun](./dodgers_2.jpg)
 
@@ -93,8 +95,8 @@ deviations a value is from the mean. The z-scores were calculated for the groupe
 the more expensive the tickets were than average. The more negative the z-score, the cheaper the tickets were than average.
 
 It is important to note that these z-scores reflect average ticket prices tracked across **all** the days leading up to the game, not just the most recent tracked price. 
-That means this pattern could shift if we just look at the most recent prices for each game a visiting team plays. You can toggle that with the buttons below. You will notice
-that not much changes, other than the overall z-scores decreasing, which makes sense as tickets closer to gametime should be cheaper than the average price of the same tickets.
+That means this pattern could shift if we just look at the most recent prices for each game a visiting team plays. You can toggle that with the buttons below. The overall z-scores
+decrease, but also the teams at the top and bottom of the leaderboard.
 
 import AwayTeamZScores from '../../../components/ticket_graphs/AwayTeamZScores'
 
@@ -106,6 +108,9 @@ Angels would likely not have this high of a z-score if averages were calculated 
 
 At the bottom of the list we have the Arizona Diamondbacks. The D-backs struggle with attendance at home, so it would make sense that they would struggle to pull fans in
 on the road. In addition, the Diamondbacks were the worst team in MLB this year. So it makes sense that not many people would want to go and see them play. 
+
+Notice the Yankees have a sizeable drop in prices around gametime. This is likely due to the fact that the Yankee games recorded took place at Yankee stadium, which has
+significant drops in prices around gametiem
 
 ## Measuring demand through ticket stock
 
