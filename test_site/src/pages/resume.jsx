@@ -7,6 +7,8 @@ import Seo from '../components/seo'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+const basicsStyling = {display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end"}
+
 const resume = ({data}) => {
     return (
 
@@ -17,54 +19,71 @@ const resume = ({data}) => {
                 <Row>
                   <Col lg={5}>
                 <div style = {{paddingTop: "20px", display: "flex", flexDirection: "column"}}>
-                    <StaticImage src = "../images/Washington-DC-ProfileInsta.jpg" style={{borderRadius: "50%", marginRight: "40px"}} width = {500} aspectRatio = {1}/>
-                    <div style = {{flex: 1}}>
-                        <h1 style = {{fontWeight: 600, fontSize: "3.5rem"}}>Ben Brill</h1>
-                        <p>Data Science/Statistics</p>
-                        <div style = {{display: "flex", justifyContent: "space-between"}}>
-                            <div>Email</div>
-                            <div>github</div>
-                            <div>twitter</div>
-                            <div>LinkedIn</div>
-                        </div>
-                    </div>
-                    <div>
-                      <h2>Skills and Tools</h2>
-                      <h3>Data Science</h3>
-                      <h6>Python, R, Excel, SQL, Machine Learning, Tensorflow, Data Visualization, Tableau, NLP</h6>
-                    </div>
+                    <StaticImage src = "../images/new_prof.jpg" style={{borderRadius: "50%", marginRight: "40px"}} width = {500 } aspectRatio = {1}/>
+                    
+                    
                 </div>
                 </Col>
                 <Col lg = {7}>
-                <div style = {{paddingTop: "20px", display: "flex", flexDirection: "column", paddingLeft: "30px"}}>
-                <h1>Education</h1>
-                {data.allDataYaml.nodes[0].Education.map(element => (
-                    <div style = {{paddingTop: "20px"}}>
-                        <h3 style = {{fontWeight: 400}}>{element.Name}</h3> 
-                        <h6 style = {{color: "#666666"}}>{element.Date}</h6>
-                        <ul style = {{marginLeft: "0.5px", paddingLeft: "0.5rem"}}>
-                        {element.Details.map(detail => (
-                          <li style = {{marginBottom: "0.2rem"}}>{detail}</li>
-                        ))}
-                        </ul>
-                    </div>
-                ))}
+                <div style = {{display: "flex", height: "100%", justifyContent: "center", flexDirection: "column", alignItems: "flex-start"}}>
+                  <div style = {{width: "100%"}}>
+                          <h1 style = {{fontWeight: 600, fontSize: "3.5rem"}}>Ben Brill</h1>
+                          <p>Data Science/Statistics</p>
+                          <div style = {{display: "flex", justifyContent: "space-between", width: "100%"}}>
+                            <div style = {basicsStyling}>
+                              <a href="/data" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Github.svg" placeholder= "blurred"/></a>
+                              <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>Github</a>
+                            </div>
+                            <div style = {basicsStyling}>
+                              <a href="/data" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Twitter.svg" placeholder= "blurred"/></a>
+                              <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>Twitter</a>
+                            </div>
+                            <div style = {basicsStyling}>
+                              <a href="/data" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/LinkedIn.svg" placeholder= "blurred"/></a>
+                              <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>LinkedIn</a>
+                            </div>
+                            <div style = {basicsStyling}>
+                              <a href="/data" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Attachment.svg" placeholder= "blurred"/></a>
+                              <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>PDF Resume</a>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+                
+                </Col>
+                </Row>
+                </Container>
+                <div style = {{paddingTop: "20px", display: "flex", flexDirection: "column"}}>
                 <h1>Experience</h1>
                 {data.allDataYaml.nodes[0].Experience.map(element => (
-                    <div style = {{paddingTop: "20px"}}>
+                    <div>
                         <h3 style = {{fontWeight: 400}}>{element.Position}</h3> 
                         <h6 style = {{color: "#666666"}}>{element.Employer} | {element.Date}</h6>
                         <ul style = {{marginLeft: "0.5px", paddingLeft: "0.5rem"}}>
                         {element.Description.map(detail => (
-                          <li style = {{marginBottom: "0.2rem"}}>{detail}</li>
+                          <li style = {{marginBottom: "0.2rem"}} className = "resumeItem">{detail}</li>
                         ))}
                         </ul>
                     </div>
                 ))}
+                <h1>Education</h1>
+                {data.allDataYaml.nodes[0].Education.map(element => (
+                    <>
+                        <h3 style = {{fontWeight: 400}}>{element.Name}</h3> 
+                        <h6 style = {{color: "#666666"}}>{element.Date}</h6>
+                        <ul style = {{marginLeft: "0.5px", paddingLeft: "0.5rem"}}>
+                        {element.Details.map(detail => (
+                          <li style = {{marginBottom: "0.2rem"}} className = "resumeItem">{detail}</li>
+                        ))}
+                        </ul>
+                    </>
+                ))}
+                <div>
+                      <h2>Skills and Tools</h2>
+                      <h3>Data Science</h3>
+                      <h6>Python, R, Excel, SQL, Machine Learning, Tensorflow, Data Visualization, Tableau, NLP</h6>
                 </div>
-                </Col>
-                </Row>
-                </Container>
+                </div>
             </Layout>
         </div>
     )

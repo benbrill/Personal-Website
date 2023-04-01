@@ -1,0 +1,278 @@
+---
+name: "Professor Demographics in Film"
+tags: [web scraping, python]
+featuredImage: professors.jpg
+description: "Diversity in professorships has long been a problem pervasive throughout academia. In this web scrapping project, I analyzed the casts of over 1000 movies on IMBD to find the gender of characters who were professors. Unfortunately, the results were not surprising."
+url: professor_project
+---
+
+Inspired by [this Washington Post article](https://www.washingtonpost.com/graphics/2020/entertainment/fictional-presidents-in-movies/) analyzing the demographics of actors who portrayed presidents in mopvies (they found that they were mostly portrayed by white males), I wanted to try a similar experiment with a portrayl of positions of power, relevant to my life: university professors.
+
+## Obtaining Data
+First, I need to find a list of movies that portray professors in some capacity. Fortunately, IMBD has tags for all of their movies, one of them being a "professor" tab. Each IMBD movie has a unique code which I need to obtain to iterate through the casts of these movies. `find_profmovies` will iterate through a list of all the movies on IMBD with the "professor" tag, obtain the IMBD codes, and store them in a list.
+
+
+
+
+```python
+import urllib
+import re
+from collections import OrderedDict
+
+def find_profmovies(n, o):
+    """
+    iterates through a given list
+    """
+    totallist = []
+    codes = []
+    for i in range(n,o):
+        url = "https://www.imdb.com/search/keyword/?keywords=professor&mode=detail&page="+ str(i)+"&ref_=kw_nxt&sort=moviemeter,asc&title_type=movie"
+        # retrieve the data
+        filedata = urllib.request.urlopen(url)
+        # read as bytes
+        bytes_text = filedata.read()
+        # decode bytes to string
+        html = bytes_text.decode("utf-8")
+        
+        pattern = r'alt="(.*)"'
+        totallist += re.findall(pattern, html)
+        
+        pattern2 = r'<a href="/title/([\w]+)/'
+        codes += re.findall(pattern2, html)
+        
+    codes = list(OrderedDict.fromkeys(codes))
+    
+    if len(totallist) == len(codes):
+        D = {}
+        for j in range(len(totallist)):
+            D[totallist[j]] = codes[j]
+    else:
+        print("Lengths aren't equal")
+            
+        
+    return totallist, codes, D
+
+
+        
+        
+```
+
+
+```python
+movies, codes, Dcodes = find_profmovies(1, 28)
+```
+
+The template for accessing each individual movie's IMBD page is relatively simple: `https://www.imdb.com/title/` followed by the movie code. `gen_urls` will simply combine the base url and the movie code to generate a list of all the url's we eventually will need to scrape and store it in the list `urls`. It will also follow a similar template and store the urls of the full cast pages in the list `cast`.
+
+
+```python
+def gen_urls(movies, L):
+    urls = []
+    cast = []
+    Dcast = {}
+    for i in range(len(L)):
+        urls.append("https://www.imdb.com/title/" + str(L[i]))
+        cast.append("https://www.imdb.com/title/" + str(L[i]) + "/fullcredits?ref_=tt_cl_sm#cast")
+        Dcast[movies[i]] = cast[i]
+    return urls, cast, Dcast
+    
+urls, cast, Dcast = gen_urls(movies, codes)
+```
+
+
+```python
+urls[312]
+```
+
+
+
+
+    'https://www.imdb.com/title/tt0269743'
+
+
+
+### Scraping Movie Data
+Now comes a bit more tedious of a task: taking the data from each movie's IMBD page and converting it into a form that we can perform data analysis on. Now, there are several IMBD API's, but they are either very poorly documented or have a limit of 100 requests per day. The issue is I have 1000 movies, so web scrapping was the most viable path for me to get the data I needed efficently. I will be using the `requests` library to obtain the `html` markdown and the `BeautifulSoup` library to parse through the markdown to get the data I need. 
+
+
+```python
+import requests
+from bs4 import BeautifulSoup
+```
+
+In an effort to make my code more robust, I functionalized this process, creating a function for each task I wanted (getting the movie title, year, etc.) and combined those functions into a larger function. Each of these functions will take in a `soup` object to parse.
+
+
+```python
+import time
+
+def gen_roles(soup):
+    """
+    takes in a soup object of the full cast page and returns a dictionary of the character name and the actor name
+    """
+    stop, count = 0,0
+    character = []
+    actor = []
+    
+    #find the breaking point of the main cast list
+    for i in soup.select('.cast_list tr'):
+        if i.get_text() == "Rest of cast listed alphabetically:":
+            break
+        stop +=1
+    #find the character names
+    for i in soup.find_all('td', class_ = "character"):
+        try:
+            character.append(i.find('a').get_text())
+        except AttributeError:
+            trial = i.get_text().split("\n")
+            trial = [j for j in trial if j != ""]
+            trial = [x.strip(' ') for x in trial]
+            if len(trial) == 0:
+                character.append("SKIPPED")
+                continue
+            character.append(str(trial[0]))
+        count += 1
+        if count == stop:
+            count = 0
+            break
+            
+    #find the actor names
+    for i in soup.select("tr td img"):
+        actor.append(i['alt'])
+        count += 1
+        if count == stop:
+            count = 0
+            break
+            
+    #put the actors and characters in a dict
+    actor_dict = {}
+    for i in range(len(actor)):
+        actor_dict[character[i]] = actor[i]
+    
+    #make a dict of only the actors and characters who are professors
+    prof_dict = {}
+    prof_list = [i for i in list(actor_dict.keys()) if i[:4] == "Prof"]
+    for i in prof_list:
+        prof_dict[actor_dict[i]] = i
+        
+    return prof_dict
+```
+
+
+```python
+def gen_genre(soup):
+    """
+    takes in a soup object of the movie page and extracts a list of the movie's genres as determined by IMBD
+    """
+    genrelist = []
+    genres = soup.find_all(class_='see-more inline canwrap')[1]
+    for i in genres.find_all('a'):
+        genrelist.append(i.get_text().split()[0])
+    return genrelist
+```
+
+
+```python
+def gen_rating(soup):
+    """
+    takes in a soup object of the main movie page and returns the metacritic rating as a string
+    """
+    try: 
+        rating = int(soup.select('div .titleReviewBarItem span')[0].get_text())
+    except ValueError:
+        try:
+            rating = soup.select('div .titleReviewBarItem span a')[1].get_text().split()[0]
+        except IndexError:
+            rating = "NONE"
+    except IndexError: 
+        rating = "NONE"
+    return rating
+```
+
+
+```python
+def gen_year(soup):
+    """
+    takes in a soup object of the main movie page and returns the year the movie was released as a string
+    """
+    return soup.find(id="titleYear").get_text().split("(")[1].split(")")[0]
+```
+
+Finally, we will combine all of these functions into one giant `create_data` function, which will take in a range of movies and return a dictionary of relevant info for each professor character. Each index of the dictionary represents one character, and contains info about the movie the character is protrayed in as well as the actr. For example, the Harry Potter movies will take up several different indexes because there are multiple professors portrayed in each one.
+
+The function determines whether or not a character is a professor by analyzing if their listed role contained the string "prof" in the `gen_roles` function. If none of the characters in the cast list meet this requirement, the function will skip over that movie and place the title in the list `no_profs`.
+
+The parameter `skip` will add the movie information to the main dictionary if set to false. If set to true, it will not add movies without explicitly titled professors to the main dictionary.
+
+
+```python
+def create_data(x, skip = False, addnone = False):
+    """
+    takes in a range of movies and returns a JSON formated dictionary of info about each professor character
+    """
+    data = {}
+    no_profs_data = {}
+    no_profs = []
+    count = 0
+    starttt = time.time()
+    # iterate through the inputed range
+    for i in range(x):
+        start_time = time.time()
+        
+        # get soup objects for the cast page
+        castpage = requests.get(cast[i])
+        cast_soup = BeautifulSoup(castpage.content, 'html.parser')
+        role_list = gen_roles(cast_soup)
+        
+        #skip if there are no professors generated from the gen roles function and skip parameter is True
+        if (len(role_list) == 0) and (skip == True):
+            print("skipping")
+            no_profs.append(movies[i])
+            continue
+            
+        # get soup objects for main page
+        summarypage = requests.get(urls[i])
+        summary_soup = BeautifulSoup(summarypage.content, 'html.parser')
+        
+        year = gen_year(summary_soup)
+        rating = gen_rating(summary_soup)
+        genre_list = gen_genre(summary_soup)
+            
+        
+        if len(role_list) != 0:
+            for j in list(role_list.keys()): 
+                movie_info = {}
+                movie_info["Name"] = movies[i]
+                movie_info["Number"] = i #number of movie
+                movie_info["Year"] = year #set year to year of movie
+                movie_info["Actor"] = j  #set actors to a dict of actors and their charachters
+                movie_info["Role"] = role_list[j]
+                movie_info["Rating"] = rating
+                for k in range(len(genre_list)):
+                    movie_info["Genre " + str(k+1)] = genre_list[k]
+                    if k == 3:
+                        break;
+                data[count] = movie_info #set key in data equal to movie name and value equal to the dictionary of movie info
+                count += 1
+            print("--- %s seconds ---" % round((time.time() - start_time), 2))
+        # if skip parameter is false, add the movie to the main dictionary without character info
+        elif len(role_list) == 0:
+            movie_info = {}
+            movie_info["Name"] = movies[i]
+            movie_info["Number"] = i #number of movie
+            movie_info["Role"] = role_list[j]
+            movie_info["Rating"] = rating
+            for k in range(2):
+                movie_info["Genre " + str(k+1)] = genre_list[k]
+            if addnone == False:
+                data[count] = movie_info
+            no_profs_data[count] = movie_info
+            print("None --- %s seconds ---" % round((time.time() - start_time), 2))
+            no_profs.append(movies[i])
+            count += 1
+        
+    print(str(time.time() - starttt))
+    return data, no_profs, no_profs_data
+       
+         
+```

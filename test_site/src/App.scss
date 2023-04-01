@@ -118,6 +118,13 @@ p {
     }
 }
 
+ul {
+    list-style-position: inside;
+}
+
+.resumeItem {
+    font-family: halyard-text, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 .carousel-indicators {
     visibility: hidden;
 }

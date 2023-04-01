@@ -70,7 +70,6 @@ query dataPostQuery {
               }
             }
             description
-            title
             tags
             name
             url
