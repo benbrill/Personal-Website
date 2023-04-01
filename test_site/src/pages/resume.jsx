@@ -43,8 +43,8 @@ const resume = ({data}) => {
                               <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>LinkedIn</a>
                             </div>
                             <div style = {basicsStyling}>
-                              <a href="/data" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Attachment.svg" placeholder= "blurred"/></a>
-                              <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>PDF Resume</a>
+                              <a href="/../../static/Brill_BenOhr_Resume.pdf"  target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Attachment.svg" placeholder= "blurred"/></a>
+                              <a href="/../../static/Brill_BenOhr_Resume.pdf" style={{paddingTop: "10px"}}>PDF Resume</a>
                             </div>
                           </div>
                   </div>
@@ -79,7 +79,7 @@ const resume = ({data}) => {
                     </>
                 ))}
                 <div>
-                      <h2>Skills and Tools</h2>
+                      <h1>Skills and Tools</h1>
                       <h3>Data Science</h3>
                       <h6>Python, R, Excel, SQL, Machine Learning, Tensorflow, Data Visualization, Tableau, NLP</h6>
                 </div>
