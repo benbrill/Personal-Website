@@ -31,16 +31,16 @@ const resume = ({data}) => {
                           <p>Data Science/Statistics</p>
                           <div style = {{display: "flex", justifyContent: "space-between", width: "100%"}}>
                             <div style = {basicsStyling}>
-                              <a href="/data" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Github.svg" placeholder= "blurred"/></a>
-                              <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>Github</a>
+                              <a href="https://github.com/benbrill" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Github.svg" placeholder= "blurred"/></a>
+                              <a href="https://github.com/benbrill" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>Github</a>
                             </div>
                             <div style = {basicsStyling}>
-                              <a href="/data" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Twitter.svg" placeholder= "blurred"/></a>
-                              <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>Twitter</a>
+                              <a href="https://twitter.com/benzbrill" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Twitter.svg" placeholder= "blurred"/></a>
+                              <a href="https://twitter.com/benzbrill" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>Twitter</a>
                             </div>
                             <div style = {basicsStyling}>
-                              <a href="/data" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/LinkedIn.svg" placeholder= "blurred"/></a>
-                              <a href="/data" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>LinkedIn</a>
+                              <a href="https://www.linkedin.com/in/benohrbrill/" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/LinkedIn.svg" placeholder= "blurred"/></a>
+                              <a href="https://www.linkedin.com/in/benohrbrill/" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>LinkedIn</a>
                             </div>
                             <div style = {basicsStyling}>
                               <a href="/../../static/Brill_BenOhr_Resume.pdf"  target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Attachment.svg" placeholder= "blurred"/></a>

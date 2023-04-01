@@ -14,15 +14,22 @@ const photos = ({data}) => {
             <Seo title="Photos" description="A collection of my photography" />
             <Menu />
             <PhotoHero />
+            <div style={{
+              margin: `0 auto`,
+              maxWidth: 1580,
+              padding: `0 2.5875rem 2.45rem`,
+            }}
+          >
             <CardGroup>
             <Row xs={1} md={3}>
-                {data.allPhotoBlogJson.nodes.map(node => (
+                {data.allPhotoBlogYaml.nodes.map(node => (
                     <Col id = "photoCol">
                     <PhotoBlogCard props = {node}/>
                     </Col>
                 ))}
             </Row>
-            </CardGroup>            
+            </CardGroup>   
+            </div>         
         </>
     )
 }
@@ -30,7 +37,7 @@ const photos = ({data}) => {
 
 export const query = graphql`
 query MyQuery {
-    allPhotoBlogJson {
+    allPhotoBlogYaml {
       nodes {
         featuredImage {
           childImageSharp {
