@@ -126,10 +126,29 @@
   images:
   - "../images/photo_posts/Yosemite/Yosemite-04569-2.jpg"
   - "../images/photo_posts/Yosemite/Yosemite-04600.jpg"
+  - "../images/photo_posts/Yosemite/Yosemite-03050.jpg"
   - "../images/photo_posts/Yosemite/Yosemite-04602.jpg"
   - "../images/photo_posts/Yosemite/Yosemite-04674.jpg"
-  - "../images/photo_posts/Yosemite/Yosemite-04693.jpg"
+  - "../images/photo_posts/Yosemite/Yosemite-02612.jpg"
+  - "../images/photo_posts/Yosemite/Yosemite-02803.jpg"
+  - "../images/photo_posts/Yosemite/Yosemite-03138.jpg"
+  - "../images/photo_posts/Yosemite/Yosemite-02823.jpg"
   - "../images/photo_posts/Yosemite/Yosemite-04705.jpg"
+  - "../images/photo_posts/Yosemite/Yosemite-04693.jpg"
+  - "../images/photo_posts/Yosemite/Yosemite-02890.jpg"
   - "../images/photo_posts/Yosemite/Yosemite-04765.jpg"
-  # - "../images/photo_posts/Yosemite/Yosemite-04556-2.jpg"
-
+  - "../images/photo_posts/Yosemite/Yosemite-04556-2.jpg"
+- name: Grad Photos
+  web_path: grad
+  featuredImage: "../images/photo_posts/GradPics/Cheryl.jpg"
+  description: A collection of my Grad Photos I took in 2022
+  date: May 2022
+  images:
+  - "../images/photo_posts/GradPics/Cheryl.jpg"
+  - "../images/photo_posts/GradPics/Cheryl-05292.jpg"
+  - "../images/photo_posts/GradPics/Cheryl-05373.jpg"
+  - "../images/photo_posts/GradPics/Cheryl-05403.jpg"
+  - "../images/photo_posts/GradPics/GradPic-06047.jpg"
+  - "../images/photo_posts/GradPics/GradPic-05768.jpg"
+  - "../images/photo_posts/GradPics/K&K-05774.jpg"
+  - "../images/photo_posts/GradPics/Tony-06146.jpg"
