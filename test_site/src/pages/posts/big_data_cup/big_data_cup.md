@@ -4,6 +4,7 @@ description: As a sumbission for Stathlete's Big Data Cup 2021, my partner and I
 featuredImage: nwhl.jpg
 tags: [Sports Analytics, Machine Learning]
 url: big_data_cup
+sort_index: 3
 ---
 
 import BlogShareContainer from '../../../components/BlogShareContainer'

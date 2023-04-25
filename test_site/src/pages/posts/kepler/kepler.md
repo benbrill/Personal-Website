@@ -4,14 +4,15 @@ tags: [data mining, python, visualization]
 featuredImage: kepler.png
 description: "We have all wondered at one point or another whether there is life out there in the universe, or if we are alone. The Kepler mission is a step in finding out the answer to that question."
 url: kepler
+sort_index: 5
 ---
 
 
 import BlogShareContainer from '../../../components/BlogShareContainer'
 
-<BlogShareContainer  website = "https://ucladatares.medium.com/exploring-machine-learning-with-the-kepler-telescope-dc1dfada5431"/>
+<BlogShareContainer github = "https://github.com/datares/team-skywalker" website = "https://ucladatares.medium.com/exploring-machine-learning-with-the-kepler-telescope-dc1dfada5431"/>
 
-*** by Luke Rivers (Project Lead), Ashley Lu, Ben Brill, Hyerin Lee ***
+***by Luke Rivers (Project Lead), Ashley Lu, Ben Brill, Hyerin Lee***
 ## Introduction
 
 We have all wondered at one point or another whether there is life out there in the universe, or if we are alone. The Kepler mission is a step in finding out the answer to that question. The Kepler telescope was launched in 2009 with the goal of identifying exoplanets orbiting other stars, some of which could be in what is referred to as a ‘habitable zone’ in which temperatures are similar to Earth and could therefore have liquid water and potentially support life.

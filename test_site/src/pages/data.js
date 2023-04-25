@@ -57,7 +57,7 @@ const Data = ({data}) => {
 }
 export const pageQuery = graphql`
 query dataPostQuery {
-    allMdx {
+    allMdx(sort: { frontmatter: { sort_index: ASC } }) {
         nodes {
           frontmatter {
             featuredImage {
@@ -73,6 +73,7 @@ query dataPostQuery {
             tags
             name
             url
+            sort_index
           }
         }
     }
