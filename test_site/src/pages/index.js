@@ -21,8 +21,8 @@ const HomePage =  function HomePage() {
             <div className="homeAbout">About</div>
         </div>
         <CardGroup>
-            <IntroCard pos = "Student at" header = "UCLA"  url = "../images/Royce_Royce.svg" body = "I'm currently a third year student studying Statistics and Cognitive Science at UCLA! I'm a tour guide there, so feel free to ask me about the building in the icon."/>
-            <IntroCard pos = "Research in" header = "Data Science" url = "../images/Data_Data.svg" body = "I'm interested in breaking into the Data Science field. I'm refining my data science skills currently as a student researcher for our Math Department."/>
+            <IntroCard pos = "Career" header = "Data Science" url = "../images/Data_Data.svg" body = "I'm currently working in an Analyst role at DaVita, but I am interested in continuing to further my career in Data Science and analytics"/>
+            <IntroCard pos = "Graduate from" header = "UCLA"  url = "../images/Royce_Royce.svg" body = "I graduated in 2023 from UCLA with a degree in Statistics and Data Science! I also was a tour guide there, so feel free to ask me about the building in the icon."/>
             <IntroCard pos = "Interested in" header = "Frontend Dev" url = "../images/design-07.svg" body = "I also like to dabble in Frontend Web Development. I have experience as a graphic designer and I'm hoping to translate those visual skills to the web."/>
         </CardGroup>
         <Alert variant = "secondary">Check out more about me in my <Alert.Link href = "/resume">resume</Alert.Link></Alert>
