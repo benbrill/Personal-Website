@@ -37,7 +37,7 @@ const photos = ({data}) => {
 
 export const query = graphql`
 query MyQuery {
-    allPhotoBlogYaml {
+    allPhotoBlogYaml(sort: { date: DESC }) {
       nodes {
         featuredImage {
           childImageSharp {
@@ -47,7 +47,7 @@ query MyQuery {
         name
         web_path
         description
-        date
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

@@ -38,7 +38,8 @@
     "react-responsive": "^9.0.2",
     "react-responsive-masonry": "^2.1.7",
     "recharts": "^2.5.0",
-    "sass": "^1.60.0"
+    "sass": "^1.60.0",
+    "yet-another-react-lightbox": "^3.11.4"
   },
   "devDependencies": {
     "eslint": "^8.37.0",

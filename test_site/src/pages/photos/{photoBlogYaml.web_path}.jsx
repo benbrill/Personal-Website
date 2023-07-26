@@ -4,6 +4,8 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 import Menu from '../../components/navbar'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+// import Lightbox from "yet-another-react-lightbox";
+// import "yet-another-react-lightbox/styles.css";
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
 const PhotoBlogPage = ({ data }) => {
@@ -20,6 +22,7 @@ const PhotoBlogPage = ({ data }) => {
                     {post.photoBlogYaml.images.map(image => (
                         <a href={image.publicURL}>
                         <GatsbyImage image = {image.childImageSharp.gatsbyImageData} placeholder = "blurred"/>
+                        {/* <Lightbox open={true} slides={[{ src: image.childImageSharp.gatsbyImageData }]}/> */}
                         </a>
                     ))}
                 </Masonry>

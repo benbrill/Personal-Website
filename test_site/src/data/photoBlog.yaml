@@ -3,7 +3,7 @@
   web_path: hollywood
   featuredImage: "../images/photo_posts/Hollywood/Hollywood-1.jpg"
   description: A set of pictures from Hollywood, CA
-  date: July 29, 2020
+  date: 2020-07-29
   unique_id: 123
   images:
   - "../images/photo_posts/Hollywood/Hollywood-1.jpg"
@@ -15,7 +15,7 @@
   web_path: warren
   featuredImage: "../images/photo_posts/Warren/Warren-9.jpg"
   description: A set of pictures from the Elizabeth Warren Rally
-  date: Feb. 6, 2020
+  date: 2020-02-06
   unique_id: 234
   images:
   - "../images/photo_posts/Warren/Warren-9.jpg"
@@ -27,7 +27,7 @@
   featuredImage: "../images/photo_posts/PuertoVallarta/Puerto Vallarta-8.jpg"
   description: Flags, Churches, Tacos, and Iguanas from the Jallisco city of Puerto
     Vallarta
-  date: June 30, 2019
+  date: 2019-06-30
   unique_id: 345
   images:
   - "../images/photo_posts/PuertoVallarta/Puerto Vallarta-8.jpg"
@@ -38,7 +38,7 @@
   featuredImage: "../images/photo_posts/DC/Washington DC-11.jpg"
   description: Lots of things to see around the nation's capital. Here's a few of
     them in my short time spent there
-  date: Dec. 31, 2019
+  date: 2019-12-31
   unique_id: 456
   images:
   - "../images/photo_posts/DC/Washington DC-1.jpg"
@@ -59,7 +59,7 @@
   web_path: sf
   featuredImage: "../images/photo_posts/SF/SF-3.jpg"
   description: Drove up THE 5 to the Bay Area. Lots of bridges, fog, and animals
-  date: Aug. 10, 2021
+  date: 2021-08-10
   unique_id: 567
   images:
   - "../images/photo_posts/SF/SF-1.jpg"
@@ -95,7 +95,7 @@
   featuredImage: "../images/photo_posts/MB/MB-8032.jpg"
   description: It's winter in Manhattan Beach but still no snow. I promise. And the
     colors are mostly real. I also promise.
-  date: Dec. 19, 2021
+  date: 2021-12-19
   images:
   - "../images/photo_posts/MB/MB-8000.jpg"
   - "../images/photo_posts/MB/MB-8002.jpg"
@@ -122,7 +122,7 @@
   web_path: yosemite
   featuredImage: "../images/photo_posts/Yosemite/Yosemite-04569-2.jpg"
   description: Super cool
-  date: March 29, 2023
+  date: 2023-03-23
   images:
   - "../images/photo_posts/Yosemite/Yosemite-04569-2.jpg"
   - "../images/photo_posts/Yosemite/Yosemite-04600.jpg"
@@ -142,7 +142,7 @@
   web_path: grad
   featuredImage: "../images/photo_posts/GradPics/Cheryl.jpg"
   description: A collection of my Grad Photos I took in 2022
-  date: May 2022
+  date: 2022-05
   images:
   - "../images/photo_posts/GradPics/Cheryl.jpg"
   - "../images/photo_posts/GradPics/Cheryl-05292.jpg"
@@ -155,7 +155,7 @@
 - name: Barcelona
   web_path: barcelona
   featuredImage: "../images/photo_posts/Barcelona/_Barcelona-01477.jpg"
-  date: July 2023
+  date: 2023-07-04
   description: ¡Vale!
   images:
   -  "../images/photo_posts/Barcelona/_Barcelona-01334.jpg"
@@ -255,7 +255,7 @@
 - name: Amsterdam
   web_path: amsterdam
   featuredImage: "../images/photo_posts/Amsterdam/_Amsterdam-01855.jpg"
-  date: July 2023
+  date: 2023-07-10
   description: Windmills and Stroopwafles
   images:
   -  "../images/photo_posts/Amsterdam/_Amsterdam-01596.jpg"
@@ -324,7 +324,7 @@
 - name: Budapest
   web_path: budapest
   featuredImage: "../images/photo_posts/Budapest/_Budapest-02108.jpg"
-  date: July 2023
+  date: 2023-07-13
   description: Explored the towns of Buda and Pest
   images:
   -  "../images/photo_posts/Budapest/_Budapest-01948.jpg"
@@ -382,7 +382,7 @@
 - name: London
   web_path: london
   featuredImage: "../images/photo_posts/London/_London-02411.jpg"
-  date: July 2023
+  date: 2023-07-16
   description: Silver rain was falling down upon the dirty ground of London town
   images:
   -  "../images/photo_posts/London/_London-02316.jpg"
