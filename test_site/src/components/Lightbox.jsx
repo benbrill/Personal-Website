@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import '../App.scss';
+import '../App.scss'; // import the CSS file
 
 const ImageLightbox = ({ imageData }) => {
     const [show, setShow] = useState(false);
@@ -17,17 +17,10 @@ const ImageLightbox = ({ imageData }) => {
                 <GatsbyImage image={image} alt="Thumbnail image" />
             </div>
 
-            <Modal
-                show={show}
-                onHide={handleClose}
-                dialogClassName="custom-modal"
-                centered
-                onEntered={() => { document.body.style.overflow = 'hidden'; }}
-                onExited={() => { document.body.style.overflow = 'auto'; }}
-            >
+            <Modal show={show} onHide={handleClose} dialogClassName="custom-modal" centered size="xl">
                 <span className="close-btn" onClick={handleClose}>&times;</span>
-                <Modal.Body style={{ padding: 0 }}>
-                    <GatsbyImage image={image} alt="Modal content" style={{ width: 'auto', height: 'auto' }} />
+                <Modal.Body>
+                    <GatsbyImage image={image} alt="Modal content" style={{ width: '100%' }} placeholder = "blurred"/>
                 </Modal.Body>
             </Modal>
         </>
