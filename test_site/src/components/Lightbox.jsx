@@ -6,8 +6,15 @@ import '../App.scss'; // import the CSS file
 const ImageLightbox = ({ imageData }) => {
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+        setShow(true);
+        document.body.style.overflow = 'hidden'; // This will hide the scrollbar
+    }
+
+    const handleClose = () => {
+        setShow(false);
+        document.body.style.overflow = 'auto'; // This will show the scrollbar
+    }
 
     const image = getImage(imageData);
 
