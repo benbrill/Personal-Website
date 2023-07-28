@@ -131,10 +131,16 @@ ul {
 
 /* lightbox.css */
 
+.custom-modal {
+    overflow-y: 'hidden';
+}
 .custom-modal .modal-content {
     background: transparent;
     border: none;
-    width: 100%; /* Controls the width of the image */
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
     margin: auto;
   }
   
@@ -157,6 +163,12 @@ ul {
     cursor: pointer;
     // background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+  }
+
+  .custom-modal img {
+    object-fit: contain !important;
+    max-height: 90vh;
+    max-width: 90vw;
   }
   
 
