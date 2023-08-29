@@ -21,7 +21,7 @@ const HomePage =  function HomePage() {
             <div className="homeAbout">About</div>
         </div>
         <CardGroup>
-            <IntroCard pos = "Career" header = "Data Science" url = "../images/Data_Data.svg" body = "I'm currently working in an Analyst role at DaVita, but I am interested in continuing to further my career in Data Science and analytics"/>
+            <IntroCard pos = "Career" header = "Data Science" url = "../images/Data_Data.svg" body = "I am interested in finding a role in the Data Science and analytics!"/>
             <IntroCard pos = "Graduate from" header = "UCLA"  url = "../images/Royce_Royce.svg" body = "I graduated in 2023 from UCLA with a degree in Statistics and Data Science! I also was a tour guide there, so feel free to ask me about the building in the icon."/>
             <IntroCard pos = "Interested in" header = "Frontend Dev" url = "../images/design-07.svg" body = "I also like to dabble in Frontend Web Development. I have experience as a graphic designer and I'm hoping to translate those visual skills to the web."/>
         </CardGroup>
