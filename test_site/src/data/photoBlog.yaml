@@ -459,4 +459,15 @@
   -  "../images/photo_posts/London/_London-02498.jpg"
   -  "../images/photo_posts/London/_London-02500.jpg"
   -  "../images/photo_posts/London/_London-02503.jpg"
+- name: New York
+  web_path: new-york
+  featuredImage: "../images/photo_posts/NewYork/NY-1.JPG"
+  date: 2024-04-02
+  description: Concrete jungle where dreams are made of
+  images:
+  -  "../images/photo_posts/NewYork/NY-1.JPG"
+  -  "../images/photo_posts/NewYork/NY-2.jpg"
+  -  "../images/photo_posts/NewYork/NY-3.jpg"
+  -  "../images/photo_posts/NewYork/NY-4.jpg"
+
 
