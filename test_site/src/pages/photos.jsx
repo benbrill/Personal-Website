@@ -10,7 +10,7 @@ import { graphql } from 'gatsby'
 
 const photos = ({data}) => {
     return (
-        <>
+        <div style={{background: "#080A0C"}}>
             <Seo title="Photos" description="A collection of my photography" />
             <Menu />
             <PhotoHero />
@@ -30,7 +30,7 @@ const photos = ({data}) => {
             </Row>
             </CardGroup>   
             </div>         
-        </>
+        </div>
     )
 }
 
