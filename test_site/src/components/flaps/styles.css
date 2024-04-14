@@ -1,0 +1,98 @@
+@keyframes flapDownTop {
+    from {
+      transform: rotateX(0deg)
+    }
+  
+    50%, to {
+      transform: rotateX(90deg)
+    }
+  }
+  
+  @keyframes flapDownBottom {
+    from, 50% {
+      transform: rotateX(90deg)
+    }
+  
+    90% {
+      transform: rotateX(20deg)
+    }
+  
+    80%, to {
+      transform: rotateX(0deg)
+    }
+  }
+  
+  .digit {
+    color: white;
+    background-color: black;
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box;
+    width: 1.1ch;
+    height: 1em;
+    font-family: sans-serif;
+    line-height: 1em;
+    text-align: center;
+  
+    &[data-mode="words"] {
+      width: 100%;
+    }
+  
+    &[data-mode="alpha"] {
+      width: 1.7ch;
+    }
+  }
+  
+  .hinge {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    box-sizing: border-box;
+    height: 0.04em;
+    background-color: inherit;
+  }
+  
+  .flap {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    background-color: inherit;
+    background: inherit;
+    z-index: 1;
+    border-radius: inherit;
+    box-sizing: border-box;
+  
+    &.animated {
+      animation-duration: 300ms;
+      z-index: 2;
+    }
+  
+    &.top {
+      clip-path: polygon(0 50%, 100% 50%, 100% 0, 0 0);
+  
+      &.animated {
+        transform: rotateX(50deg);
+        opacity: 0.40;
+      }
+  
+      &.animated.final {
+        opacity: 1;
+        animation-name: flapDownTop;
+        animation-timing-function: ease-in;
+      }
+    }
+  
+    &.bottom {
+      clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 50%);
+  
+      &.animated.final {
+        animation-name: flapDownBottom;
+        animation-timing-function: ease-out;
+      }
+    }
+  }
