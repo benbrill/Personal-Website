@@ -9,6 +9,8 @@ import { graphql } from 'gatsby'
 
 
 const photos = ({data}) => {
+
+  var count = 0;
     return (
         <div style={{background: "#080A0C"}}>
             <Seo title="Photos" description="A collection of my photography" />
@@ -22,11 +24,13 @@ const photos = ({data}) => {
           >
             <CardGroup>
             <Row xs={1} md={3}>
-                {data.allPhotoBlogYaml.nodes.map(node => (
+                {data.allPhotoBlogYaml.nodes.map(node => {
+                  count++
+                return(
                     <Col id = "photoCol">
-                    <PhotoBlogCard props = {node}/>
+                    <PhotoBlogCard props = {node} count = {String(count).padStart(2,'0')}/>
                     </Col>
-                ))}
+                )})}
             </Row>
             </CardGroup>   
             </div>         

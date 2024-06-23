@@ -52,17 +52,23 @@
 }
 
 #photoCard {
-    border: none;
-    border-radius: 20px;
+    border: 2px solid #fef9f4;
+    border-radius: 0px;
     // min-height: 25rem;
     margin: 20px;
-    box-shadow: 1px 1px 8px 5px rgb(0 0 0 / 10%);
+    box-shadow: 0px 1px 30px 1px rgb(255 248 223 / 20%);
+    padding: 5px;
     flex: 1 0;
 
     .title {
         text-align: center;
         font-size: 1.75rem;
         font-weight: 600;
+        filter: blur(.015vw);
+        letter-spacing: .075vw;
+        transform: scale(1.05, .975);
+        transform-origin: right;
+        background: linear-gradient(to right, var(#ffa54f), var(#ffa54f));
     }
 
     .text {
@@ -73,9 +79,51 @@
         margin: auto 0 5px 15px;
         // justify-self: end;
     }
+
+    .title-glow {
+        position: absolute;
+        text-shadow: 0 0 .1rem red, 0 0 .1rem red;
+    }
+
+    .film-wrapper {
+        text-transform: uppercase;
+        font-size: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-weight: 300;
+
+    }
+
+    .grid-title {
+        -webkit-text-fill-color: #0000;
+        text-wrap: nowrap;
+        background: linear-gradient(to right, #ffa54f, #d7781e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        display: inline-block;
+        overflow: hidden;
+    }
+    
+    .kodak-text-tweaks {
+        filter: blur(.017rem);
+        letter-spacing: .15rem;
+        transform: scale(1.05, .975);
+        transform-origin: right;
+    }
+
+    .gi-num {
+        color: #ffae4f;
+        // font-family: --var(--font-helv);
+        // font-style: "65 Medium";
+        font-weight: 700;
+        left: 0;
+        letter-spacing: 0;
+        padding-left: 10px;
+        position: absolute;
+        transform: scale(1.25, 1.095)
+    }
 }
-
-
 
 
 

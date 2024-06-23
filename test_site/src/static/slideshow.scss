@@ -1,0 +1,202 @@
+.image-container {
+    position: relative;
+    // height: 50rem;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 20px;
+
+    .image {
+        border-radius: 1em;
+        // backdrop-filter: blur(15px) saturate(3);
+        filter: drop-shadow(0 0 0.75em rgb(255, 255, 255, 0.3));
+    };
+
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        .border {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            // background: royalblue;
+            // clip-path: polygon(10% 10%, 90% 0, 90% 90%, 0 90%);
+            // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            border-width: 20px 10px !important;
+            border-style: solid;
+            border-color: rgb(31, 31, 31) !important;
+            // backdrop-filter: blur( 5.5px );
+            box-sizing: border-box;
+            // -webkit-backdrop-filter: blur( 10px );
+            border-radius: 1em;
+            // padding: 20px;
+    
+        }
+
+        .photo-title {
+            position: absolute;
+            top:0;
+            width: 100%;
+            text-align: left;
+            padding-left: 10px;
+            letter-spacing: .2em;
+            font-size: .9em;
+            box-sizing: border-box;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .photo-label {
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            font-size: .9em;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .grid-title {
+                padding: 0px 0px 0 10px;
+            }
+        }
+    }    
+    
+}
+
+@media screen and (max-width: 768px){
+    .carousel {
+        width: 20em;
+    }
+
+    .hero-landing {
+        height: 15em !important;
+
+        .whole-thing {
+            width: 100%;
+            .title {
+                font-size: 3em;
+                top: 3em;
+            }
+        }
+        }
+    }
+
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 45em;
+    // height: 100%;
+    // gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-fill {
+    position: absolute;
+    background: repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px);
+    height: 400px;
+    width: 400px;
+}
+
+.title {
+    font-size: 6em;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: halyard-display;
+    position: absolute;
+    top: 2em;
+    z-index: 1;
+    // padding: 1em;
+    width: 100%;
+    filter:blur(1px);
+    opacity: 0.9;
+    text-shadow: #ffa44f6b 0px 0px 10px;
+    // animation: glow 3s infinite alternate;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    text-align: center !important;
+    // letter-spacing: 0em;
+
+
+    .title-glow {
+        position: absolute;
+        text-shadow: 0 0 .2em red, 0 0 .2em red;
+        letter-spacing: .35em;
+        text-indent: .35em;
+        // text-align: center;
+    }
+
+    .kodak-text-tweaks {
+        filter: blur(.017rem);
+        transform: none;
+        text-indent: .35em;
+        transform-origin: center;
+        // text-align: center;
+    }
+}
+
+.grid-title {
+    -webkit-text-fill-color: #0000;
+    text-wrap: nowrap;
+    background: linear-gradient(to right, #ffa54f, #d7781e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.kodak-text-tweaks {
+    filter: blur(.017em);
+    letter-spacing: .35em;
+    transform: scale(1.05, .975);
+    transform-origin: center;
+}
+
+.title-glow {
+    position: absolute;
+    text-shadow: 0 0 .2em red, 0 0 .2em red;
+}
+
+.hero-landing {
+    margin-top: 20px;
+    background-color: black;
+    height: 80vh;
+    overflow: hidden;
+
+}
+.whole-thing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // height: 100%;
+}
+
+@keyframes glow {
+    from{
+        text-shadow: #ffa44fa7 0px 0px 10px
+    }
+    to{
+        text-shadow:  #ffa44fa7 0px 0px 20px;
+    }
+}
