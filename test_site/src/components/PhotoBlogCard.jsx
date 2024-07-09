@@ -8,7 +8,7 @@ const PhotoBlogCard = ({props, count}) => {
     return (
 
         
-        <Card id = "photoCard" style = {{background:"#080A0C"}}>
+        <Card id = "photoCard" style = {{background:"rgb(31, 31, 31)" }}>
             <Link to = {props.web_path}>
             <span class="film-wrapper">
                 <span className="gi-num kodak-text-tweaks">{count}</span>
@@ -21,8 +21,11 @@ const PhotoBlogCard = ({props, count}) => {
                  </span>
             </Link>
             <Link to = {props.web_path}><GatsbyImage image = {props.featuredImage.childImageSharp.gatsbyImageData}/></Link>
-            {/* <Card.Text class="text" style={{color:"#EEEEEE"}}>{props.description}  </Card.Text>
-            <Card.Text class="footer" style={{color: "#76ABAE"}}>{props.date}</Card.Text> */}
+            {/* <Card.Text class="text" style={{color:"#EEEEEE"}}>{props.description}  </Card.Text> */}
+            <div className="photo-label">
+                <Card.Text class="footer grid-title"></Card.Text>
+                <Card.Text class="footer grid-title">{props.date}</Card.Text>
+            </div>
         </Card>
         
     )

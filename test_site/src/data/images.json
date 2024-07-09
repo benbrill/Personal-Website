@@ -1,5 +1,10 @@
 [
     {
+        "name": "Angels Flight1",
+        "description": "Angels Flight in DTLA",
+        "img": "../images/photo_posts/Sedona/Sedona-04266-2.jpg"
+    },
+    {
         "name": "Chateau Marmont",
         "description": "A picture of a hotel in Hollywood",
         "img": "../images/home/Hollywood-1.jpg"
