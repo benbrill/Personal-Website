@@ -28,25 +28,28 @@ const VintageSlideshow = () => {
         </div>
         <StaticQuery
                 query= {graphql`
-                query photoTestQuery {
-                    allImagesJson {
-                      nodes {
-                        img {
-                          childImageSharp {
-                            gatsbyImageData(aspectRatio : 1.5, transformOptions: {cropFocus: CENTER})
-                          }
+                query photoQuery {
+                  allHomeImagesYaml {
+                    nodes {
+                      img {
+                        childImageSharp {
+                          gatsbyImageData(aspectRatio: 1.5, transformOptions: {cropFocus: CENTER})
                         }
-                        description
                         name
+                        birthTime(formatString: "YYYY-MM-DD")
                       }
                     }
                   }
+                }
                   
                 `}
                 render={data => (
                 <div className='carousel'>
-                {data.allImagesJson.nodes.map((image, idx) =>  (
-                    <PhotoSlide image={image.img.childImageSharp.gatsbyImageData} current = {current} idx={idx}/>
+                {data.allHomeImagesYaml.nodes.map((image, idx) =>  (
+                    <PhotoSlide image={image.img.childImageSharp.gatsbyImageData} 
+                    current = {current} idx={idx} 
+                    name = {image.img.name}
+                    date = {image.img.birthTime}/>
                 ))}
                 </div>
                 )}/>

@@ -3,7 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion'
 import'../static/slideshow.scss'
 
-const PhotoSlide = ({ image, current, idx }) => {
+const PhotoSlide = ({ image, current, idx, name, date }) => {
 
   const hiddenMask = [`polygon(0 0, 100% 0, 100% 100%, 0% 100%)`,
                         `polygon(0% 0%, 0% 0%, 0% 0%, 0% 100%)`]
@@ -11,10 +11,7 @@ const PhotoSlide = ({ image, current, idx }) => {
                         `polygon(0 0, 100% 0, 100% 100%, 0% 100%)`
                     ];
   
-  if (current === idx) {
-    console.log('current: ', current);
-  }
-
+console.log(name)
   return (
     <>
 
@@ -36,7 +33,7 @@ const PhotoSlide = ({ image, current, idx }) => {
      rotate: {duration: 1, delay: idx === current ? 0 : -0.2},
      x: {duration: 1, delay: idx === current ? 0 : -0.3},
      opacity: {delay: idx === current ? 0 : 1},
-     filter: {delay: idx === current ? -0.5 : 1}    
+     filter: {delay: idx === current ? .5 : -.5}    
      }}>
 
         <div className='overlay'>
@@ -47,8 +44,8 @@ const PhotoSlide = ({ image, current, idx }) => {
                 <span className="grid-title">Ben-Ohr Brill</span>
             </div>
             <div className='photo-label'>
-                <span className='grid-title'>Photo</span>
-                <span className='grid-title'>Date</span>
+                <span className='grid-title'>{name}</span>
+                <span className='grid-title'>{date}</span>
             </div>
         </div>
         <GatsbyImage image={image} className='image' alt="" placeholder = "blurred"/>

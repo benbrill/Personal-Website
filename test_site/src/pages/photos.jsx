@@ -51,7 +51,7 @@ query MyQuery {
         name
         web_path
         description
-        date(formatString: "MM-DD-YYYY")
+        date(formatString: "YYYY-MM-DD")
       }
     }
   }
