@@ -10,7 +10,7 @@ const VintageSlideshow = () => {
 
   useState(() => {
     const interval = setInterval(() => {
-      setCurrent((prevState) => prevState === 5 - 1 ? 0 : prevState + 1);
+      setCurrent((prevState) => prevState === 12 - 1 ? 0 : prevState + 1);
     }, 7000);
 
     return () => clearInterval(interval);
