@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>2019 US Drug Misuse by Cannabis Legality</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 100%;
+			height: 100%;
+		}
+    /* .leaflet-right {
+      right: 50%; 
+      transform: translate(-50%, 0%);
+    } */
+    .leaflet-horizontalcenter {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 10px;
+    }
+
+    .leaflet-horizontalcenter .leaflet-control {
+      margin-bottom: 10px;
+    }
+
+
+	</style>
+
+	<style>#map { width: 100%; height: 100%; }
+.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<script type="text/javascript" src="allData.js"></script>
+
+<script type="text/javascript">
+  
+
+	var map = L.map('map').setView([38.8, -92], 5);
+  // code to add centering option for control
+  function addControlPlaceholders(map) {
+    var corners = map._controlCorners,
+      l = 'leaflet-',
+      container = map._controlContainer;
+
+    function createCorner(vSide, hSide) {
+      var className = l + vSide + ' ' + l + hSide;
+      corners[vSide + hSide] = L.DomUtil.create('div', className, container);
+    }
+    createCorner('horizontalcenter', 'top');
+  }
+  addControlPlaceholders(map);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data courtesy Rocky Mountain Poison and Drug Safety center, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/light-v9',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map);
+
+	// control that shows state info on hover
+	var info = L.control({position: 'horizontalcentertop'});
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	};
+
+	info.update = function (props) {
+    let legalityText = "Illegal";
+    if (props && props.legality === 1) legalityText = "Decriminalized or Allowed for Medical Use";
+    else if (props && props.legality === 2) legalityText = "Allowed for Recreational Use";
+
+    let typeText = "";
+    if (props && props.type === "nmu") typeText = "Non-medical use (NMU) of prescription drug";
+    else if (props && props.type === "illicit") typeText = "Use of illicit, non-cannabis drug";
+    else if (props && props.type === "both") typeText = "Either";
+		this._div.innerHTML = '<h4>2019 US Drug Misuse by Cannabis Legality' +  (props ?
+			': ' + typeText + ' in the past year' + '</h4>' + '<b>' + props.name + '</b><br />' + '<b>Cannabis Status: </b>' + legalityText + '<br/>' + '<b>' + props.percentage + '</b>'+ '%'
+			: '</h4> Hover over a state');
+	};
+
+  info.addTo(map);
+
+
+	// get color depending on population density value
+	function getColor(d) {
+		return d > 14 ? '#800026' :
+				d > 12  ? '#BD0026' :
+				d > 10  ? '#E31A1C' :
+				d > 8  ? '#FC4E2A' :
+				d > 6   ? '#FD8D3C' :
+				d > 4   ? '#FEB24C' :
+				d > 2   ? '#FED976' :
+							'#FFEDA0';
+	}
+
+	function style(feature) {
+
+    let useColor = 'white';
+    if (feature.properties.legality === 1) useColor = 'mediumseagreen';
+    else if (feature.properties.legality === 2) useColor = 'green';
+		return {
+			weight: 3,
+			opacity: 1,
+			color: useColor,
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor(feature.properties.percentage)
+		};
+	}
+
+	function highlightFeature(e) {
+		var layer = e.target;
+    let useColor = 'gray';
+    if (layer.feature.properties.legality === 1) useColor = 'mediumseagreen';
+    else if (layer.feature.properties.legality === 2) useColor = ' green';
+		layer.setStyle({
+			weight: 5,
+			color: useColor,
+			dashArray: '',
+			fillOpacity: 0.7
+		});
+
+		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+			layer.bringToFront();
+		}
+
+		info.update(layer.feature.properties);
+	}
+
+
+	var geojson;
+
+	function resetHighlight(e) {
+		let layer = e.target;
+    let useColor = 'white';
+    if (layer.feature.properties.legality === 1) useColor = 'mediumseagreen';
+    else if (layer.feature.properties.legality === 2) useColor = 'green';
+    layer.setStyle({
+      weight: 3,
+			opacity: 1,
+			color: useColor,
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor(layer.feature.properties.percentage)
+    });
+		info.update();
+	}
+
+	function zoomToFeature(e) {
+		map.fitBounds(e.target.getBounds());
+	}
+
+	function onEachFeature(feature, layer) {
+		layer.on({
+			mouseover: highlightFeature,
+			mouseout: resetHighlight,
+			click: zoomToFeature
+		});
+	}
+
+
+	geojson = L.geoJson(statesData, {
+		style: style,
+		onEachFeature: onEachFeature,
+	})//.addTo(map);
+
+  let nmu0 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "nmu" && feature.properties.legality === 0 }
+  });
+
+  let nmu1 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "nmu" && feature.properties.legality === 1 }
+  });
+
+  let nmu2 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "nmu" && feature.properties.legality === 2 }
+  });
+
+  let nmu3 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "nmu"}
+  });
+
+  let illicit0 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "illicit" && feature.properties.legality === 0}
+  });
+
+  let illicit1 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "illicit" && feature.properties.legality === 1}
+  });
+
+  let illicit2 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "illicit" && feature.properties.legality === 2}
+  });
+
+  let illicit3 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "illicit" }
+  });
+
+  let both0 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "both" && feature.properties.legality === 0}
+  });
+
+  let both1 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "both" && feature.properties.legality === 1}
+  });
+
+  let both2 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "both" && feature.properties.legality === 2}
+  });
+
+  let both3 = L.geoJson(statesData, {
+    style: style,
+		onEachFeature: onEachFeature,
+    filter: function(feature) { return feature.properties.type === "both" }
+  });
+
+  
+
+  // let noner = L.geoJson(statesData, {
+  //   style: style,
+	// 	onEachFeature: onEachFeature,
+  //   filter: function(feature) { return feature.properties.type === "noner" }
+  // });
+
+  // let illegal = L.geoJson(statesData, {
+  //   style: style,
+	// 	onEachFeature: onEachFeature,
+  //   filter: function(feature) { return feature.properties.legality === 0 }
+  // });
+
+  // let medUse = L.geoJson(statesData, {
+  //   style: style,
+	// 	onEachFeature: onEachFeature,
+  //   filter: function(feature) { return feature.properties.legality=== 1 }
+  // });
+
+  // let recUse = L.geoJson(statesData, {
+  //   style: style,
+	// 	onEachFeature: onEachFeature,
+  //   filter: function(feature) { return feature.properties.legality === 2 }
+  // });
+
+  // let allLegal =  L.geoJson(statesData, {
+	// 	style: style,
+	// 	onEachFeature: onEachFeature,
+	// });
+
+  let drugSwitch = L.control.layers({
+    "<b>By Misuse, State Legality</b> <br/> NMU = Non-medical Use <br/> Illicit = Illicit, non-cannabis drug <br/> <br/>Illegal = Cannabis illegal in this state<br/>Med. = Decriminalized or for medical use<br/>Rec. = For recreational use<br/><br/>": both3, 
+    "NMU, Illegal": nmu0,
+    "NMU, Med.": nmu1,
+    "NMU, Rec.": nmu2,
+    "NMU, All": nmu3,
+    "Illicit, Illegal": illicit0,
+    "Illicit, Med.": illicit1,
+    "Illicit, Rec.": illicit2,
+    "Illicit, All": illicit3,
+    "Either, Illegal": both0,
+    "Either, Med.": both1,
+    "Either, Rec.": both2,
+  }, null, {collapsed: false});
+  
+  drugSwitch.addTo(map);
+
+  // let legalitySwitch = L.control.layers({
+  //   "0": illegal,
+  //   "1": medUse,
+  //   "2": recUse,
+  //   "none": noner,
+  //   "all": allLegal
+  // }, null, {collapsed: false});
+  // legalitySwitch.addTo(map);
+  //setting defaults
+  both3.addTo(map);
+  // allLegal.addTo(map);
+
+
+
+
+	var legend = L.control({position: 'bottomright'});
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+			grades = [0, 2,4,6,8,10,12,14],
+			labels = [],
+			from, to;
+
+    // legality per state
+    labels.push('<h4>State Cannabis Legality</h4>');
+    labels.push(
+				'<i style="background: white' + '"></i> ' +
+				'Illegal');
+    labels.push(
+				'<i style="background: mediumseagreen' + '"></i> ' +
+				'Decriminalized or for Medical Use');
+    labels.push(
+				'<i style="background: green' + '"></i> ' +
+				'For Recreational Use<br>');
+    // color ranges
+    labels.push('<h4>Use Percentage</h4>');
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+[
+    {
+        "name": "Hollywood",
+        "web_path": "hollywood",
+        "featuredImage": "../images/photo_posts/Hollywood/Hollywood-1.jpg",
+        "description": "A set of pictures from Hollywood, CA",
+        "date": "July 29, 2020",
+        "id": 1,
+        "images": [
+            "../images/photo_posts/Hollywood/Hollywood-1.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-2.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-3.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-4.jpg",
+            "../images/photo_posts/Hollywood/Hollywood-5.jpg"
+        ]
+    }, 
+    {
+        "name": "Elizabeth Warren Rally",
+        "web_path": "warren",
+        "featuredImage": "../images/photo_posts/Warren/Warren-9.jpg",
+        "description": "A set of pictures from the Elizabeth Warren Rally",
+        "date": "Feb. 6, 2020",
+        "id": 2,
+        "images": [
+            "../images/photo_posts/Warren/Warren-9.jpg",
+            "../images/photo_posts/Warren/Warren-11.jpg",
+            "../images/photo_posts/Warren/Warren-13.jpg",
+            "../images/photo_posts/Warren/Warren-14.jpg"
+        ]
+    },
+    {
+        "name": "Puerto Vallarta",
+        "web_path": "puerto-vallarta",
+        "featuredImage": "../images/photo_posts/PuertoVallarta/Puerto Vallarta-8.jpg",
+        "description": "Flags, Churches, Tacos, and Iguanas from the Jallisco city of Puerto Vallarta",
+        "date": "June 30, 2019",
+        "id": 3,
+        "images": [
+            "../images/photo_posts/PuertoVallarta/Puerto Vallarta-8.jpg",
+            "../images/photo_posts/PuertoVallarta/Puerto Vallarta-37.jpg",
+            "../images/photo_posts/PuertoVallarta/Puerto Vallarta-124.jpg"
+        ]
+    },
+    {
+        "name": "Washington D.C.",
+        "web_path": "dc",
+        "featuredImage": "../images/photo_posts/DC/Washington DC-11.jpg",
+        "description": "Lots of things to see around the nation's capital. Here's a few of them in my short time spent there",
+        "date": "Dec. 31, 2019",
+        "id": 4,
+        "images": [
+            "../images/photo_posts/DC/Washington DC-1.jpg",
+            "../images/photo_posts/DC/Washington DC-2.jpg",
+            "../images/photo_posts/DC/Washington DC-3.jpg",
+            "../images/photo_posts/DC/Washington DC-4.jpg",
+            "../images/photo_posts/DC/Washington DC-5.jpg",
+            "../images/photo_posts/DC/Washington DC-6.jpg",
+            "../images/photo_posts/DC/Washington DC-7.jpg",
+            "../images/photo_posts/DC/Washington DC-8.jpg",
+            "../images/photo_posts/DC/Washington DC-9.jpg",
+            "../images/photo_posts/DC/Washington DC-10.jpg",
+            "../images/photo_posts/DC/Washington DC-11.jpg",
+            "../images/photo_posts/DC/Washington DC-12.jpg",
+            "../images/photo_posts/DC/Washington DC-13.jpg",
+            "../images/photo_posts/DC/Washington DC-15.jpg"
+        ]
+    },
+    {
+        "name": "San Francisco",
+        "web_path": "sf",
+        "featuredImage": "../images/photo_posts/SF/SF-3.jpg",
+        "description": "Drove up THE 5 to the Bay Area. Lots of bridges, fog, and animals",
+        "date": "Aug. 10, 2021",
+        "id": 5,
+        "images": [
+            "../images/photo_posts/SF/SF-1.jpg",
+            "../images/photo_posts/SF/SF-3.jpg",
+            "../images/photo_posts/SF/SF-4.jpg",
+            "../images/photo_posts/SF/SF-5.jpg",
+            "../images/photo_posts/SF/SF-6.jpg",
+            "../images/photo_posts/SF/SF-7.jpg",
+            "../images/photo_posts/SF/SF-8.jpg",
+            "../images/photo_posts/SF/SF-9.jpg",
+            "../images/photo_posts/SF/SF-10.jpg",
+            "../images/photo_posts/SF/SF-11.jpg",
+            "../images/photo_posts/SF/SF-12.jpg",
+            "../images/photo_posts/SF/SF-13.jpg",
+            "../images/photo_posts/SF/SF-14.jpg",
+            "../images/photo_posts/SF/SF-15.jpg",
+            "../images/photo_posts/SF/SF-16.jpg",
+            "../images/photo_posts/SF/SF-17.jpg",
+            "../images/photo_posts/SF/SF-18.jpg",
+            "../images/photo_posts/SF/SF-19.jpg",
+            "../images/photo_posts/SF/SF-20.jpg",
+            "../images/photo_posts/SF/SF-21.jpg",
+            "../images/photo_posts/SF/SF-22.jpg",
+            "../images/photo_posts/SF/SF-23.jpg",
+            "../images/photo_posts/SF/SF-24.jpg",
+            "../images/photo_posts/SF/SF-25.jpg",
+            "../images/photo_posts/SF/SF-26.jpg",
+            "../images/photo_posts/SF/SF-27.jpg",
+            "../images/photo_posts/SF/SF-28.jpg",
+            "../images/photo_posts/SF/SF-57.jpg"
+        ]
+    },
+    {
+        "name": "Manhattan in Winter",
+        "web_path": "mb",
+        "featuredImage": "../images/photo_posts/MB/MB-8032.jpg",
+        "description": "It's winter in Manhattan Beach but still no snow. I promise. And the colors are mostly real. I also promise.",
+        "date": "Dec. 19, 2021",
+        "id": 6,
+        "images": [
+            "../images/photo_posts/MB/MB-8000.jpg",
+            "../images/photo_posts/MB/MB-8002.jpg",
+            "../images/photo_posts/MB/MB-8032.jpg",
+            "../images/photo_posts/MB/MB-8052.jpg",
+            "../images/photo_posts/MB/MB-8054.jpg",
+            "../images/photo_posts/MB/MB-8063.jpg",
+            "../images/photo_posts/MB/MB-8070.jpg",
+            "../images/photo_posts/MB/MB-8073.jpg",
+            "../images/photo_posts/MB/MB-8089.jpg",
+            "../images/photo_posts/MB/MB-8075.jpg",
+            "../images/photo_posts/MB/MB-8100.jpg",
+            "../images/photo_posts/MB/MB-8107.jpg",
+            "../images/photo_posts/MB/MB-8110.jpg",
+            "../images/photo_posts/MB/MB-8124.jpg",
+            "../images/photo_posts/MB/MB-8125.jpg",
+            "../images/photo_posts/MB/MB-8162.jpg",
+            "../images/photo_posts/MB/MB-8163.jpg",
+            "../images/photo_posts/MB/MB-8127.jpg",
+            "../images/photo_posts/MB/MB-8207.jpg",
+            "../images/photo_posts/MB/MB-8211.jpg",
+            "../images/photo_posts/MB/MB-8213.jpg"
+        ]
+    }
+]
