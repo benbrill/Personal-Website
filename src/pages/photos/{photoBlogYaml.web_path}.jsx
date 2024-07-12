@@ -39,7 +39,7 @@ query($id: String!) {
         images {
             publicURL
             childImageSharp {
-              gatsbyImageData
+            gatsbyImageData(formats: WEBP)
             }
           }
   }
