@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout_home'
+import Layout from '../components/LayoutHome'
 import IntroCard from '../components/IntroCard'
 import HeroLanding from '../components/HeroLanding';
 import CardGroup from 'react-bootstrap/CardGroup';
