@@ -62,7 +62,7 @@ const PhotoGallery = ({post}) => {
     <Container>
                 {rows.map((row, index) => {
                     return(
-                        <Row key = {index}>
+                        <Row key = {index} style = {{justifyContent: "center"}}>
                             {row.photos.map((photo, index) => {
                                 return(
                                     <Col key = {index} lg={row.type === "vertical" ? 4 : 6} xs={row.type === "vertical" ? 6 : 12}>

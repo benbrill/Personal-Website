@@ -39,10 +39,10 @@
 - name: Washington D.C.
   web_path: dc
   featuredImage: "../images/photo_posts/DC/Washington DC-11.jpg"
-  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
+  backgroundImage: "../images/photo_posts/DC/DC-00860.jpg"
   description: Lots of things to see around the nation's capital. Here's a few of
     them in my short time spent there
-  date: 2019-12-31
+  date: 2023-09-17
   unique_id: 456
   images:
   - "../images/photo_posts/DC/Washington DC-1.jpg"
@@ -52,6 +52,21 @@
   - "../images/photo_posts/DC/Washington DC-5.jpg"
   - "../images/photo_posts/DC/Washington DC-6.jpg"
   - "../images/photo_posts/DC/Washington DC-7.jpg"
+  -  "../images/photo_posts/DC/DC-.jpg"
+  -  "../images/photo_posts/DC/DC-00900.jpg"
+  -  "../images/photo_posts/DC/DC-02600.jpg"
+  -  "../images/photo_posts/DC/DC-02656.jpg"
+  -  "../images/photo_posts/DC/DC-02665.jpg"
+  -  "../images/photo_posts/DC/DC-02766.jpg"
+  -  "../images/photo_posts/DC/DC-02798.jpg"
+  -  "../images/photo_posts/DC/DC-02815.jpg"
+  -  "../images/photo_posts/DC/DC-02836.jpg"
+  -  "../images/photo_posts/DC/DC-02878.jpg"
+  -  "../images/photo_posts/DC/Sedona-02593.jpg"
+  -  "../images/photo_posts/DC/Sedona-02658.jpg"
+  -  "../images/photo_posts/DC/Sedona-02727.jpg"
+  -  "../images/photo_posts/DC/Sedona-02993.jpg"
+  -  "../images/photo_posts/DC/Washington DC-00356.jpg"
   - "../images/photo_posts/DC/Washington DC-8.jpg"
   - "../images/photo_posts/DC/Washington DC-9.jpg"
   - "../images/photo_posts/DC/Washington DC-10.jpg"
@@ -127,7 +142,7 @@
 - name: Yosemite
   web_path: yosemite
   featuredImage: "../images/photo_posts/Yosemite/Yosemite-04569-2.jpg"
-  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
+  backgroundImage: "../images/photo_posts/Yosemite/Yosemite-02612.jpg"
   description: Super cool
   date: 2023-03-23
   images:
@@ -163,7 +178,7 @@
 - name: Barcelona
   web_path: barcelona
   featuredImage: "../images/photo_posts/Barcelona/_Barcelona-01477.jpg"
-  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
+  backgroundImage: "../images/photo_posts/Barcelona/_Barcelona-01412.jpg"
   date: 2023-07-04
   description: ¡Vale!
   images:
@@ -263,8 +278,8 @@
   -  "../images/photo_posts/Barcelona/_Barcelona-01589.jpg"
 - name: Amsterdam
   web_path: amsterdam
-  featuredImage: "../images/photo_posts/Amsterdam/_Amsterdam-01855.jpg"
-  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
+  featuredImage: "../images/photo_posts/Amsterdam/_Amsterdam-01787.jpg"
+  backgroundImage: "../images/photo_posts/Amsterdam/_Amsterdam-01612.jpg"
   date: 2023-07-10
   description: Windmills and Stroopwafles
   images:
@@ -334,7 +349,7 @@
 - name: Budapest
   web_path: budapest
   featuredImage: "../images/photo_posts/Budapest/_Budapest-02108.jpg"
-  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
+  backgroundImage: "../images/photo_posts/Budapest/_Budapest-02114.jpg"
   date: 2023-07-13
   description: Explored the towns of Buda and Pest
   images:
@@ -392,8 +407,8 @@
   -  "../images/photo_posts/Budapest/_Budapest-02259.jpg"
 - name: London
   web_path: london
-  featuredImage: "../images/photo_posts/London/_London-02411.jpg"
-  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
+  featuredImage: "../images/photo_posts/London/_London-02500.jpg"
+  backgroundImage: "../images/photo_posts/London/_London-02315.jpg"
   date: 2023-07-16
   description: Silver rain was falling down upon the dirty ground of London town
   images:
@@ -598,7 +613,7 @@
 - name: Sedona
   web_path: sedona
   featuredImage: "../images/photo_posts/Sedona/Sedona-03391.jpg"
-  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
+  backgroundImage: "../images/photo_posts/Sedona/Sedona-04218.jpg"
   date: 2024-01-13
   description: Vortexes and Red Rocks
   images:
@@ -744,7 +759,7 @@
 - name: Rocky Mountains
   web_path: rmnp
   featuredImage: "../images/photo_posts/RMNP/RMNP-03136.jpg"
-  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
+  backgroundImage: "../images/photo_posts/RMNP/RMNP-03151.jpg"
   date: 2023-10-23
   description: The Rockies are calling
   images:
@@ -813,5 +828,53 @@
   -  "../images/photo_posts/RMNP/RMNP-03912.jpg"
   -  "../images/photo_posts/RMNP/RMNP-03956.jpg"
   -  "../images/photo_posts/RMNP/RMNP-03993.jpg"
-
-
+- name: Echo Park
+  web_path: echo-park
+  featuredImage: "../images/photo_posts/EchoPark/Silverlake-04881.jpg"  
+  backgroundImage: "../images/photo_posts/EchoPark/Silverlake-04919.jpg"  
+  date: 2024-07-14
+  description: It's a pretty flat area so there's not much echo
+  images:
+  -  "../images/photo_posts/EchoPark/Silverlake-04812.jpg"
+  -  "../images/photo_posts/EchoPark/Silverlake-04832.jpg"
+  -  "../images/photo_posts/EchoPark/Silverlake-04843.jpg"  
+  -  "../images/photo_posts/EchoPark/Silverlake-04868.jpg"  
+  -  "../images/photo_posts/EchoPark/Silverlake-04877.jpg"  
+  -  "../images/photo_posts/EchoPark/Silverlake-04881.jpg"  
+  -  "../images/photo_posts/EchoPark/Silverlake-04907.jpg"  
+  -  "../images/photo_posts/EchoPark/Silverlake-04919.jpg"  
+  -  "../images/photo_posts/EchoPark/LA View-8599.jpg"
+  -  "../images/photo_posts/EchoPark/LA View-8650.jpg"
+  -  "../images/photo_posts/EchoPark/LA View-8662.jpg"
+- name: Mexico City
+  web_path: cdmx
+  featuredImage: "../images/photo_posts/CDMX/CDMX-9428.jpg" 
+  backgroundImage: "../images/photo_posts/CDMX/CDMX-9318.jpg" 
+  date: 2022-07-02
+  description: CDMX for short
+  images:
+  -  "../images/photo_posts/CDMX/CDMX-9318.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9331.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9332.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9342.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9384.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9392.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9400.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9402.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9408.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9411.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9413.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9428.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9453.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9480.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9517.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9526.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9531.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9535.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9545.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9569.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9617.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9638.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9690.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9708.jpg"
+  -  "../images/photo_posts/CDMX/CDMX-9719.jpg"

@@ -20,15 +20,14 @@ const PhotoBlogPage = ({ data }) => {
             <Menu />
             <div style = {{display : "grid"}}>
                 <GatsbyImage image = {post.photoBlogYaml.backgroundImage.childImageSharp.gatsbyImageData} alt = "" 
-                style = {{gridArea: "1/1", width: "100%", height: "100vh", zIndex: -1, position: "fixed", opacity: "0.5"}}
+                style = {{gridArea: "1/1", width: "100%", height: "100vh", zIndex: -1, position: "fixed", opacity: "0.5", top: 0, left: 0}}
                 layout = "fullWidth"/>
             <div style = {{gridArea: "1/1",
                 position: "relative",
-                placeItems: "center",
-                padding: "30px"}}>
+                placeItems: "center"}}>
                 <h1 style = {{textAlign:"center", fontWeight:600, paddingTop: "30px"}}>{post.photoBlogYaml.name}</h1>
                 <p style = {{textAlign: "center", marginBottom: "5px"}}>{post.photoBlogYaml.description}</p>
-                <p style = {{textAlign: "center"}}><em>{post.photoBlogYaml.date}</em></p>
+                <p style = {{textAlign: "center"}}>{post.photoBlogYaml.date}</p>
                 <div style = {{padding: "0px 0em"}}>
 
                 <PhotoGallery post = {post}/>
@@ -56,7 +55,7 @@ query($id: String!) {
             gatsbyImageData
             }
             }
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
         images {
             publicURL
             childImageSharp {
