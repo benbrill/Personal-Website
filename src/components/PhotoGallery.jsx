@@ -39,8 +39,8 @@ const PhotoGallery = ({post}) => {
     const rows = [];
     let verticalIndex = 0;
     let horizontalIndex = 0;
-    let verticalRowLength = 3;
-    let horizontalRowLength = 2;
+    let verticalRowLength = isMobile ? 2 : 3;;
+    let horizontalRowLength = isMobile ? 1 : 2;
 
     while (verticalIndex < verticalPhotos.length || horizontalIndex < horizontalPhotos.length) {
         // Add a row of vertical photos
