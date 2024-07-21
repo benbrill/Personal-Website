@@ -50,7 +50,7 @@ function Menu() {
         <Nav className="justify-content right" >
           <Nav.Link href="/resume" style={{ transition: '1s ease', color: navBackground ? '#2b2b2b' : 'white'}}>Resume</Nav.Link>
           <Nav.Link href="/data" style={{ transition: '1s ease', color: navBackground ? '#2b2b2b' : 'white'}}>Data</Nav.Link>
-          <Nav.Link href="https://benbrill.myportfolio.com/" target = "_blank" style={{ transition: '1s ease', color: navBackground ? '#2b2b2b' : 'white'}}>Design</Nav.Link>
+          {/* <Nav.Link href="https://benbrill.myportfolio.com/" target = "_blank" style={{ transition: '1s ease', color: navBackground ? '#2b2b2b' : 'white'}}>Design</Nav.Link> */}
           <Nav.Link href="/photos" style={{ transition: '1s ease', color: navBackground ? '#2b2b2b' : 'white'}}>Photos</Nav.Link>
         </Nav>
         </Navbar.Collapse>

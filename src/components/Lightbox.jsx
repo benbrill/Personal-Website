@@ -20,7 +20,7 @@ const ImageLightbox = ({ imageData }) => {
 
     return (
         <>
-            <div onClick={handleShow} style={{cursor: 'pointer'}}>
+            <div onClick={handleShow} style={{cursor: 'pointer', padding: "5px"}}>
                 <GatsbyImage image={image} alt="Thumbnail image" />
             </div>
 

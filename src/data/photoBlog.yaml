@@ -2,6 +2,7 @@
 - name: Hollywood
   web_path: hollywood
   featuredImage: "../images/photo_posts/Hollywood/Hollywood-1.jpg"
+  backgroundImage: "../images/photo_posts/Hollywood/Hollywood-5.jpg"
   description: A set of pictures from Hollywood, CA
   date: 2020-07-29
   unique_id: 123
@@ -14,6 +15,7 @@
 - name: Elizabeth Warren Rally
   web_path: warren
   featuredImage: "../images/photo_posts/Warren/Warren-9.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   description: A set of pictures from the Elizabeth Warren Rally
   date: 2020-02-06
   unique_id: 234
@@ -25,6 +27,7 @@
 - name: Puerto Vallarta
   web_path: puerto-vallarta
   featuredImage: "../images/photo_posts/PuertoVallarta/Puerto Vallarta-8.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   description: Flags, Churches, Tacos, and Iguanas from the Jallisco city of Puerto
     Vallarta
   date: 2019-06-30
@@ -36,6 +39,7 @@
 - name: Washington D.C.
   web_path: dc
   featuredImage: "../images/photo_posts/DC/Washington DC-11.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   description: Lots of things to see around the nation's capital. Here's a few of
     them in my short time spent there
   date: 2019-12-31
@@ -58,6 +62,7 @@
 - name: San Francisco
   web_path: sf
   featuredImage: "../images/photo_posts/SF/SF-3.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   description: Drove up THE 5 to the Bay Area. Lots of bridges, fog, and animals
   date: 2021-08-10
   unique_id: 567
@@ -93,6 +98,7 @@
 - name: Manhattan in Winter
   web_path: mb
   featuredImage: "../images/photo_posts/MB/MB-8032.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   description: It's winter in Manhattan Beach but still no snow. I promise. And the
     colors are mostly real. I also promise.
   date: 2021-12-19
@@ -121,6 +127,7 @@
 - name: Yosemite
   web_path: yosemite
   featuredImage: "../images/photo_posts/Yosemite/Yosemite-04569-2.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   description: Super cool
   date: 2023-03-23
   images:
@@ -141,6 +148,7 @@
 - name: Grad Photos
   web_path: grad
   featuredImage: "../images/photo_posts/GradPics/Cheryl.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   description: A collection of my Grad Photos I took in 2022
   date: 2022-05
   images:
@@ -155,6 +163,7 @@
 - name: Barcelona
   web_path: barcelona
   featuredImage: "../images/photo_posts/Barcelona/_Barcelona-01477.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2023-07-04
   description: ¡Vale!
   images:
@@ -255,6 +264,7 @@
 - name: Amsterdam
   web_path: amsterdam
   featuredImage: "../images/photo_posts/Amsterdam/_Amsterdam-01855.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2023-07-10
   description: Windmills and Stroopwafles
   images:
@@ -324,6 +334,7 @@
 - name: Budapest
   web_path: budapest
   featuredImage: "../images/photo_posts/Budapest/_Budapest-02108.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2023-07-13
   description: Explored the towns of Buda and Pest
   images:
@@ -382,6 +393,7 @@
 - name: London
   web_path: london
   featuredImage: "../images/photo_posts/London/_London-02411.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2023-07-16
   description: Silver rain was falling down upon the dirty ground of London town
   images:
@@ -462,6 +474,7 @@
 - name: New York
   web_path: new-york
   featuredImage: "../images/photo_posts/NewYork/NYC-04316.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2024-04-02
   description: Concrete jungle where dreams are made of
   images:
@@ -563,6 +576,7 @@
 - name: N. Israel Coast
   web_path: n-israel-coast
   featuredImage: "../images/photo_posts/IsraelNorthCoast/Haifa-1.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2019-07-22
   description: Cities of Akko and Haifa situated on the Haifa Bay
   images:
@@ -584,6 +598,7 @@
 - name: Sedona
   web_path: sedona
   featuredImage: "../images/photo_posts/Sedona/Sedona-03391.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2024-01-13
   description: Vortexes and Red Rocks
   images:
@@ -604,6 +619,7 @@
 - name: Jerusalem
   web_path: jerusalem
   featuredImage:  "../images/photo_posts/Jerusalem/Jerusalem 1-2.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2019-07-13
   description: The center of the Jewish world
   images:
@@ -650,6 +666,7 @@
 - name: Tzfat
   web_path: tzfat
   featuredImage: "../images/photo_posts/Tzfat/Tzfat-5.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2019-07-13
   description: A mountain town with a mystical vibe
   images:
@@ -682,6 +699,7 @@
 - name: Tel Aviv-Yafo
   web_path: tlv
   featuredImage: "../images/photo_posts/TLV/Yafo-1.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2019-07-13
   description: The city that never sleeps
   images:
@@ -726,6 +744,7 @@
 - name: Rocky Mountains
   web_path: rmnp
   featuredImage: "../images/photo_posts/RMNP/RMNP-03136.jpg"
+  backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
   date: 2023-10-23
   description: The Rockies are calling
   images:
