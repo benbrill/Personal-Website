@@ -19,7 +19,7 @@ const resume = ({data}) => {
                 <Row>
                   <Col lg={5}>
                 <div style = {{paddingTop: "20px", display: "flex", flexDirection: "column"}}>
-                    <StaticImage src = "../images/new_prof.jpg" style={{borderRadius: "50%", marginRight: "40px"}} width = {500 } aspectRatio = {1}/>
+                    <StaticImage src = "../images/LACMA-1.jpg" style={{borderRadius: "50%", marginRight: "40px"}} width = {500 } aspectRatio = {1}/>
                     
                     
                 </div>

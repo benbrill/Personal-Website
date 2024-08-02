@@ -12,7 +12,7 @@
   - "../images/photo_posts/Hollywood/Hollywood-3.jpg"
   - "../images/photo_posts/Hollywood/Hollywood-4.jpg"
   - "../images/photo_posts/Hollywood/Hollywood-5.jpg"
-- name: Elizabeth Warren Rally
+- name: Warren Rally
   web_path: warren
   featuredImage: "../images/photo_posts/Warren/Warren-9.jpg"
   backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
@@ -110,7 +110,7 @@
   - "../images/photo_posts/SF/SF-27.jpg"
   - "../images/photo_posts/SF/SF-28.jpg"
   - "../images/photo_posts/SF/SF-57.jpg"
-- name: Manhattan in Winter
+- name: Manhattan Beach
   web_path: mb
   featuredImage: "../images/photo_posts/MB/MB-8032.jpg"
   backgroundImage: "../images/photo_posts/NewYork/NYC-04506.jpg"
