@@ -886,6 +886,17 @@
   description: Thank the Gods
   images:
   -  "../images/photo_posts/GoG/Colorado-05310.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5352.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5373.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5410.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5428.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5474.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5477.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5490.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5529.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5548.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5555.jpg"
+  -  "../images/photo_posts/GoG/Colorado-5579.jpg"
 - name: Denver Greenery
   web_path: denver
   featuredImage: "../images/photo_posts/Denver/Colorado-5620.jpg"
