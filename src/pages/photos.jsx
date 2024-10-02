@@ -24,10 +24,10 @@ const photos = ({data}) => {
           >
             <CardGroup>
             <Row xs={1} md={3}>
-                {data.allPhotoBlogYaml.nodes.map(node => {
+                {data.allPhotoBlogYaml.nodes.map((node, key) => {
                   count++
                 return(
-                    <Col id = "photoCol">
+                    <Col id = "photoCol" key={key}>
                     <PhotoBlogCard props = {node} count = {String(count).padStart(2,'0')}/>
                     </Col>
                 )})}
