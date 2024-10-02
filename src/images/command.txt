@@ -1,1 +1,1 @@
-ls src/images/photo_posts/GoG/*.jpg | awk -F/ '{print "-  \"../images/photo_posts/GoG/_" $NF "\""}'
+ls src/images/photo_posts/Denver/*.jpg | awk -F/ '{print "-  \"../images/photo_posts/Denver/" $NF "\""}'
