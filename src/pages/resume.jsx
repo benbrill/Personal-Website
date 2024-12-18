@@ -34,17 +34,17 @@ const resume = ({data}) => {
                               <a href="https://github.com/benbrill" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Github.svg" placeholder= "blurred"/></a>
                               <a href="https://github.com/benbrill" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>Github</a>
                             </div>
-                            <div style = {basicsStyling}>
+                            {/* <div style = {basicsStyling}>
                               <a href="https://twitter.com/benzbrill" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Twitter.svg" placeholder= "blurred"/></a>
                               <a href="https://twitter.com/benzbrill" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>Twitter</a>
-                            </div>
+                            </div> */}
                             <div style = {basicsStyling}>
                               <a href="https://www.linkedin.com/in/benohrbrill/" target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/LinkedIn.svg" placeholder= "blurred"/></a>
                               <a href="https://www.linkedin.com/in/benohrbrill/" target="_blank" rel="noreferrer" style={{paddingTop: "10px"}}>LinkedIn</a>
                             </div>
                             <div style = {basicsStyling}>
-                              <a href="/../../static/Brill_BenOhr_Resume.pdf"  target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Attachment.svg" placeholder= "blurred"/></a>
-                              <a href="/../../static/Brill_BenOhr_Resume.pdf" style={{paddingTop: "10px"}}>PDF Resume</a>
+                              <a href="https://drive.google.com/file/d/1Gz-RJqF-uPWFxXAPbryAL2nK7pWXnWCb/view?usp=sharing"  target="_blank" rel="noreferrer"><StaticImage src = "../../static/images/Attachment.svg" placeholder= "blurred"/></a>
+                              <a href="https://drive.google.com/file/d/1Gz-RJqF-uPWFxXAPbryAL2nK7pWXnWCb/view?usp=sharing" style={{paddingTop: "10px"}}>PDF Resume</a>
                             </div>
                           </div>
                   </div>
@@ -60,8 +60,8 @@ const resume = ({data}) => {
                         <h3 style = {{fontWeight: 400}}>{element.Position}</h3> 
                         <h6 style = {{color: "#666666"}}>{element.Employer} | {element.Date}</h6>
                         <ul style = {{marginLeft: "0.5px", paddingLeft: "0.5rem"}}>
-                        {element.Description.map(detail => (
-                          <li style = {{marginBottom: "0.2rem"}} className = "resumeItem">{detail}</li>
+                        {element.Description.map((detail, i) => (
+                          <li key={i} style = {{marginBottom: "0.2rem"}} className = "resumeItem">{detail}</li>
                         ))}
                         </ul>
                     </div>
@@ -80,8 +80,10 @@ const resume = ({data}) => {
                 ))}
                 <div>
                       <h1>Skills and Tools</h1>
+                      <h3>Programming Languages</h3>
+                      <h6>Python, R, SQL, Scala, C++, JavaScript, Numpy (Python)</h6>
                       <h3>Data Science</h3>
-                      <h6>Python, R, Excel, SQL, Machine Learning, Tensorflow, Data Visualization, Tableau, NLP</h6>
+                      <h6>Statistical Modeling, Machine Learning, Data Mining, Data Visualization, Experimental Design</h6>
                 </div>
                 </div>
             </Layout>

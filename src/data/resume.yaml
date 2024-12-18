@@ -4,6 +4,14 @@ Education:
       - Bachelors of Science in Statistics and Data Science
     Date: Sept 2019 - June 2023
 Experience:
+  - Employer: DaVita Kidney Care
+    Position: Sr Data Analyst
+    Date: August 2023 - present
+    Description:
+    - Coordinate migration of historical compensation and personnel data for 59,000 teammates over six years and construct ETL pipelin for incoming data to virtual warehouse to improve analytic workflows and increase data transparency for stakeholders.
+    - Employ advanced statistical methodologies in Excel to assess and interpret compensation data, resulting in data-driven recommendation that inform company’s salary structure, total rewards, and bonus initiatives.
+    - Construct reports and dashboards to analyze compensation initiatives like enforcing minimums on salary ranges, transitioning to a target-based bonus, and ensuring proper funding across 2,000 facilities to present to C-Suite stakeholders
+    - Benchmark new and existing roles against market data to ensure roles are equitable, aligned, and competitive across market
   - Employer: Shopify
     Position: Data Science Intern
     Date: June 2022 - September 2022
@@ -14,7 +22,7 @@ Experience:
       - Tested, debugged, and assisted launch of Shop Promise platform to over 150 pilot merchants
   - Employer: UCLA Department of Mathematics
     Position: Research Assistant
-    Date: June 2021 - present
+    Date: June 2021 - December 2021
     Description:
       - Developed scraper in Python to extract over 250,000 unique records of mathematics doctoral students and cleanly store within a SQL database
       - Researched six different name gender classification algorithms and reported on various biases
