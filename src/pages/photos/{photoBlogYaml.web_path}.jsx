@@ -8,12 +8,11 @@ import Menu from '../../components/navbar'
 // import { Container, Row, Col } from 'react-bootstrap'
 import Seo from '../../components/seo'
 import PhotoGallery from '../../components/PhotoGallery'
+import { Accordion } from 'react-bootstrap'
 // import Lightbox from '../../components/Lightbox'
 
 const PhotoBlogPage = ({ data }) => {
     const post  = data
-
-
     return (
         <>
         <Seo title = {`${post.photoBlogYaml.name}: Photos`} description = {post.photoBlogYaml.description}/>
@@ -28,7 +27,36 @@ const PhotoBlogPage = ({ data }) => {
                 <h1 style = {{textAlign:"center", fontWeight:600, paddingTop: "30px"}}>{post.photoBlogYaml.name}</h1>
                 <p style = {{textAlign: "center", marginBottom: "5px"}}>{post.photoBlogYaml.description}</p>
                 <p style = {{textAlign: "center"}}>{post.photoBlogYaml.date}</p>
+                {post.photoBlogYaml.name == "Grad Photos" ? 
+                    <div style={{backgroundColor: 'rgba(34,40,49,0.8)', borderRadius: "10px", maxWidth:"550px", padding: "5px", margin: "15px"}}>
+                        <h4 style={{fontFamily:'Halyard-Display', fontWeight: 600, color: "white", paddingTop: "5px", textAlign: "center"}}>2025 Grad Bookings</h4>
+                        <p style = {{textAlign: "center", color: 'white', fontSize: "16px", fontWeight: 200}}>
+                            Please fill out the form below or use this <a href="https://calendar.app.google/5aZ3X6hMtxnkhT2V9" style={{"textDecoration": "underline", color: "skyblue"}}>link</a> to book a session
+                            <br/>
+                            Hopefully it's be pretty chill and fun
+                            <br/>
+                            My scheduling is flexible and I can accomodate most requests and group sizes.
+                            <br/><br/>
+                            I accept payment in the form of money, food, or friendship -- depending on who you are. I'll work with your budget to determine pricing,
+                            but estimate around $75-$100 for a 1ish hour session for one person.
+                        </p>
+                        <Accordion>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>Book a shoot with me!</Accordion.Header>
+                                <Accordion.Body>
+                                <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1gmPus5J5yLhg9HHiEHCg_-1cVEUvizQh1k5wX-EptiA1MnBrarD_VT4D3XRHvM_mlUHfL-X7O?gv=true" style={{backgroundColor: "white"}} width="100%" height="1000"></iframe>
+                                Thanks for your interest in booking a grad shoot with me!
+
+                                Please fill out the form below to book a slot with me. Be sure to include any special requests --outfit changes, specific locations other than Royce Quad (engineering, TFT, etc.), editing styles/inspiration -- and I'll do my best to accommodate them. 
+
+                                Based on your input, I'll reach out via text to confirm your appointment and determine pricing.
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            </Accordion>
+                    </div>
+                : <p style = {{textAlign: "center"}}></p>}
                 <div style = {{padding: "0px 0em"}}>
+
 
                 <PhotoGallery post = {post}/>
                 {/* {post.photoBlogYaml.images.map(image => {
