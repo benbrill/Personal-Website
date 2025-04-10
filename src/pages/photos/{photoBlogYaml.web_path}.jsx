@@ -31,14 +31,24 @@ const PhotoBlogPage = ({ data }) => {
                     <div style={{backgroundColor: 'rgba(34,40,49,0.8)', borderRadius: "10px", maxWidth:"550px", padding: "5px", margin: "15px"}}>
                         <h4 style={{fontFamily:'Halyard-Display', fontWeight: 600, color: "white", paddingTop: "5px", textAlign: "center"}}>2025 Grad Bookings</h4>
                         <p style = {{textAlign: "center", color: 'white', fontSize: "16px", fontWeight: 200}}>
-                            Please fill out the form below or use this <a href="https://calendar.app.google/5aZ3X6hMtxnkhT2V9" style={{"textDecoration": "underline", color: "skyblue"}}>link</a> to book a session
+                            Please fill out the form below or use this <a href="https://calendar.app.google/5aZ3X6hMtxnkhT2V9" style={{"textDecoration": "underline", color: "skyblue"}}>link</a> to book a session.
+                            Hopefully it will be pretty chill and fun.
                             <br/>
-                            Hopefully it's be pretty chill and fun
+                            <span style={{fontWeight:600, textAlign: "left", lineHeight:"2"}}>Booking with me includes</span>
+                            <em>
+                            <ul style = {{paddingLeft: "0px", textAlign: "left", lineHeight: "1.15"}}> 
+                                <li>Flexible 1-1.5 hour photo shoot</li>
+                                <li>Solo and/or group pics</li>
+                                <li>Locations of your choice (within reason)</li>
+                                <li>Proofs of raw photos</li>
+                                <li>Editing in the style of your choice</li>
+                                <li>A really sick photographer</li>
+                            </ul>
+                            </em>
                             <br/>
-                            My scheduling is flexible and I can accomodate most requests and group sizes.
-                            <br/><br/>
                             I accept payment in the form of money, food, or friendship -- depending on who you are. I'll work with your budget to determine pricing,
-                            but estimate around $75-$100 for a 1ish hour session for one person.
+                            but estimate around $75-$100 for a 1ish hour session for one person. I will charge a flat rate that includes the shoot, proofs, and edits depending on your requests and group size,
+                            so don't feel rushed to keep the hourly rate in mind.
                         </p>
                         <Accordion>
                             <Accordion.Item eventKey="0">
